@@ -1,0 +1,13 @@
+<div class="container">
+<h1> Trips New</h1>
+
+  <%= simple_form_for [ @trip ] do |f| %>
+    <%= f.input :date %>
+    <%# <%= f.input :country, collection: @projects.pluck(:country).uniq %>
+    <%= f.input :project_id, collection: @projects %>
+    <%= f.submit class: 'btn btn-success' %>
+  <% end %>
+
+  <%= link_to "Voltar", dashboard_path, class: "btn btn-primary" %>
+
+</div>

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :projects, only: %i[ index ] do
-    resources :trips, only: %i[new create]
-  end
+  # resources :projects, only: %i[ index ]
+  resources :trips, only: %i[new create]
+
 
   resources :trips, only: %i[ show ]
   get :dashboard, to: 'pages#dashboard'
