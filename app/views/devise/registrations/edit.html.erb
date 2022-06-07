@@ -10,6 +10,15 @@
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
 
+    <%= f.input :about,
+                required: true,
+                input_html: { autocomplete: "about" } %>
+    <%= f.input :occupation,
+                required: true,
+                input_html: { autocomplete: "occupation" } %>
+    <%= f.input :city,
+                required: true,
+                input_html: { autocomplete: "city" } %>
     <%= f.input :password,
                 hint: "leave it blank if you don't want to change it",
                 required: false,
@@ -28,8 +37,5 @@
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
 <%= link_to "Back", :back %>
+<%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
