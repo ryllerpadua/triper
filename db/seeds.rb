@@ -15,7 +15,7 @@ Project.create ([{ name:'Loving Cape Town Kids', country: 'África do Sul' }, { 
 { name: 'Monk Teaching', country: 'Sri Lanka' }, { name: 'Women Empowerment', country: 'Sri Lanka' }, { name: 'Teaching', country: 'Sri Lanka' },
 { name: 'Child Care Center', country: 'Tailândia' }, { name: 'Elephant Sanctuary', country: 'Tailândia' }, { name: 'Teaching in Thailand', country: 'Tailândia' }, { name: 'Teach Buddhist Monks', country: 'Tailândia' },
 { name: 'Help2Kids', country: 'Tanzânia' },
-{ name: 'Thien Homeless Center', country: 'Vietnã' }, { name: 'Child Care', country: 'Vietnã' },
+{ name: 'Thien Homeless Center', country: 'Vietnã' }, { name: 'Child Care', country: 'Vietnã' }
 ])
 
 p "Created #{Project.count} projects"
