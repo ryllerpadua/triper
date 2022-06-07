@@ -33,12 +33,12 @@ ActiveRecord::Schema.define(version: 2022_06_07_185641) do
 
   create_table "trips", force: :cascade do |t|
     t.date "date"
-    t.bigint "user_id", null: false
-    t.bigint "project_id", null: false
+    t.bigint "users_id", null: false
+    t.bigint "projects_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["project_id"], name: "index_trips_on_project_id"
-    t.index ["user_id"], name: "index_trips_on_user_id"
+    t.index ["projects_id"], name: "index_trips_on_projects_id"
+    t.index ["users_id"], name: "index_trips_on_users_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -61,6 +61,6 @@ ActiveRecord::Schema.define(version: 2022_06_07_185641) do
 
   add_foreign_key "matches", "trips", column: "trip1_id"
   add_foreign_key "matches", "trips", column: "trip2_id"
-  add_foreign_key "trips", "projects"
-  add_foreign_key "trips", "users"
+  add_foreign_key "trips", "projects", column: "projects_id"
+  add_foreign_key "trips", "users", column: "users_id"
 end
