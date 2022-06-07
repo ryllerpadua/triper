@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_07_171624) do
+ActiveRecord::Schema.define(version: 2022_06_07_185641) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "matches", force: :cascade do |t|
+    t.bigint "trip1_id", null: false
+    t.bigint "trip2_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["trip1_id"], name: "index_matches_on_trip1_id"
+    t.index ["trip2_id"], name: "index_matches_on_trip2_id"
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string "name"
@@ -24,12 +33,12 @@ ActiveRecord::Schema.define(version: 2022_06_07_171624) do
 
   create_table "trips", force: :cascade do |t|
     t.date "date"
-    t.bigint "users_id", null: false
-    t.bigint "projects_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "project_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["projects_id"], name: "index_trips_on_projects_id"
-    t.index ["users_id"], name: "index_trips_on_users_id"
+    t.index ["project_id"], name: "index_trips_on_project_id"
+    t.index ["user_id"], name: "index_trips_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -50,6 +59,8 @@ ActiveRecord::Schema.define(version: 2022_06_07_171624) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "trips", "projects", column: "projects_id"
-  add_foreign_key "trips", "users", column: "users_id"
+  add_foreign_key "matches", "trips", column: "trip1_id"
+  add_foreign_key "matches", "trips", column: "trip2_id"
+  add_foreign_key "trips", "projects"
+  add_foreign_key "trips", "users"
 end
