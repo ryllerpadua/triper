@@ -17,7 +17,11 @@ class TripsController < ApplicationController
   end
 
   def my_trips
-    @trips = current_user.trips
+    @trips = current_user.trips.order(:project_id)
+  end
+
+  def destroy
+    @trip.destroy
   end
 
   private
