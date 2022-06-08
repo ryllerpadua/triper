@@ -1,11 +1,12 @@
 class TripsController < ApplicationController
   def index
     projects = current_user.trips.map { |trip| trip.project }
-    @trips = Trip.where( project: projects ).where.not(user: current_user)
+    @trips = Trip.where(project: projects).where.not(user: current_user)
     @trips.select do |trip|
       interval = trip.date.beginning_of_month..trip.date.end_of_month
       current_user.trips.where(project: trip.project, date: interval).count.positive?
     end
+    @trips = @trips.reject { |trip| Match.where(trip1: trip).count.positive? || Match.where(trip2: trip).count.positive? }
   end
 
   def show
@@ -30,6 +31,9 @@ class TripsController < ApplicationController
   end
 
   def destroy
+    @trip = Trip.find(params[:id])
+    Match.where(trip1: @trip).destroy_all
+    Match.where(trip2: @trip).destroy_all
     @trip.destroy
   end
 

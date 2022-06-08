@@ -1,4 +1,19 @@
 <div class="container">
-  <h1>Suas matches</h1>
-  <%= @matches.count %>
+  <h1>Suas Matches</h1>
+
+  Aqui você visualiza quem deu match em você e em quem você deu match.
+  <div class="container mt-4 p-0">
+    <ul class="p-0">
+      <%  @matches.each do |match| %>
+      <li style="list-style: none">
+        <div class="card mt-4 p-3">
+          <h2>Match com: <%= match.trip1.user.first_name %></h2>
+          <p>Para: <%= match.trip1.project.name %></p>
+          <p>Em: <%= match.trip1.date %></p>
+          <%= link_to "Conversar", "#", class: "btn btn-primary" %>
+        </div>
+      <% end  %>
+      </li>
+    </ul>
+  </div>
 </div>
