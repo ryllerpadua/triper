@@ -10,7 +10,8 @@
         <div class="card m-2 p-2">
           <h2><%= trip.project.country %></h2>
           <p><%= trip.project.name  %></p>
-          <%= link_to 'Delete não criado - ver controller & rota', class: "btn-edit mt-2 mb-3", method: :delete, data: { confirm: "Are you sure?" } %>
+          <p><%= trip.date  %></p>
+          <%= link_to 'Delete', trip_path(trip) , class: "btn-edit mt-2 mb-3", method: :delete, data: { confirm: "Are you sure?" } %>
           <% end  %>
         </div>
       </li>

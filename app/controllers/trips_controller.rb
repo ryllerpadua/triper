@@ -14,6 +14,7 @@ class TripsController < ApplicationController
     @projects = Project.all
     @trip.user = current_user
     @trip.save
+    redirect_to my_trips_path
   end
 
   def my_trips
@@ -21,7 +22,9 @@ class TripsController < ApplicationController
   end
 
   def destroy
+    @trip = Trip.find(params[:id])
     @trip.destroy
+    redirect_to my_trips_path
   end
 
   private
