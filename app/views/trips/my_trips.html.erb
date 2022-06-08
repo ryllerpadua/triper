@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>My trips</h1>
+
+  <ul>
+    <%  @trips.each do |trip| %>
+    <li>
+      <%= trip.project.name  %>
+      <% end  %>
+    </li>
+  </ul>
+
+</div>
