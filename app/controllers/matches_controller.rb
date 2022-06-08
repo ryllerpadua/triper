@@ -11,8 +11,7 @@ class MatchesController < ApplicationController
     if match.save
       redirect_to matches_path
     else
-      redirect_to trips_path, notice: "Nao foi possível criar um match =("
+      redirect_to trips_path, notice: "Erro"
     end
   end
-
 end

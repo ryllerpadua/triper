@@ -6,6 +6,7 @@ class TripsController < ApplicationController
       interval = trip.date.beginning_of_month..trip.date.end_of_month
       current_user.trips.where(project: trip.project, date: interval).count.positive?
     end
+    @trips = @trips.reject { |trip| Match.where(trip1: trip).count.positive? || Match.where(trip2: trip).count.positive? }
   end
 
   def show
@@ -32,6 +33,8 @@ class TripsController < ApplicationController
 
   def destroy
     @trip = Trip.find(params[:id])
+    Match.where(trip1: @trip).destroy_all
+    Match.where(trip2: @trip).destroy_all
     @trip.destroy
     redirect_to my_trips_path
   end
