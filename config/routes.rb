@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  # resources :projects, only: %i[ index ]
-    resources :trips
+
+  resources :trips
 
   get :my_trips, to: 'trips#my_trips'
   get :dashboard, to: 'pages#dashboard'
