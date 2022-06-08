@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-
+  resources :matches, only: %i[new create index]
   resources :trips
 
   get :my_trips, to: 'trips#my_trips'
