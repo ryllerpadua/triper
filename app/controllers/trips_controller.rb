@@ -1,13 +1,12 @@
 class TripsController < ApplicationController
   def index
     projects = current_user.trips.map { |trip| trip.project }
-    @trips = Trip.where( project: projects ).where.not(user: current_user)
+    @trips = Trip.where(project: projects).where.not(user: current_user)
     @trips.select do |trip|
       interval = trip.date.beginning_of_month..trip.date.end_of_month
       current_user.trips.where(project: trip.project, date: interval).count.positive?
     end
   end
-
 
   def show
     # @trip = Trip.find(params[:id])
