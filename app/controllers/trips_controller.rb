@@ -14,11 +14,10 @@ class TripsController < ApplicationController
     @projects = Project.all
     @trip.user = current_user
     @trip.save
-
   end
 
   def my_trips
-    @trips = Trip.all
+    @trips = current_user.trips
   end
 
   private
