@@ -9,7 +9,7 @@
           <p>Data: <%= trip.date.year %> <%=trip.date.month %></p>
           <p>Usuário: <%= trip.user.first_name  %></p>
 
-          <%= link_to "Dar Match", matches_path, class: "btn btn-primary" %>
+          <%= link_to "Dar Match", trip_matches_path(trip), method: :post, class: "btn btn-primary" %>
         </div>
       </li>
     <% end %>
