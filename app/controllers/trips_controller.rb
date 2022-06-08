@@ -8,7 +8,6 @@ class TripsController < ApplicationController
     end
   end
 
-
   def show
     # @trip = Trip.find(params[:id])
     @project = Project.find(params[:id])
