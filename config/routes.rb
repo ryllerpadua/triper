@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :matches, only: %i[new create index]
-  resources :trips
 
+  resources :trips do
+    resources :matches, only: %i[create]
+  end
+  resources :matches, only: %i[index]
+  
   get :my_trips, to: 'trips#my_trips'
   get :dashboard, to: 'pages#dashboard'
   root to: 'pages#home'
