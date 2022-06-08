@@ -9,7 +9,6 @@ class TripsController < ApplicationController
     @trips = @trips.reject { |trip| Match.where(trip1: trip).count.positive? || Match.where(trip2: trip).count.positive? }
   end
 
-
   def show
     # @trip = Trip.find(params[:id])
     @project = Project.find(params[:id])
@@ -25,7 +24,6 @@ class TripsController < ApplicationController
     @projects = Project.all
     @trip.user = current_user
     @trip.save
-    redirect_to my_trips_path
   end
 
   def my_trips
@@ -37,7 +35,6 @@ class TripsController < ApplicationController
     Match.where(trip1: @trip).destroy_all
     Match.where(trip2: @trip).destroy_all
     @trip.destroy
-    redirect_to my_trips_path
   end
 
   private
