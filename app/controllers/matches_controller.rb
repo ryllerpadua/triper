@@ -4,10 +4,11 @@ class MatchesController < ApplicationController
     @matches = Match.all
   end
 
-
-  # def new
-
-  # end
+  def destroy
+    @match = Match.find(params[:id])
+    @match.destroy
+    redirect_to matches_path
+  end
 
   def show
     @match = Match.find(params[:id])
