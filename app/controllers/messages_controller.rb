@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
     @message.match = @match
     @message.user = current_user
     if @message.save
-      ActionCable.server.broadcast("everyone",
+      ActionCable.server.broadcast("match-#{@match.id}",
         render_to_string(partial: 'messages/message', locals: { message: @message })
       )
       redirect_to match_path(@match, anchor: "message-#{@message.id}")

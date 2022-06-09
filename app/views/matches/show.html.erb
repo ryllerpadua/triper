@@ -1,7 +1,7 @@
 <div class="container match">
-  <h1><%= "#{@match.trip1.user.first_name} e #{@match.trip2.user.first_name}" %></h1>
+  <h1>Chat <%= "#{@match.id}" %></h1>
 
-  <div class="messages" data-controller="match-subscription">
+  <div class="messages" data-controller="match-subscription" data-match-subscription-match-id-value="<%= @match.id %>">
     <% @match.messages.each do |message| %>
       <%= render 'messages/message', message: message %>
     <% end %>
