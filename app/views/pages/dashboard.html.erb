@@ -2,7 +2,7 @@
   <div class="row my-5">
     <div class="col-12 col-md-4">
       <div class="card-profile p-0 m-2">
-        <div class="card-image" style="background-image: url(<%= cl_image_path current_user.photo.key, height: 300, crop: :fill %>;)">
+        <div class="card-image" style="background-image: url(<%= cl_image_path current_user.photo.key, height: 300, crop: :fill %>)">
         </div>
         <div class="p-4">
           <h2 class="mb-3"><strong><%= current_user.name %></strong>, <%= current_user.age %></h2>
