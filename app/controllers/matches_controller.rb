@@ -10,6 +10,11 @@ class MatchesController < ApplicationController
     redirect_to matches_path
   end
 
+  def show
+    @match = Match.find(params[:id])
+    @message = Message.new
+  end
+
   def create
     trip1 = Trip.find(params[:trip_id])
     trip2 = current_user.trips.find_by(project: trip1.project, date: trip1.date)
