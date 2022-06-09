@@ -37,7 +37,6 @@ class TripsController < ApplicationController
     Match.where(trip1: @trip).destroy_all
     Match.where(trip2: @trip).destroy_all
     @trip.destroy
-    redirect_to my_trips_path
   end
 
   private
