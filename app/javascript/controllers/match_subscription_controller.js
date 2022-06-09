@@ -8,6 +8,7 @@ export default class extends Controller {
     { channel: "MatchChannel", id: this.matchIdValue },
     {received: (message) => {
     this.element.insertAdjacentHTML('beforeend', message)
+    this.element.scrollTop = this.element.scrollHeight
    } }
    )
   }
