@@ -2,11 +2,11 @@ class User < ApplicationRecord
   has_many :trips, dependent: :destroy
   has_many :projects, through: :trips
   has_one_attached :photo
+  validates_length_of :trips, maximum: 9
+  validates :first_name, :last_name, :about, :occupation, :city, :date_of_birth, :photo, presence: true
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
-  validates :first_name, :last_name, :about, :occupation, :city, :date_of_birth, :photo, presence: true
 
   def name
     "#{first_name} #{last_name}"
@@ -17,6 +17,4 @@ class User < ApplicationRecord
     age -= 1 if Date.today < date_of_birth + age.years
     age
   end
-
-
 end
