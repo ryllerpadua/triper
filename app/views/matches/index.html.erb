@@ -11,6 +11,7 @@
           <p>Para: <%= match.trip1.project.name %></p>
           <p>Em: <%= match.trip1.date %></p>
           <%= link_to "Conversar", "#", class: "btn btn-primary" %>
+          <%= link_to 'Delete', match_path(match), class: "btn btn-primary mt-2", method: :delete, data: { confirm: "Are you sure?" } %>
         </div>
       <% end  %>
       </li>
