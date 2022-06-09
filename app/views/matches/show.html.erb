@@ -1,5 +1,5 @@
 <div class="container match">
-  <h1>#<%= @match.id %></h1>
+  <h1><%= "#{@match.trip1.user.first_name} e #{@match.trip2.user.first_name}" %></h1>
 
   <div class="messages" data-controller="match-subscription">
     <% @match.messages.each do |message| %>
