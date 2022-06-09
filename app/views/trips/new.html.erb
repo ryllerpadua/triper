@@ -7,9 +7,14 @@
    <%= f.input :date, start_year: Date.today.year,
                 end_year: Date.today.year + 5, discard_day: true,
                 order: [:month, :year] %>
-    <%# <%= f.input :country, collection: @projects.pluck(:country).uniq %>
-
-    <%= f.submit id: "sa-create-trip", class: 'btn btn-success' %>
+    <% if current_user.trips.length < 10 %>
+      <%= f.submit id: "sa-create-trip", class: 'btn btn-success' %>
+    <% else %>
+      <%= f.submit id: "sa-create-trip", class: 'btn btn-danger mb-1' %>
+      <p class="text-danger"> Você chegou ao limite de 10 trips cadastradas. Apague outras para gerar mais.</p>
+    <% end %>
   <% end %>
-  <%= link_to "Voltar", dashboard_path, class: "btn btn-primary" %>
+  <div class="container mt-2 p-0">
+    <%= link_to "Voltar", dashboard_path, class: "btn btn-primary" %>
+  </div>
 </div>
