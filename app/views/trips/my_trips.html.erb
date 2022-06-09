@@ -3,6 +3,9 @@
 
   Aqui você visualiza as viagens cadastradas por você que servem para que outros interessados possam lhe encontrar na busca.
   O ideal é que você cadastre em torno de 3 projetos ou países, para que seja mais fácil focar em encontrar pessoas com interesses similares.
+  <div class="container mt-2 px-0">
+    <%= link_to 'Voltar', dashboard_path, class: "btn btn-primary" %>
+  </div>
   <div class="container mt-4">
     <ul>
       <%  @trips.each do |trip| %>

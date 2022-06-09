@@ -4,10 +4,16 @@ class MatchesController < ApplicationController
     @matches = Match.all
   end
 
+  def destroy
+    @match = Match.find(params[:id])
+    @match.destroy
+    redirect_to matches_path
+  end
 
-  # def new
-
-  # end
+  def show
+    @match = Match.find(params[:id])
+    @message = Message.new
+  end
 
   def create
     trip1 = Trip.find(params[:trip_id])

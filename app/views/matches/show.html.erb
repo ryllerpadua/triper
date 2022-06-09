@@ -1,0 +1,12 @@
+<div class="container match">
+  <h1><%= "#{@match.trip1.user.first_name} e #{@match.trip2.user.first_name}" %></h1>
+
+  <div class="messages" data-controller="match-subscription">
+    <% @match.messages.each do |message| %>
+      <%= render 'messages/message', message: message %>
+    <% end %>
+  </div>
+    <%= simple_form_for [@match, @message], remote: true do |f| %>
+      <%= f.input :content, label: false, placeholder: "Digite sua mensagem" %>
+    <% end %>
+</div>

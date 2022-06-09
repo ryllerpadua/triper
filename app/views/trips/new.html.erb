@@ -2,11 +2,12 @@
 <h1> Trips New</h1>
 
   <%= simple_form_for [ @trip ] do |f| %>
+   <%= f.input :project_id, collection: @projects %>
    <%= f.input :date, start_year: Date.today.year,
                 end_year: Date.today.year + 5, discard_day: true,
                 order: [:month, :year] %>
     <%# <%= f.input :country, collection: @projects.pluck(:country).uniq %>
-    <%= f.input :project_id, collection: @projects %>
+
     <%= f.submit class: 'btn btn-success' %>
   <% end %>
 
