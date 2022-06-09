@@ -1,5 +1,8 @@
 <div class="container">
   <h1>Trips Index</h1>
+   <div class="container mt-2 px-0">
+    <%= link_to 'Voltar', dashboard_path, class: "btn btn-primary" %>
+  </div>
   <ul>
     <% @trips.each do |trip| %>
       <li style="list-style: none">
