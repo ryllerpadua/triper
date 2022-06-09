@@ -23,7 +23,9 @@ class TripsController < ApplicationController
     @trip = Trip.new(trip_params)
     @projects = Project.all
     @trip.user = current_user
-    @trip.save
+    if @trip.save
+      redirect_to new_trip_path
+    end
   end
 
   def my_trips
@@ -35,6 +37,7 @@ class TripsController < ApplicationController
     Match.where(trip1: @trip).destroy_all
     Match.where(trip2: @trip).destroy_all
     @trip.destroy
+    redirect_to my_trips_path
   end
 
   private

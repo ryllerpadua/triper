@@ -1,12 +1,15 @@
-<div class="container match">
-  <h1>Chat <%= "#{@match.id}" %></h1>
+<div class="container">
+  <%= link_to "Voltar", matches_path, class: "btn btn-primary" %>
+  <div class="container match">
+    <h1>Chat <%= "#{@match.id}" %></h1>
 
-  <div class="messages" data-controller="match-subscription" data-match-subscription-match-id-value="<%= @match.id %>">
-    <% @match.messages.each do |message| %>
-      <%= render 'messages/message', message: message %>
-    <% end %>
+    <div class="messages" data-controller="match-subscription" data-match-subscription-match-id-value="<%= @match.id %>">
+      <% @match.messages.each do |message| %>
+        <%= render 'messages/message', message: message %>
+      <% end %>
+    </div>
+      <%= simple_form_for [@match, @message], remote: true do |f| %>
+        <%= f.input :content, label: false, placeholder: "Digite sua mensagem" %>
+      <% end %>
   </div>
-    <%= simple_form_for [@match, @message], remote: true do |f| %>
-      <%= f.input :content, label: false, placeholder: "Digite sua mensagem" %>
-    <% end %>
 </div>
