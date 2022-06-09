@@ -5,6 +5,9 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @countries = current_user.projects.pluck(:country)
+    @trips = current_user.trips.order(:project_id)
   end
+
 
 end
