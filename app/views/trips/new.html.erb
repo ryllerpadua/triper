@@ -1,16 +1,15 @@
 <div class="container">
-<h1> Trips New</h1>
+<h1> Crie uma Trip </h1>
+<p>Aqui cria uma trip para servir de base para que outros Exchangers o encontrem na busca</p>
 
   <%= simple_form_for [ @trip ] do |f| %>
-   <%= f.input :project_id, collection: @projects %>
+   <%= f.input :project_id, collection: @projects, include_blank: false %>
    <%= f.input :date, start_year: Date.today.year,
                 end_year: Date.today.year + 5, discard_day: true,
                 order: [:month, :year] %>
     <%# <%= f.input :country, collection: @projects.pluck(:country).uniq %>
 
-    <%= f.submit class: 'btn btn-success' %>
+    <%= f.submit id: "sa-create-trip", class: 'btn btn-success' %>
   <% end %>
-
   <%= link_to "Voltar", dashboard_path, class: "btn btn-primary" %>
-
 </div>
