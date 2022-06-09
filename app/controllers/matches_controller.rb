@@ -4,6 +4,12 @@ class MatchesController < ApplicationController
     @matches = Match.all
   end
 
+  def destroy
+    @match = Match.find(params[:id])
+    @match.destroy
+    redirect_to matches_path
+  end
+
   def create
     trip1 = Trip.find(params[:trip_id])
     trip2 = current_user.trips.find_by(project: trip1.project, date: trip1.date)
