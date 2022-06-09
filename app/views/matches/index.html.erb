@@ -1,7 +1,12 @@
 <div class="container">
   <h1>Suas Matches</h1>
 
-  Aqui você visualiza quem deu match em você e em quem você deu match.
+  <p> Aqui você visualiza quem deu match em você e em quem você deu match.</p>
+  <p> Também pode iniciar conversas </p>
+  <div class="container p-0">
+    <%= link_to "Voltar", dashboard_path, class: "btn btn-primary" %>
+  </div>
+
   <div class="container mt-4 p-0">
     <ul class="p-0">
       <%  @matches.each do |match| %>
@@ -11,7 +16,7 @@
           <p>Para: <%= match.trip1.project.name %></p>
           <p>Em: <%= match.trip1.date %></p>
 
-          <%= link_to "Conversar", match_path(match), class: "btn btn-primary" %>        
+          <%= link_to "Conversar", match_path(match), class: "btn btn-primary" %>
           <%= link_to 'Delete', match_path(match), class: "btn btn-primary mt-2", method: :delete, data: { confirm: "Are you sure?" } %>
 
         </div>
