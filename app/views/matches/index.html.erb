@@ -10,7 +10,7 @@
           <h2>Match com: <%= match.trip1.user.first_name %></h2>
           <p>Para: <%= match.trip1.project.name %></p>
           <p>Em: <%= match.trip1.date %></p>
-          <%= link_to "Conversar", "#", class: "btn btn-primary" %>
+          <%= link_to "Conversar", match_path(match), class: "btn btn-primary" %>
         </div>
       <% end  %>
       </li>
