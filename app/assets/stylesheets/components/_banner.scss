@@ -1,0 +1,65 @@
+.banner {
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 80vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inner-container {
+  margin: auto;
+  text-align: center;
+  color: white;
+  }
+
+  .inner-container h1 {
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+  }
+
+  .inner-container p {
+      text-shadow: 2px 2px 3px rgb(0, 0, 0);
+  }
+
+  .inner-banner {
+    display: flex;
+    background-color: #54BFD6;
+    color: #fff;
+    padding: 50px 0;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    font-size: 25px;
+    margin-right: 0px;
+  }
+
+  .inner-banner p {
+    font-size: 20px;
+  }
+
+.banner-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  align-items: center;
+  height: 60vh;
+
+
+}
+
+  .banner-card {
+    padding: 30px;
+    background-color: rgba(147, 140, 140, 0.408);
+    border-radius: 5px;
+    margin: 20px 0;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+    }
