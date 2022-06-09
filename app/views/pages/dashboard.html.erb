@@ -1,7 +1,11 @@
 <div class="container">
   <h1>User Dashboard</h1>
-  <%= link_to "Nova Trip", new_trip_path, class: "btn btn-primary" %>
-  <%= link_to "Ver minhas trips", my_trips_path, class: "btn btn-primary" %>
 
-  <%= link_to "Buscar match", trips_path, class: "btn btn-primary" %>
+  <h2 class="text-info"> <%="#{current_user.first_name}" %> </h2>
+
+  <div class="container mt-2 p-0">
+    <%= link_to "Nova Trip", new_trip_path, class: "btn btn-primary" %>
+    <%= link_to "Ver minhas trips", my_trips_path, class: "btn btn-primary" %>
+    <%= link_to "Buscar match", trips_path, class: "btn btn-primary" %>
+  </div>
 </div>
