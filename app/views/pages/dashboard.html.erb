@@ -1,12 +1,39 @@
-<div class="banner">
-  <div class="container">
-  <h1>User Dashboard</h1>
-
-  <h2 class="text-info"> <%="#{current_user.first_name}" %> </h2>
-
-  <div class="container mt-2 p-0">
-    <%= link_to "Nova Trip", new_trip_path, class: "btn btn-primary" %>
-    <%= link_to "Ver minhas trips", my_trips_path, class: "btn btn-primary" %>
-    <%= link_to "Buscar match", trips_path, class: "btn btn-primary" %>
+<div class="container">
+  <div class="row my-5">
+    <div class="col-12 col-md-4">
+      <div class="card-profile p-0 m-2">
+        <div class="card-image" style="background-image: url(<%= cl_image_path current_user.photo.key, height: 300, crop: :fill %>;)">
+        </div>
+        <div class="p-4">
+          <h2 class="mb-3"><strong><%= current_user.name %></strong>, <%= current_user.age %></h2>
+          <p><i class="fas fa-briefcase me-2"></i><%= current_user.occupation %></p>
+          <p><i class="fas fa-map-marker-alt me-2"></i><%= current_user.city %></p>
+          <p><i class="fas fa-plane-departure me-2"></i><%= @countries.join(", ") %></p>
+          <hr>
+          <p><%= current_user.about %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-8">
+      <div class="card-profile m-2 p-2">
+        <div class="my-2">
+          <%= link_to "Nova Trip", new_trip_path, class: "btn btn-primary" %>
+          <%= link_to "Ver minhas trips", my_trips_path, class: "btn btn-primary" %>
+          <%= link_to "Buscar match", trips_path, class: "btn btn-primary" %>
+        </div>
+        <div class="cards">
+          <%  @trips.each do |trip| %>
+            <div class="card-project p-2">
+              <small class="card-tag"><strong><%= trip.project.country %></strong></small>
+              <div>
+                <h2><%= trip.project.name  %></h2>
+                <p><%= trip.date  %></p>
+                <%= link_to 'Delete', trip_path(trip) , class: "btn-edit mt-2 mb-3", method: :delete, data: { confirm: "Are you sure?" } %>
+              </div>
+            </div>
+          <% end  %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
