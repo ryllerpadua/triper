@@ -7,11 +7,11 @@
    <%= f.input :date, start_year: Date.today.year,
                 end_year: Date.today.year + 5, discard_day: true,
                 order: [:month, :year] %>
-    <% if current_user.trips.length < 10 %>
+    <% if current_user.trips.length < 9 %>
       <%= f.submit id: "sa-create-trip", class: 'btn btn-success' %>
     <% else %>
       <%= f.submit id: "sa-create-trip", class: 'btn btn-danger mb-1' %>
-      <p class="text-danger"> Você chegou ao limite de 10 trips cadastradas. Apague outras para gerar mais.</p>
+      <p class="text-danger"> Você chegou ao limite de 9 trips cadastradas. Apague outras para gerar mais.</p>
     <% end %>
   <% end %>
   <div class="container mt-2 p-0">
