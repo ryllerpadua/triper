@@ -1,0 +1,12 @@
+.btn-home{
+  text-decoration: none;
+  border: 1px solid #F57C35;
+  color: #F57C35;
+  padding: 15px 30px;
+  display: inline-block;
+
+  &:hover {
+    background-color: #F57C35;
+    color: #fff;
+  }
+}
