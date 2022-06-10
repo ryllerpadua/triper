@@ -24,12 +24,10 @@ class TripsController < ApplicationController
     @projects = Project.all
     @trip.user = current_user
     if @trip.save
-      redirect_to new_trip_path
+      redirect_to dashboard_path
+    else
+      render :new
     end
-  end
-
-  def my_trips
-    @trips = current_user.trips.order(:project_id)
   end
 
   def destroy
@@ -37,7 +35,7 @@ class TripsController < ApplicationController
     Match.where(trip1: @trip).destroy_all
     Match.where(trip2: @trip).destroy_all
     @trip.destroy
-    redirect_to my_trips_path
+    redirect_to dashboard_path
   end
 
   private
