@@ -3,8 +3,9 @@
   <div class="container match">
     <h1>Chat <%= "#{@match.id}" %></h1>
 
-    <div class="messages" data-controller="match-subscription" data-match-subscription-match-id-value="<%= @match.id %>">
+    <div class="messages d-flex" data-controller="match-subscription" data-match-subscription-match-id-value="<%= @match.id %>">
       <% @match.messages.each do |message| %>
+        <%= image_tag url_for(current_user.photo), class: "photo-chat" %>
         <%= render 'messages/message', message: message %>
       <% end %>
     </div>

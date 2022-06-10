@@ -12,13 +12,28 @@
       <% @matches.each do |match| %>
       <li style="list-style: none">
         <div class="card mt-4 p-3">
-          <h2>Match com: <%= match.trip1.user.first_name %></h2>
-          <p>Para: <%= match.trip1.project.name %></p>
-          <p>Em: <%= match.trip1.date %></p>
+          <% if current_user == match.trip1.user %>
+            <h2>Match com: <%= match.trip2.user.first_name %></h2>
+            <div class="container p-0">
+              <%= image_tag url_for(current_user.photo), class: "photo-chat" %>
+              <i class="fa-solid fa-plane-departure"></i>
+              <%= image_tag url_for(match.trip2.user.photo), class: "photo-chat" %>
+            </div>
+            <p>Para: <%= match.trip1.project.name %></p>
+            <p>Em: <%= match.trip1.date %></p>
+          <% else %>
+            <h2>Match com: <%= match.trip1.user.first_name %></h2>
+            <div class="container p-0">
+              <%= image_tag url_for(current_user.photo), class: "photo-chat" %>
+              <i class="fa-solid fa-plane-departure"></i>
+              <%= image_tag url_for(match.trip1.user.photo), class: "photo-chat" %>
+            </div>
+            <p>Para: <%= match.trip1.project.name %></p>
+            <p>Em: <%= match.trip1.date %></p>
+          <% end %>
 
           <%= link_to "Conversar", match_path(match), class: "btn btn-primary" %>
           <%= link_to 'Delete', match_path(match), class: "btn btn-primary mt-2", method: :delete, data: { confirm: "Are you sure?" } %>
-
         </div>
       <% end  %>
       </li>
