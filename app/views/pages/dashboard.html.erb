@@ -7,11 +7,12 @@
         <div class="p-4">
           <h2 class="mb-3"><strong><%= current_user.name %></strong>, <%= current_user.age %> </h2>
           <p><i class="fa-solid fa-pen-to-square me-2"></i><%= link_to "Editar Perfil", edit_user_registration_path, class: "edit text-decoration-none"  %></p>
-          <p><i class="fas fa-briefcase me-2"></i><%= current_user.occupation %></p>
-          <p><i class="fas fa-map-marker-alt me-2"></i><%= current_user.city %></p>
-          <p><i class="fas fa-plane-departure me-2"></i><%= @countries.join(", ") %></p>
+          <p><i class="fas fa-briefcase me-2"></i><strong>Profissão:</strong> <%= current_user.occupation %></p>
+          <p><i class="fas fa-map-marker-alt me-2"></i><strong>Cidade: </strong><%= current_user.city %></p>
+          <p><i class="fas fa-plane-departure me-2"></i><strong>Destinos: </strong><%= @countries.join(", ") %></p>
           <hr>
-          <p><%= current_user.about %></p>
+          <p class="m-0"><strong>Sobre: </strong></p>
+            <p><%= current_user.about %></p>
         </div>
       </div>
     </div>
@@ -20,6 +21,7 @@
         <div class="my-2">
           <%= link_to "Nova Trip", new_trip_path, class: "btn btn-primary" %>
           <%= link_to "Buscar match", trips_path, class: "btn btn-primary" %>
+          <%= link_to "Minhas matches", matches_path, class: "btn btn-warning text-color-white" %>
         </div>
         <div class="cards">
           <%  @trips.each do |trip| %>
