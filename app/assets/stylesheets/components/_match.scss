@@ -14,14 +14,25 @@
   }
 
   .messages {
+
     height: 100%;
     overflow: scroll;
     padding: 1rem;
+    border: 1px solid grey;
   }
 
-  #new_message {
+  .messages .photo-chat {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 1px 1px rgb(157, 157, 157);
+    border: 1px solid white;
+    margin-right: 10px;
+  }
+
+   #new_message {
     border-top: 1px solid $gray-200;
-    padding: 1rem;
+    margin-top: 5px;
 
     .form-group {
       margin-bottom: 0;

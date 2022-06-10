@@ -5,7 +5,8 @@
         <div class="card-image" style="background-image: url(<%= cl_image_path current_user.photo.key, height: 300, crop: :fill %>)">
         </div>
         <div class="p-4">
-          <h2 class="mb-3"><strong><%= current_user.name %></strong>, <%= current_user.age %></h2>
+          <h2 class="mb-3"><strong><%= current_user.name %></strong>, <%= current_user.age %> </h2>
+          <p><i class="fa-solid fa-pen-to-square me-2"></i><%= link_to "Editar Perfil", edit_user_registration_path, class: "edit text-decoration-none"  %></p>
           <p><i class="fas fa-briefcase me-2"></i><%= current_user.occupation %></p>
           <p><i class="fas fa-map-marker-alt me-2"></i><%= current_user.city %></p>
           <p><i class="fas fa-plane-departure me-2"></i><%= @countries.join(", ") %></p>
