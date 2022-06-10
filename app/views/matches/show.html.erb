@@ -2,13 +2,10 @@
   <%= link_to "Voltar", matches_path, class: "btn btn-primary" %>
   <div class="container match">
     <h1>Chat <%= "#{@match.id}" %></h1>
-
     <div class="messages" data-controller="match-subscription" data-match-subscription-match-id-value="<%= @match.id %>">
       <% @match.messages.each do |message| %>
-      <div class="d-flex">
-        <%= image_tag url_for(message.user.photo), class: "photo-chat" %>
+
         <%= render 'messages/message', message: message %>
-      </div>
       <% end %>
     </div>
       <%= simple_form_for [@match, @message], remote: true do |f| %>
