@@ -20,6 +20,9 @@
           <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
         <% end %>
 
+        <%= f.input :date_of_birth, as: :date, start_year: Date.today.year - 70,
+                    end_year: Date.today.year - 12,
+                    order: [:day ,:month, :year] %>x
         <%= f.input :about,
                     required: true,
                     input_html: { autocomplete: "about" } %>
@@ -36,6 +39,10 @@
         <%= f.input :password_confirmation,
                     required: false,
                     input_html: { autocomplete: "new-password" } %>
+        <%= f.input :current_password,
+                    hint: "we need your current password to confirm your changes",
+                    required: true,
+                    input_html: { autocomplete: "current-password" } %>
         <%= f.input :photo, as: :file %>
       </div>
 
