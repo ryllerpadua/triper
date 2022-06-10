@@ -1,20 +1,26 @@
-<div class="container">
-<h1> Crie uma Trip </h1>
-<p>Aqui cria uma trip para servir de base para que outros Exchangers o encontrem na busca</p>
+<div class="d-flex flex-column align-items-center justify-content-center w-100 p-3 banner-forms">
+  <div class="cardbox-create">
 
-  <%= simple_form_for [ @trip ] do |f| %>
-   <%= f.input :project_id, collection: @projects, include_blank: false %>
-   <%= f.input :date, start_year: Date.today.year,
-                end_year: Date.today.year + 5, discard_day: true,
-                order: [:month, :year] %>
-    <% if current_user.trips.length < 9 %>
-      <%= f.submit id: "sa-create-trip", class: 'btn btn-success' %>
-    <% else %>
-      <%= f.submit id: "sa-create-trip", class: 'btn btn-danger mb-1' %>
-      <p class="text-danger"> Você chegou ao limite de 9 trips cadastradas. Apague outras para gerar mais.</p>
-    <% end %>
-  <% end %>
-  <div class="container mt-2 p-0">
-    <%= link_to "Voltar", dashboard_path, class: "btn btn-primary" %>
+    <div class="container">
+    <h1 class="text-center">Crie uma Trip </h1>
+    <p>Aqui cria uma trip para servir de base para que outros Exchangers o encontrem na busca</p>
+
+      <%= simple_form_for [ @trip ] do |f| %>
+      <%= f.input :project_id, collection: @projects, include_blank: false %>
+      <%= f.input :date, start_year: Date.today.year,
+                    end_year: Date.today.year + 5, discard_day: true,
+                    order: [:month, :year] %>
+        <div class="d-flex justify-content-between">
+        <% if current_user.trips.length < 9 %>
+          <%= f.submit id: "sa-create-trip", class: 'btn btn-success' %>
+        <% else %>
+          <%= f.submit id: "sa-create-trip", class: 'btn btn-danger mb-1' %>
+          <p class="text-danger"> Você chegou ao limite de 9 trips cadastradas. Apague outras para gerar mais.</p>
+        <% end %>
+      <% end %>
+        <%= link_to "Voltar", dashboard_path, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
