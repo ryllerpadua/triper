@@ -12,6 +12,7 @@
          <h2><%= trip.project.name %></h2>
           <h3><%= trip.project.country %></h3>
           <p>Data: <%= trip.date.year %> <%=trip.date.month %></p>
+          <%= image_tag url_for(trip.user.photo), class: "photo-chat" %>
           <p>Usuário: <%= trip.user.first_name  %></p>
 
           <%= link_to "Dar Match", trip_matches_path(trip), method: :post, class: "btn btn-primary" %>
