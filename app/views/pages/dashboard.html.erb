@@ -18,10 +18,14 @@
     </div>
     <div class="col-12 col-md-8">
       <div class="card-profile m-2 p-2">
-        <div class="my-2">
-          <%= link_to "Criar Trip", new_trip_path, class: "btn btn-primary" %>
-          <%= link_to "Minhas matches", matches_path, class: "btn btn-primary" %>
-          <%= link_to "Buscar match", trips_path, class: "btn btn-warning text-white" %>
+        <div class="menu-buttons d-flex">
+          <div class="my-2">
+            <%= link_to "Criar Trip", new_trip_path, class: "btn btn-primary" %>
+            <%= link_to "Minhas matches", matches_path, class: "btn btn-primary" %>
+          </div>
+          <div class="my-2">
+            <%= link_to "Buscar match", trips_path, class: "btn btn-warning text-white" %>
+          </div>
         </div>
         <div class="cards">
           <%  @trips.each do |trip| %>
