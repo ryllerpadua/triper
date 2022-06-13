@@ -17,7 +17,9 @@
             <span class="destino">
               <i class="fa-solid fa-map-location-dot"></i><%= trip.project.name %> - <%= trip.project.country %>
             </span>
-            </i><%= link_to "Match", trip_matches_path(trip), method: :post, class: "btn-match btn-primary" %>
+            <%= link_to raw('<i class="fas fa-thumbs-up"></i>'), trip_matches_path(trip), method: :post, class: "btn-match btn-primary" %>
+
+
           </div>
         </li>
       <% end %>

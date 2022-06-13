@@ -31,65 +31,65 @@
   padding: 30px 50px 20px 50px;
 }
 
-.card-search {
 
+.card-search[style^="background-image:"] {
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  overflow: hidden;
+
+}
+
+
+
+.card-search {
   color: white;
+  width: 40vh;
+  height: 20vh;
   position: relative;
-  width: 60vh;
-  height: 30vh;
   border-radius: 8px;
   border: 1px solid #54bed6;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  text-shadow: 1px 1px 1px rgb(49, 49, 49);
 
   h2 {
     position: absolute;
     top: 20px;
     left: 20px;
     font-weight: bold;
-
   }
 
   .fa-calendar-days {
-    position: absolute;
-    bottom: 60px;
     font-size: 24px;
-    left: 20px;
+    padding-right: 10px;
   }
 
   .date {
     position: absolute;
-    bottom: 10px;
-    font-size: 20px;
-    left: 60px;
+    bottom: 20px;
+    left: 20px;
+    font-size: 16px;
     font-weight: bold;
   }
 
-  .fa-calendar-days {
-    position: absolute;
-    bottom: 10px;
-    font-size: 24px;
-    left: -40px;
-
-  }
-
-  .destino {
-    position: absolute;
-    bottom: 40px;
-    font-size: 20px;
-    left: 60px;
-    font-weight: bold;
-  }
 
   .fa-map-location-dot {
-    position: absolute;
-    bottom: 40px;
     font-size: 24px;
-    left: -40px;
+    padding-right: 10px;
   }
+
+   .destino {
+     position: absolute;
+     bottom: 60px;
+     left: 20px;
+     font-size: 16px;
+     font-weight: bold;
+   }
 
   .btn-match {
     position: absolute;
-    bottom: 20px;
+    top: 25px;
     right: 20px;
   }
 
