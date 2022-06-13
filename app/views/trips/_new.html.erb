@@ -1,0 +1,20 @@
+<div class="cardbox">
+  <div class="">
+    <h1 class="text-center">Crie uma Trip </h1>
+    <p>Aqui cria uma trip para servir de base para que outros Exchangers o encontrem na busca</p>
+    <%= simple_form_for [ Trip.new  ] do |f| %>
+      <%= f.input :project_id, collection: Project.all.order(:name), include_blank: false %>
+      <%= f.input :date, start_year: Date.today.year, end_year: Date.today.year + 5, discard_day: true, order: [:month, :year] %>
+      <div class="d-flex justify-content-between">
+        <% if current_user.trips.length < 6 %>
+          <%= f.submit id: "sa-create-trip", class: 'btn btn-success' %>
+          <%= link_to "Voltar", "#", data: {dismiss: "modal", target: "#tripModal"}, class: "btn btn-primary" %>
+        <% else %>
+          <%= f.submit id: "sa-create-trip", class: 'btn btn-danger mb-1', disabled: true %>
+          <%= link_to "Voltar", dashboard_path, data: {dismiss: "modal", target: "#tripModal"}, class: "btn btn-primary" %>
+      </div>
+          <p class="text-danger text-center mt-2"> Você chegou ao limite de 6 trips cadastradas. Apague outras para gerar mais.</p>
+        <% end %>
+    <% end %>
+  </div>
+</div>

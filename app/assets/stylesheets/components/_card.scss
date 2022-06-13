@@ -2,28 +2,53 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-color: white;
+}
+
+
+.card-profile-holder {
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: white;
+
   .card-image {
     background-size: cover;
     background-position: center;
-    height: 200px;
+    height: 300px;
     border-radius: 5px 5px 0 0;
+
   }
 }
 
 .cardbox {
   border-radius: 20px;
+  border: 1px solid #08415C;
+  color: #08415C;
   background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 600px;
   padding: 50px;
   margin: 140px 15px;
+  padding: 30px 50px 20px 50px;
 }
 
-.cardbox-create {
-  border-radius: 20px;
-  background-color: white;
-  width: 600px;
-  margin: 140px 15px;
-  padding: 30px 50px 20px 50px;
+.card-search {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2px;
+
+  .h2 {
+    position: absolute;
+  }
+}
+
+.photo-match {
+
 }
 
 
@@ -52,6 +77,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  .cardbox {
+    width: 80vw;
+  }
 }
 
 // Smallest device
