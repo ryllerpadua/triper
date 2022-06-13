@@ -1,42 +1,58 @@
-<div class="container">
-  <h1>Suas Matches</h1>
+<div class="flexwrap">
+  <div class="container my-5">
+    <h1>Suas Matches</h1>
 
-  <p> Aqui você visualiza quem deu match em você e em quem você deu match.</p>
-  <p> Também pode iniciar conversas </p>
-  <div class="container p-0">
-    <%= link_to "Voltar", dashboard_path, class: "btn btn-primary" %>
+    <p> Aqui você visualiza quem deu match em você e em quem você deu match.</p>
+    <p> Também pode iniciar conversas </p>
+    <div class="container p-0">
+      <%= link_to "Voltar", dashboard_path, class: "btn btn-primary" %>
+    </div>
+
+    <div class="container mt-4 p-0">
+      <ul class="p-0">
+        <% @matches.each do |match| %>
+        <li style="list-style: none">
+          <div class="card mt-4 p-3">
+            <% if current_user == match.trip1.user %>
+              <h2>Match com: <%= match.trip2.user.first_name %></h2>
+              <div class="container p-0">
+                <%= cl_image_tag (current_user.photo.key), class: "photo-chat" %>
+                <i class="fa-solid fa-plane-departure"></i>
+                <%= image_tag url_for(match.trip2.user.photo), class: "photo-chat" %>
+              </div>
+              <p>Para: <%= match.trip1.project.name %></p>
+              <p>Em: <%= match.trip1.date %></p>
+            <% else %>
+              <h2>Match com: <%= match.trip1.user.first_name %></h2>
+              <div class="container p-0">
+                <%= image_tag url_for(current_user.photo), class: "photo-chat" %>
+                <i class="fa-solid fa-plane-departure"></i>
+                <%= cl_image_tag (match.trip1.user.photo.key), class: "photo-chat" %>
+              </div>
+              <p>Para: <%= match.trip1.project.name %></p>
+              <p>Em: <%= match.trip1.date %></p>
+            <% end %>
+
+            <%= link_to "Conversar", match_path(match), class: "btn btn-primary" %>
+            <%= link_to 'Delete', match_path(match), class: "btn btn-primary mt-2", method: :delete, data: { confirm: "Are you sure?" } %>
+          </div>
+        <% end  %>
+        </li>
+      </ul>
+    </div>
   </div>
+  <div class="footer">
+    <div class="footer-links">
+      <a href="https://www.instagram.com/exchangedobem/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCzstn0qkbt9WLIzaIr-7OZQ"><i class="fab fa-youtube"></i></a>
+      <a href="https://t.me/exchangedobem"><i class="fa-brands fa-telegram"></i></a>
 
-  <div class="container mt-4 p-0">
-    <ul class="p-0">
-      <% @matches.each do |match| %>
-      <li style="list-style: none">
-        <div class="card mt-4 p-3">
-          <% if current_user == match.trip1.user %>
-            <h2>Match com: <%= match.trip2.user.first_name %></h2>
-            <div class="container p-0">
-              <%= cl_image_tag (current_user.photo.key), class: "photo-chat" %>
-              <i class="fa-solid fa-plane-departure"></i>
-              <%= image_tag url_for(match.trip2.user.photo), class: "photo-chat" %>
-            </div>
-            <p>Para: <%= match.trip1.project.name %></p>
-            <p>Em: <%= match.trip1.date %></p>
-          <% else %>
-            <h2>Match com: <%= match.trip1.user.first_name %></h2>
-            <div class="container p-0">
-              <%= image_tag url_for(current_user.photo), class: "photo-chat" %>
-              <i class="fa-solid fa-plane-departure"></i>
-              <%= cl_image_tag (match.trip1.user.photo.key), class: "photo-chat" %>
-            </div>
-            <p>Para: <%= match.trip1.project.name %></p>
-            <p>Em: <%= match.trip1.date %></p>
-          <% end %>
-
-          <%= link_to "Conversar", match_path(match), class: "btn btn-primary" %>
-          <%= link_to 'Delete', match_path(match), class: "btn btn-primary mt-2", method: :delete, data: { confirm: "Are you sure?" } %>
-        </div>
-      <% end  %>
-      </li>
-    </ul>
+    </div>
+    <div class="footer-links">
+    <p class="m-0 text-white"> <strong>Powered by VolunTripr</strong> </p><a href=""> <i class="fa-solid fa-heart"></i></a>
+    </div>
+    <div class="footer-links">
+      <p class="m-0 text-white"> <strong>Suporte:</strong> </p><a href=""><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
   </div>
-</div>
+ </div>

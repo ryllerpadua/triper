@@ -6,9 +6,16 @@
 }
 
 
-.nav-item {
+.nav-item .nav-link{
   font-weight: bold;
   text-align: center;
+  color: white;
+  transition: 0.3s;
+
+  &:hover {
+    color: #b2ebe0;
+    transition: 0.3s;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {

@@ -1,5 +1,10 @@
-
+require "open-uri"
 Project.destroy_all  # Remover após versão final
+
+file = URI.open('https://i1.wp.com/exchangedobem.com/wp-content/uploads/2019/08/e-scaled-e1598279031743.jpg')
+project = Project.new(name: 'Child and Animal Care Teste', country: "África do Sul")
+project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
+
 
 Project.create ([{ name:'Loving Cape Town Kids', country: 'África do Sul' }, { name:'Centro M. Nyanga', country: 'África do Sul' }, { name: 'Child and Animal Care', country: 'África do Sul' }, { name: 'Fazenda Urbana', country: 'África do Sul' }, { name: 'Curso de Inglês', country: 'África do Sul' }, { name:'Love2Teach', country: 'África do Sul' }, { name:'Yoga & Organic Farming', country: 'África do Sul'}, { name: 'Penguin Rescue', country: 'África do Sul' }, { name: 'Streetwise Soccer', country: 'África do Sul' }, { name:'Hands on Big 5', country: 'África do Sul' }, { name: 'Cheetah Center', country: 'África do Sul' },
 { name: 'Onça Pintada', country: 'Brasil' }, { name: 'Turismo Consciente - Pipa', country: 'Brasil' }, { name: 'Conservação de Animais Marinhos', country: 'Brasil' }, { name: 'Inst. Moinho Cultural', country: 'Brasil' }, { name: 'Educação Ambiental e Cons. da Natureza', country: 'Brasil' }, { name: 'Vivências Jatobazinho', country: 'Brasil' }, { name: 'Projeto Lontra', country: 'Brasil' },
