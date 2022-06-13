@@ -1,27 +1,26 @@
-<div class="container">
-  <div class="row my-5">
-    <div class="col-12 col-md-4">
-      <div class="card-profile p-0 m-2">
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-12 col-md-3">
+      <div class="card-profile-holder m-2">
         <div class="card-image" style="background-image: url(<%= cl_image_path current_user.photo.key, height: 300, crop: :fill %>)">
         </div>
         <div class="p-4">
           <h2 class="mb-3"><strong><%= current_user.name %></strong>, <%= current_user.age %> </h2>
-          <p><i class="fa-solid fa-pen-to-square me-2"></i><%= link_to "Editar Perfil", edit_user_registration_path, class: "edit text-decoration-none"  %></p>
+          <p><i class="fa-solid fa-pen-to-square me-2"></i><%= link_to "Editar", edit_user_registration_path, class: "btn-dash-small"  %></p>
           <p><i class="fas fa-briefcase me-2"></i><strong>Profissão:</strong> <%= current_user.occupation %></p>
           <p><i class="fas fa-map-marker-alt me-2"></i><strong>Cidade: </strong><%= current_user.city %></p>
           <p><i class="fas fa-plane-departure me-2"></i><strong>Destinos: </strong><%= @countries.join(", ") %></p>
           <hr>
           <p class="m-0"><strong>Sobre: </strong></p>
-            <p><%= current_user.about %></p>
+          <p><%= current_user.about %></p>
         </div>
       </div>
     </div>
-    <div class="col-12 col-md-8">
+    <div class="col-12 col-md-6">
       <div class="card-profile m-2 p-2">
         <div class="my-2">
-          <%= link_to "Criar Trip", new_trip_path, class: "btn btn-primary" %>
-          <%= link_to "Minhas matches", matches_path, class: "btn btn-primary" %>
-          <%= link_to "Buscar match", trips_path, class: "btn btn-warning text-white" %>
+          <%= link_to "Criar Trip", "#", data: {toggle: "modal", backdrop: false, target: "#tripModal"}, class: "btn-dash" %>
+          <%= link_to "Minhas matches", matches_path, class: "btn-dash" %>
         </div>
         <div class="cards">
           <%  @trips.each do |trip| %>
@@ -37,5 +36,21 @@
         </div>
       </div>
     </div>
+    <div class="col-12 col-md-3">
+      <div class="card-profile d-flex justify-content-center m-2 p-2">
+        <%= link_to "Buscar match", trips_path, class: "btn-dash" %>
+      </div>
+    </div>
   </div>
 </div>
+
+     <!-- Modal -->
+    <div class="modal fade" id="tripModal" tabindex="-1" role="dialog" aria-labelledby="tripModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <%= render 'trips/new' %>
+          </div>
+        </div>
+      </div>
+    </div>

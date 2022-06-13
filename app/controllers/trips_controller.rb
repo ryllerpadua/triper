@@ -23,11 +23,8 @@ class TripsController < ApplicationController
     @trip = Trip.new(trip_params)
     @projects = Project.all
     @trip.user = current_user
-    if @trip.save
-      redirect_to dashboard_path
-    else
-      render :new
-    end
+    @trip.save
+    redirect_to dashboard_path
   end
 
   def destroy
