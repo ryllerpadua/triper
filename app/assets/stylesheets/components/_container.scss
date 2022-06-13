@@ -11,6 +11,12 @@
 .container {
   background-color: white;
   justify-content: space-between;
-  margin: 0;
-  overflow: auto
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
 }
