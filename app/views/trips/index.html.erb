@@ -1,23 +1,26 @@
-<div class="container">
-  <h1>Encontre outros Exchangers </h1>
-  <p>Aqui aparece uma lista de possíveis matches para viajar na mesma data e projeto.</p>
+<div class="flex-wrapper">
+  <div class="container">
+    <h1>Encontre outros Exchangers </h1>
+    <p>Aqui aparece uma lista de possíveis matches para viajar na mesma data e projeto.</p>
 
-   <div class="container mt-2 px-0">
-    <%= link_to 'Voltar', dashboard_path, class: "btn btn-primary" %>
+    <div class="container mt-2 px-0">
+      <%= link_to 'Voltar', dashboard_path, class: "btn btn-primary" %>
+    </div>
+    <ul>
+      <% @trips.each do |trip| %>
+        <li style="list-style: none">
+          <div class="card-search m-5 p-2" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path trip.user.photo.key %>')">
+            <h2><%= trip.user.first_name %>, <%= trip.user.age %></h2>
+            <span class="date">
+              <i class="fa-solid fa-calendar-days"></i><%= trip.date.strftime("%B") %>, <%= trip.date.year %>
+            </span>
+            <span class="destino">
+              <i class="fa-solid fa-map-location-dot"></i><%= trip.project.name %> - <%= trip.project.country %>
+            </span>
+            </i><%= link_to "Match", trip_matches_path(trip), method: :post, class: "btn-match btn-primary" %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
   </div>
-  <ul>
-    <% @trips.each do |trip| %>
-      <li style="list-style: none">
-        <div class="card-search m-2 p-2 text-dark">
-          <%= image_tag url_for(trip.user.photo), class: "photo-match" %>
-          <h2><%= trip.user.first_name %>, <%= trip.user.age %></h2>
-          <p><i class="fa-solid fa-calendar-days"></i> - <%=trip.date.strftime("%B")%>, <%= trip.date.year %></p>
-          <p><i class="fa-solid fa-map-location-dot"></i> - <%= trip.project.name %> - <%= trip.project.country %><p>
-          <i class="fa-solid fa-thumbs-up"></i><%= link_to "Dar Match", trip_matches_path(trip), method: :post, class: "btn btn-primary" %>
-        </div>
-      </li>
-    <% end %>
-  </ul>
 </div>
-
-<%# <%= image_tag url_for(trip.user.photo) %>

@@ -32,25 +32,68 @@
 }
 
 .card-search {
+
+  color: white;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 2px;
+  width: 60vh;
+  height: 30vh;
+  border-radius: 8px;
+  border: 1px solid #54bed6;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
 
-  .h2 {
+  h2 {
     position: absolute;
+    top: 20px;
+    left: 20px;
+    font-weight: bold;
+
   }
+
+  .fa-calendar-days {
+    position: absolute;
+    bottom: 60px;
+    font-size: 24px;
+    left: 20px;
+  }
+
+  .date {
+    position: absolute;
+    bottom: 10px;
+    font-size: 20px;
+    left: 60px;
+    font-weight: bold;
+  }
+
+  .fa-calendar-days {
+    position: absolute;
+    bottom: 10px;
+    font-size: 24px;
+    left: -40px;
+
+  }
+
+  .destino {
+    position: absolute;
+    bottom: 40px;
+    font-size: 20px;
+    left: 60px;
+    font-weight: bold;
+  }
+
+  .fa-map-location-dot {
+    position: absolute;
+    bottom: 40px;
+    font-size: 24px;
+    left: -40px;
+  }
+
+  .btn-match {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
 }
-
-.photo-match {
-
-}
-
 
 .card .photo-chat {
   width: 80px;
