@@ -1,5 +1,5 @@
 <div class="flex-wrapper">
-  <div class="container mb-5">
+  <div class="container my-5">
     <div class="row">
       <div class="col-12 col-md-3">
         <div class="card-profile-holder m-2">
@@ -20,12 +20,20 @@
       <div class="col-12 col-md-6">
         <div class="card-profile m-2 p-2">
           <div class="my-2">
-            <%= link_to "Criar Trip", "#", data: {toggle: "modal", backdrop: false, target: "#tripModal"}, class: "btn-dash" %>
+            <%= link_to "Criar Trip", "#", data: {toggle: "modal", target: "#tripModal"}, class: "btn-dash" %>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tripModal">
+              Launch demo modal
+            </button>
             <%= link_to "Minhas matches", matches_path, class: "btn-dash" %>
           </div>
           <div class="cards">
             <%  @trips.each do |trip| %>
-              <div class="card-project p-2">
+              <% if trip.project.photo.attached? %>
+                <div class="card-project p-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path trip.project.photo.key, height: 300, crop: :fill %>')">
+              <% else %>
+                <div class="card-project p-2">
+              <% end %>
                 <small class="card-tag"><strong><%= trip.project.country %></strong></small>
                 <div>
                   <h2><%= trip.project.name  %></h2>
@@ -61,21 +69,30 @@
 </div>
 
 
-<%# Modal Criar Trip %>
-<div class="modal fade" id="tripModal">
+<!-- Modal -->
+<div class="modal fade" id="tripModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-body"> <%= render 'trips/new' %></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Crie uma Trip</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-  </div>
-</div>
-
-
-<%# Modal Suas Matches %>
-<div class="modal fade" id="tripModal">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-body"> <%= render 'trips/new' %></div>
+      <div class="modal-body">
+        <%= simple_form_for [ Trip.new  ] do |f| %>
+          <%= f.input :project_id, collection: Project.order(:name).group_by(&:country), include_blank: false, input_html: { data: { controller: 'select2' } }, as: :grouped_select, group_method: :last %>
+          <%= f.input :date, start_year: Date.today.year, end_year: Date.today.year + 5, discard_day: true, order: [:month, :year] %>
+          <div class="d-flex justify-content-between">
+            <% if current_user.trips.length < 6 %>
+              <%= f.submit id: "sa-create-trip", class: 'btn btn-success' %>
+              <%= link_to "Voltar", "#", data: {dismiss: "modal", target: "#tripModal"}, class: "btn btn-primary" %>
+            <% else %>
+              <%= f.submit id: "sa-create-trip", class: 'btn btn-danger mb-1', disabled: true %>
+              <%= link_to "Voltar", dashboard_path, data: {dismiss: "modal", target: "#tripModal"}, class: "btn btn-primary" %>
+          </div>
+              <p class="text-danger text-center mt-2"> Você chegou ao limite de 6 trips cadastradas. Apague outras para gerar mais.</p>
+            <% end %>
+        <% end %>
       </div>
+    </div>
   </div>
 </div>

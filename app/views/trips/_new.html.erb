@@ -1,9 +1,9 @@
-<div class="cardbox">
+<div class="cardbox" data-controller="select2">
 
     <h1 class="text-center">Crie uma Trip </h1>
     <p>Aqui cria uma trip para servir de base para que outros Exchangers o encontrem na busca</p>
     <%= simple_form_for [ Trip.new  ] do |f| %>
-      <%= f.input :project_id, collection: Project.all.order(:name), include_blank: false %>
+      <%= f.input :project_id, collection: Project.all.order(:name), include_blank: false, input_html: { class: 'select2' } %>
       <%= f.input :date, start_year: Date.today.year, end_year: Date.today.year + 5, discard_day: true, order: [:month, :year] %>
       <div class="d-flex justify-content-between">
         <% if current_user.trips.length < 6 %>
