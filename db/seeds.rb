@@ -1,7 +1,6 @@
 require "open-uri"
 Project.destroy_all  # Remover após versão final
 
-
 # África do Sul
 
 file = URI.open('https://dm1files.storage.live.com/y4meBOYqID2FGukqiJTIeJ47m734RsR52m4i2riGJK2ovU_mneK7py75RyN84U6ZbVHlwfjnxTotaAidh_NnzvkDm2unUkK-zFhmv19wKGk_VAWjh-zfXszBQCd5FZ7BpNXgi9UhnxTRGkDAjclT7vt1HYIMMqz8pwUQ3kfKh1ohKxzH5Oqu_gOrMvhTdoGvEuA?width=1280&height=856&cropmode=none')
@@ -272,5 +271,6 @@ project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg
 # { name: 'Help2Kids', country: 'Tanzânia' },
 # { name: 'Thien Homeless Center', country: 'Vietnã' }, { name: 'Child Care', country: 'Vietnã' }
 # ])
+
 
 p "Created #{Project.count} projects"

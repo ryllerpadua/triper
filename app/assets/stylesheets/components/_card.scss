@@ -38,7 +38,6 @@
     font-size: 30px;
   }
 
-
   .card-image {
     background-size: cover;
     background-position: center;
@@ -60,13 +59,11 @@
   padding: 30px 50px 20px 50px;
 }
 
-
 .card-search[style^="background-image:"] {
   background-size: cover;
   background-position: center;
   height: 250px;
   overflow: hidden;
-
 }
 
 .card-search {
@@ -99,7 +96,6 @@
     font-weight: bold;
   }
 
-
   .fa-map-location-dot {
     font-size: 24px;
     padding-right: 10px;
@@ -118,7 +114,6 @@
     top: 25px;
     right: 20px;
   }
-
 }
 
 .card .photo-chat {
@@ -138,7 +133,7 @@
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   text-shadow: 1px 1px 1px rgb(49, 49, 49);
-
+  
   .card-tag{
     color: #84e7f5;
   }
