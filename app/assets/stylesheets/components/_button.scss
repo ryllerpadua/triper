@@ -62,3 +62,19 @@
     transition: 0.2s;
   }
 }
+
+.btn-match {
+  background-color: #54bed6e4;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: 0.4s;
+  text-align: center;
+  vertical-align: middle;
+  padding: 3px 16px 3px 16px;
+
+
+  &:hover {
+    background-color: #54bed6;
+    box-shadow: 2px 2px #f47d35;
+    transition: 0.4s;
+  }
+}
