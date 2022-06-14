@@ -102,7 +102,7 @@
           </div>
           <div class="modal-body">
             <%= simple_form_for [ Trip.new  ] do |f| %>
-              <%= f.input :project_id, collection: Project.order(:name).group_by(&:country), include_blank: false, input_html: { data: { controller: 'select2' } }, as: :grouped_select, group_method: :last %>
+              <%= f.input :project_id, collection: Project.order(:country).order(:name).group_by(&:country), include_blank: false, input_html: { data: { controller: 'select2' } }, as: :grouped_select, group_method: :last %>
               <%= f.input :date, start_year: Date.today.year, end_year: Date.today.year + 5, discard_day: true, order: [:month, :year] %>
               <div class="d-flex justify-content-between">
                 <% if current_user.trips.length < 6 %>
