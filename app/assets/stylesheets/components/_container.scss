@@ -26,3 +26,10 @@
 .esquerda {
   padding: 1;
 }
+
+.dashboard-main {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 25px;
+}
