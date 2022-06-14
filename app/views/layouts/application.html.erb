@@ -10,6 +10,14 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <script src="https://kit.fontawesome.com/7320406189.js" crossorigin="anonymous"></script>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <style>
+       <%= ".messages .message.user-#{current_user.id}"%> {
+        justify-content: flex-end;
+       }
+       <%= ".messages .message.user-#{current_user.id} .message-content"%> {
+        background-color: rgba(84, 191, 214, 0.2);
+       }
+    </style>
   </head>
 
   <body>
