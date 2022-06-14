@@ -1,13 +1,20 @@
 .card-profile {
-  margin-left: 0;
-  margin-bottom: 10px;
-  padding-right: 15px;
+  justify-content: center;
+  padding-right: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-color: white;
   height: auto;
-  padding-left: 15px;
+  padding-left: 20px;
   padding-top: 3px;
   padding-bottom: 10px;
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    padding: 0;
+  }
 }
 
 .card-profile-holder {
@@ -17,6 +24,7 @@
   color: #393939;
   margin-left: 0;
   margin-right: 0;
+
 
   .fa-pen-to-square {
     color: #f47d35;
@@ -68,7 +76,7 @@
 
 .card-search {
   color: white;
-  width: 40vh;
+  width: 30vw;
   height: 20vh;
   position: relative;
   border-radius: 8px;
@@ -177,6 +185,74 @@
   grid-gap: 16px;
 }
 
+
+
+
+
+.card-matched[style^="background-image:"] {
+  background-size: cover;
+  background-position: center;
+  width: 30vh;
+  height: 20vh;
+  overflow: hidden;
+}
+
+.card-matched {
+  color: white;
+  width: 20vh;
+  height: 40vh;
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid #54bed6;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  text-shadow: 1px 1px 1px rgb(49, 49, 49);
+
+  h2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-weight: bold;
+  }
+
+  .date {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .destino {
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .btn-match {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+  }
+
+  .btn-profile {
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+  }
+
+  .fa-xmark {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    color: white;
+  }
+}
+
+
+
+
 /* Use a media query to add a breakpoint at 800px: */
 @media screen and (max-width: 800px) {
   .cardbox {
@@ -188,6 +264,14 @@
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
     grid-template-columns: 1fr;
+  }
+
+  .card-search{
+    width: 90vw;
+  }
+
+  .card-project{
+    width: 94vw;
   }
 }
 
