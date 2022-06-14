@@ -1,24 +1,39 @@
 .match {
   background: white;
-  margin-top: 9px;
+ 
   height: calc(100vh - 75px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
+  width: 70vw;
 
-  h1 {
-    border-bottom: 1px solid $gray-200;
+  h3 {
     margin-bottom: 0;
-    padding: 1rem;
   }
 
   .messages {
-
     height: 100%;
-    overflow: scroll;
+    overflow-y: auto;
     padding: 1rem;
-    border: 1px solid grey;
+  }
+
+  .messages .message {
+    width: 100%;
+    display: flex;
+    .message-content {
+
+      background-color: rgba($color: $orange, $alpha: 0.2);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      max-width: 60%;
+      width: fit-content;
+    }
+    p {
+      margin-bottom: 0;
+    }
+
   }
 
   .messages .photo-chat {
@@ -28,6 +43,8 @@
     box-shadow: 1px 1px rgb(157, 157, 157);
     border: 1px solid white;
     margin-right: 10px;
+    min-width: 50px;
+    min-height: 50px;
   }
 
    #new_message {
