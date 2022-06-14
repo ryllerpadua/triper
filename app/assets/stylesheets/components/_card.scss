@@ -1,21 +1,50 @@
 .card-profile {
-  border-radius: 5px;
+  margin-left: 0;
+  margin-bottom: 10px;
+  padding-right: 15px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-color: white;
+  height: auto;
+  padding-left: 15px;
+  padding-top: 3px;
+  padding-bottom: 10px;
 }
 
-
 .card-profile-holder {
-  border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  background-color: white;
+  background-color: #fff;
+  height: auto;
+  color: #393939;
+  margin-left: 0;
+  margin-right: 0;
+
+  .fa-pen-to-square {
+    color: #f47d35;
+  }
+
+  .fa-plane-departure {
+    color: #54bed6;
+  }
+
+  .fa-briefcase {
+    color: #54bed6;
+  }
+
+  .fa-map-marker-alt {
+    color: #54bed6;
+  }
+
+  .about {
+    font-size: 30px;
+  }
+
 
   .card-image {
     background-size: cover;
     background-position: center;
     height: 300px;
-    border-radius: 5px 5px 0 0;
-
+    border-radius: 1px 1px 1px 1px;
+    border-bottom: 4px solid #54bed6be;
   }
 }
 
@@ -40,8 +69,6 @@
 
 }
 
-
-
 .card-search {
   color: white;
   width: 40vh;
@@ -49,7 +76,6 @@
   position: relative;
   border-radius: 8px;
   border: 1px solid #54bed6;
-
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   text-shadow: 1px 1px 1px rgb(49, 49, 49);
 
@@ -105,15 +131,43 @@
 }
 
 .card-project {
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  background-color: white;
-  position: relative;
+  color: white;
   width: 100%;
+  height: 30%;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  text-shadow: 1px 1px 1px rgb(49, 49, 49);
 
   .card-tag{
-    color: #f47d35;
+    color: #84e7f5;
   }
+
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  p {
+    position: absolute;
+    bottom: -10px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .fa-xmark {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    color: white;
+  }
+}
+
+.card-project[style^="background-image:"] {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  overflow: hidden;
 }
 
 .cards {

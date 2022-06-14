@@ -46,18 +46,17 @@
 }
 
 .btn-dash-small {
-  background-color: #54bed6;
   text-decoration: none;
-  padding: 1px 2px;
-  border: 1px solid #54bed6;
-  border-radius: 2px;
-  color: white;
+  padding: 1px 6px;
+  border: 1px solid #f47d35;
+  border-radius: 8px;
+  color: #393939;
   font-size: smaller;
   transition: 0.2s;
 
   &:hover {
-    background-color: #b3d4ce;
-    border: 1px solid #b3d4ce;
+    background-color: #f47d35;
+    border: 1px solid #f47d35;
     color: white;
     transition: 0.2s;
   }

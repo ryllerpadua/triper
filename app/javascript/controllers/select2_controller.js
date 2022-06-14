@@ -11,6 +11,8 @@ export default class extends Controller {
       width: '100%',
       theme: 'bootstrap-5',
       dropdownParent: $('#tripModal'),
+      minimumResultsForSearch: Infinity,
+
     });
   }
 }
