@@ -1,7 +1,7 @@
 <div class="container match my-4">
   <div class="d-flex justify-content-between p-3 align-items-center">
     <h3><%= "#{@match.trip1.user.first_name} e #{@match.trip2.user.first_name}" %></h3>
-    <%= link_to "Voltar", matches_path %>
+    <%= link_to "Voltar", dashboard_path %>
   </div>
     <div class="messages" data-controller="match-subscription" data-match-subscription-match-id-value="<%= @match.id %>">
       <% @match.messages.each do |message| %>
