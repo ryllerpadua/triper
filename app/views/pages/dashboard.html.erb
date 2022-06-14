@@ -1,81 +1,77 @@
 <div class="flex-wrapper">
-  <div class="container my-5">
-    <div class="row">
-      <div class="col-12 col-md-3">
-        <div class="card-profile-holder m-2">
-          <div class="card-image" style="background-image: url(<%= cl_image_path current_user.photo.key, height: 300, crop: :fill %>)">
-          </div>
-          <div class="p-4">
-            <h2 class="mb-3"><strong><%= current_user.name %></strong>, <%= current_user.age %> </h2>
-            <p><i class="fa-solid fa-pen-to-square me-2"></i><%= link_to "Editar", edit_user_registration_path, class: "btn-dash-small"  %></p>
-            <p><i class="fas fa-briefcase me-2"></i><strong>Profissão:</strong> <%= current_user.occupation %></p>
-            <p><i class="fas fa-map-marker-alt me-2"></i><strong>Cidade: </strong><%= current_user.city %></p>
-            <p><i class="fas fa-plane-departure me-2"></i><strong>Destinos: </strong><%= @countries.join(", ") %></p>
-            <hr>
-            <p class="m-0"><strong>Sobre: </strong></p>
-            <p><%= current_user.about %></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="card-profile m-2 p-2">
-          <div class="my-2">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn-dash" data-bs-toggle="modal" data-bs-target="#tripModal">
-              Criar Viagem
-            </button>
-            <%= link_to "Minhas matches", matches_path, type: "button", class: "btn-dash" %>
-          </div>
-          <div class="cards">
-            <%  @trips.each do |trip| %>
-              <% if trip.project.photo.attached? %>
-                <div class="card-project p-2" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= cl_image_path trip.project.photo.key, height: 300, crop: :fill %>')">
-              <% else %>
-                <div class="card-project p-2">
-              <% end %>
-                <small class="card-tag"><strong><%= trip.project.country %></strong></small>
-                <div>
-                  <h2><%= trip.project.name  %></h2>
-                  <p><%= trip.date  %></p>
-                  <%= link_to 'Delete', trip_path(trip) , class: "btn-edit mt-2 mb-3", method: :delete, data: { confirm: "Are you sure?" } %>
-                </div>
-              </div>
-            <% end  %>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-3">
-        <div class="card-profile d-flex justify-content-center m-2 p-2">
-          <%= link_to "Buscar match", trips_path, class: "btn-dash" %>
+  <div class="row">
+    <div class="esquerda col-12 col-md-2">
+      <div class="card-profile-holder">
+        <div class="card-image" style="background-image: url(<%= cl_image_path current_user.photo.key, height: 300, crop: :fill %>)"></div>
+        <div class="p-4">
+          <h2 class="mb-3"><strong><%= current_user.name %></strong>, <%= current_user.age %> </h2>
+          <p><i class="fa-solid fa-pen-to-square me-2"></i><%= link_to "Editar", edit_user_registration_path, class: "btn-dash-small"  %></p>
+          <p><i class="fas fa-briefcase me-2"></i><strong>Profissão:</strong> <%= current_user.occupation %></p>
+          <p><i class="fas fa-map-marker-alt me-2"></i><strong>Cidade: </strong><%= current_user.city %></p>
+          <p><i class="fas fa-plane-departure me-2"></i><strong>Destinos: </strong><%= @countries.join(", ") %></p>
+          <hr>
+          <p class="about m-0"><strong>Sobre: </strong></p>
+          <p class="about-info"><%= current_user.about %></p>
         </div>
       </div>
     </div>
-  </div>
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="tripModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Crie uma Trip</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="meio col-12 col-md-6">
+      <div class="card-profile">
+        <div class="my-2">
+          <button type="button" class="btn-dash" data-bs-toggle="modal" data-bs-target="#tripModal"> <!-- Button trigger modal -->
+            Criar Viagem
+          </button>
         </div>
-        <div class="modal-body">
-          <%= simple_form_for [ Trip.new  ] do |f| %>
-            <%= f.input :project_id, collection: Project.order(:name).group_by(&:country), include_blank: false, input_html: { data: { controller: 'select2' } }, as: :grouped_select, group_method: :last %>
-            <%= f.input :date, start_year: Date.today.year, end_year: Date.today.year + 5, discard_day: true, order: [:month, :year] %>
-            <div class="d-flex justify-content-between">
-              <% if current_user.trips.length < 6 %>
-                <%= f.submit id: "sa-create-trip", class: 'btn btn-success' %>
-                <%= link_to "Voltar", "#", data: {dismiss: "modal", target: "#tripModal"}, class: "btn btn-primary" %>
-              <% else %>
-                <%= f.submit id: "sa-create-trip", class: 'btn btn-danger mb-1', disabled: true %>
-                <%= link_to "Voltar", dashboard_path, data: {dismiss: "modal", target: "#tripModal"}, class: "btn btn-primary" %>
-            </div>
-                <p class="text-danger text-center mt-2"> Você chegou ao limite de 6 trips cadastradas. Apague outras para gerar mais.</p>
-              <% end %>
+        <div class="cards">
+          <%  @trips.each do |trip| %>
+            <% if trip.project.photo.attached? %>
+              <div class="card-project p-2" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= cl_image_path trip.project.photo.key, height: 300, crop: :fill %>')">
+            <% else %>
+              <div class="card-project p-2">
+            <% end %>
+                <small class="card-tag"><strong><%= trip.project.country %></strong></small>
+                <div>
+                  <h2><%= trip.project.name  %></h2>
+                  <p><%= trip.date.strftime("%B") %>, <%= trip.date.year %></p>
+                  <%= link_to raw('<i class="fa-solid fa-xmark"></i>'), trip_path(trip) , class: "btn-edit mt-2 mb-3", method: :delete, data: { confirm: "Are you sure?" } %>
+                </div>
+             </div>
           <% end %>
+        </div>
+      </div>
+      <div class="card-profile p-2">
+        <%= link_to "Minhas matches", matches_path, type: "button", class: "btn-dash" %>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="card-profile d-flex justify-content-center p-2">
+        <%= link_to "Buscar match", trips_path, class: "btn-dash" %>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="tripModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Crie uma Trip</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <%= simple_form_for [ Trip.new  ] do |f| %>
+              <%= f.input :project_id, collection: Project.order(:name).group_by(&:country), include_blank: false, input_html: { data: { controller: 'select2' } }, as: :grouped_select, group_method: :last %>
+              <%= f.input :date, start_year: Date.today.year, end_year: Date.today.year + 5, discard_day: true, order: [:month, :year] %>
+              <div class="d-flex justify-content-between">
+                <% if current_user.trips.length < 6 %>
+                  <%= f.submit id: "sa-create-trip", class: 'btn btn-success' %>
+                  <%= link_to "Voltar", "#", data: {dismiss: "modal", target: "#tripModal"}, class: "btn btn-primary" %>
+                <% else %>
+                  <%= f.submit id: "sa-create-trip", class: 'btn btn-danger mb-1', disabled: true %>
+                  <%= link_to "Voltar", dashboard_path, data: {dismiss: "modal", target: "#tripModal"}, class: "btn btn-primary" %>
+              </div>
+                  <p class="text-danger text-center mt-2"> Você chegou ao limite de 6 trips cadastradas. Apague outras para gerar mais.</p>
+              <% end %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>

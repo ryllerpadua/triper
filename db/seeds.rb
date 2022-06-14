@@ -1,219 +1,257 @@
 require "open-uri"
 Project.destroy_all  # Remover após versão final
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mPFieNMldtf0j-vH7cdd6RY0b81yxE6JdY3EFWRvMl51kTY5BnGITl6wZru1EF3Rzj482FCKxwix7-I_MSOx3RUDP1lYiRnntl-747JVD1cLjvV11CEbpcuF3z_awxzuimqIFM4He8u6ZEmaK4qPmzcnVas-Xmud_uDOovYkE7jGBr53wqqO_Na9Wi2lvX7j1SvXqVwMizTkF3DJn8tk_Gj5XhPWuoPGIAAykWOvgxZU/PHOTO-2019-11-28-17-09-30.jpg?psid=1')
+# África do Sul
+
+file = URI.open('https://dm1files.storage.live.com/y4meBOYqID2FGukqiJTIeJ47m734RsR52m4i2riGJK2ovU_mneK7py75RyN84U6ZbVHlwfjnxTotaAidh_NnzvkDm2unUkK-zFhmv19wKGk_VAWjh-zfXszBQCd5FZ7BpNXgi9UhnxTRGkDAjclT7vt1HYIMMqz8pwUQ3kfKh1ohKxzH5Oqu_gOrMvhTdoGvEuA?width=1280&height=856&cropmode=none')
 project = Project.create(name: 'Loving Cape Town Kids', country: "África do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.bl.files.1drv.com/y4mrMzNfwU6YKOPY_2JwyAwGoxN4825apqKKOg6PG93I201amdGMWCXLwfVwFfFdkdGtVya3DN-SUWAQM-o95us7aZKQtucou7b_YKcEQBhe9Q9ytF3RlvlHzKeA97PoFiuIDBIuFBeyvT4W2Anz1gCwDURFLt-4TuO8hn9jIn_gpyK_ijCsAGwzEIG3tZQIQdhr0Ckv7Ri06_ZMDKbfHZ-_6n-gXR6LDqBsS3LGTWQjKs/3-e1647021355473.webp?psid=1')
+file = URI.open('https://dsm01pap007files.storage.live.com/y4m0Pb0GcGnjpem2IawEmNlShwqPM1nmhAgcmLv6KnMBpZDwQEHVOv4kOZgXIRhz6iVQSX0sM70hNgtTqovltgyOFTdlx9qMK6xkT8KCK5MBaYhSxcNNB0fkkEnRUEDOaX4Q4Amdwd2LrNNEmP5dadJBrHeEmhNwdSRvd6mcoi1PYDkwKIaqUq6O9CeVP5jhQME?width=1280&height=960&cropmode=none')
 project = Project.create(name: 'Centro M. Nyanga', country: "África do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://lcwgxq.dm.files.1drv.com/y4m99EjCcKXQ06L2Yc3Cej6bBuysrsHr5YnrRu47r7bROsmz20arN5QGdj3kr6j5Yve-_1rwqgQrAm3Slz5NrY1beUydPM4IAIpicpN05OrOGZXTMKj5kuWkugHaS_x_d4cgZ6KV6fhGpQOyXsYf36n6Hu-dty2iM85p1IgdVgv1O0JP8bkLCrrf6EqqhLw2QRS2D8wrN1VLeaoiRPKBjqWhAr9WvMcPdjdorIecJZCXS0/WhatsApp%20Image%202019-07-06%20at%2005.56.15.jpeg?psid=1')
+file = URI.open('https://dsm01pap004files.storage.live.com/y4mVEISoCY_5VaXEkk5iSDL9rIE9DCOKFWH9dRB-JgM1zOH2nq8zjIXce2A8xh6aWDHjUHUDgodgyfa_PQ1xa9zVliR6UXYGzmBL8KBd2k9QjVLJ3fVaHEZUZQmSgH8zjTY3Z07u_WdAHuIZjqOpbNSpM6Qp8V8VnoAx7r-SoQgFv35zIl7GZSwWsct7PKD89w1?width=1280&height=853&cropmode=none')
 project = Project.create(name: 'Child and Animal Care', country: "África do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mU3_Bef02EFuH1j-vhHkGiTFZTG9NNw5MCkVaBxMddY1-nPqps6cU-F_OuWcahWZd7dkNM44UPB4C9w1EFoSOyqyOz14JoiiKw0uxDzwGT-NT63FCt1LZWewSuzDOyqsgRZdR-E3zmP3EVBWaVKSrXOCnyJGrmwtua4a78q7EqMK21ahvqJNDmH5y6IdNBo1MKqytSwMsUYJUuOrGaIXRLt2ISZruc_RrJzUmxv3m-0E/Urban_Farming_13.jpg?psid=1')
+file = URI.open('https://dm2pap090files.storage.live.com/y4mDGvgfLIWXCYIkgvJhDf2OMDCxCvsr8wGV3-XGp15oqgm7w5UUNdus2BEO7dndW5dDYSKcDRug4a5gqfyFtAYi4nt8QAanNwJmMm6LQNpkkRUjzTvEOrWXT8_L3RuF-o3SH-3LP_Ykx_F4I8eCLMLSH6Jpg1mLEtE-pOzIhEUWTA1CtxYEZNOtqLGZ5Lh6Lv5?width=1024&height=682&cropmode=none')
 project = Project.create(name: 'Fazenda Urbana', country: "África do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mB6oF6LKwh-XSh4W0SraI5GNwrq3h8zIO7CvsF0oARS-VseF2apYgRE7PkmrtHLkakucbm9Q20APlHPa0bQ1gw7TFSBhFvSrvOtkZE5_P6l59Bep4e8Dc4gyBy39cZ66lhl6M1CKg4qOcDhDw8TCLYq90roYHDC7oE43OUTJltXc_h8y_XSP7uopWc7G9lRcr36VOq1FbFKK3cJxQboKaAGYVJW-Nj9GejxkrBdNR1T4/Tanz%C3%A2nia.jpg?psid=1')
+file = URI.open('https://dm2301files.storage.live.com/y4m9L0KCAWb8hkAXO0XUN2PSGZ0HVudCx9PvVYLpxgGEaeedKW2_Gx6EnTBJwM2PpfGh0Ph-a_8-WZiJKM1J7D3jOUmbobY0wu4ulEa_rR2PaAm7qgslDcrji10N8e1R6YEpF8GhhDaW4RoCk7koMWG3HDijGRbrcBEQy06oVov-zFI6oftcnP-MhjKeo7yiroN?width=1024&height=768&cropmode=none')
 project = Project.create(name: 'Curso de Inglês', country: "África do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4m-KburmiHStxfmdcqNMBof5ltPfGQxsr_VHJaCCc6OD1rRzfM12QXlOs28jk9rEfPYaZZBOz4qpbwEpkuAPGmgzuEYrB-Tb1avb1R4J9cbWOuhzJwJsDT4Rz_MNfbEYGrdFkC5okzZvQBWzaSKQSr8_0oFmg38YyveDNY4TWtXIzVU39_rJR2Nlyr0-RoMT5Er-cjxQnYGzHeOMOyPhF3EctiOkkCiZqWf8ybfq-snVU/%40isabelneves01%202.PNG?psid=1')
+file = URI.open('https://dsm04pap001files.storage.live.com/y4m9kZG8AEzN5VmnADhYjaIZtDMGsD9AhUOM1NaI57OZj8FCQ176kuKlZDiwD6f90co1Nsft7SSCKWYK2XS1aelmiImm2FxWDNoUZZOigRkujT9O2ZNy6frIvzPhKbVhxW7ubirhjd_PBFsQx0UYkywQ6Whf1QamHFs-6eS_utrnGlzxlqcdhQ839OlEotLUhx0?width=1024&height=770&cropmode=none')
 project = Project.create(name: 'Love2Teach', country: "África do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4maatc52zQEt9KIG3yIItJz-mcdjJkkVz86fAymLHom-2S5b2ApuGcrFH6HRltVBFsu_CV0VXQzWOTpmAr4kLz5IedKkLky8MCP0Pgo-NYGpyR_EoPwEsa2thaEJdWVzJZ8QyBP8B7pmMe4v97_L29bvTscAGjzJOiAMxZAttVXnnzYnRs8k6vrnoAgL12MzAiz63baANe7zX-Jb0d03ofjKXwsVj7zsyxsXFwcjvYRF0/GAbriela.jpg?psid=1')
+file = URI.open('https://dsm01pap003files.storage.live.com/y4mFqRe59cw3egaNycyQtx-MsrL0rkwXxh9JnVsla17toLgaGvb0x_GpwvaJqssEVVroy-MBxy3QYhgLhFTo0N8om7uK7_ao2r3RVUKeqWLEpwLEvWLDs3hUiKVjsm4eNZ7JZEhCna7VD8Ef0sMOyR806JjuRgrc6Mp9_68KbiG5rnd6NBsnjgyaGU_ZCInn3zA?width=960&height=960&cropmode=none')
 project = Project.create(name: 'Penguin Rescue', country: "África do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mrZQbJdBRLm9cutdb0Ypk_S1SQNHt0eAPZGGkwo649-CKnNfBXIwQnGrawdbEsa39fxyfRO6wPKBMKtaqoQhJtbT1Lbh43bbPvjWTv9_BFMJEeB0i_6DvouQyu-1aDs3kChQgRLacCm2pd4kV8qX5pEzMjmr6bQ-1Xh5ndP_a6I4QxTVSktxN-LWy8CKkMLI5TCE22efoyf5HSrjwWMf0jlU1O4G5WfnLqVCmHXitqQU/PHOTO-2019-10-23-13-12-56.jpg?psid=1')
+file = URI.open('https://dm2306files.storage.live.com/y4mYfhUtZKPtw6Z_1lYzcO6IraVv0QYtcKxh9n7uws0l4LJBERIPxJjrQUbU4szklqYoTTemr_0gOqWRHhxcZPjdrLEazORA2RH4q8_zjt1ONu6_LHyQGEwIOKaEpnVnlowOTVP9RoENm1KAXCnyS4ITVyyfJhi7KHlijUone_OUx1TjCj-JBE6kHFVaL0wOp7q?width=1024&height=768&cropmode=none')
 project = Project.create(name: 'Streetwise Soccer', country: "África do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mdxi3Sb5CBz_xRU59fu9HikRh-GYGkV0w9D4KlAG2ViVfdD6MrvRblIf-jI7eEGk3364DRG8Owgyzdfcmh5l_R7xL3THMRfoTPN6L_1SZSRMPKcgRZ4TxC2wnGKaIHt1wbCfo8A_kDvc1vdCnmX2eEBQFSfsOMXMcCXnwfcq_9OmyDNBzFhhz81kuqQgm-fbMJOmKqIr3YddWRXuxCpLOQfnwyRBof0WLL8dcTjAc7II/%40danielaprudente_.PNG?psid=1')
+file = URI.open('https://dsm01pap007files.storage.live.com/y4m6dr7XdbU5v3eaEqhWJLgqvHZughYdlYlWmF6E28LdOC9zENZdR6SWb-QLTNSbili-RKxaprrwrEc8i9-kpjRkHreU-Ub9ZKQONLj7fbhoPYyaDZkNTmsgqQO7ypoGO5hky9HWP2GsjyY9TFetAjZjbRIEewj2eqCjLy251wHuGcwZFj4iEgEDOczjMEmsRsy?width=1024&height=770&cropmode=none')
 project = Project.create(name: 'Hands on Big 5', country: "África do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://3y4lqw.dm.files.1drv.com/y4mJLMUymNsz0ql6SPEM6Drh6_gyY0-nsRXIsWluARKRDyslH5FRGL4KVFq0srdHIAKKpQ6HfjcbE553aN8rov8elHDYCHxGE_exfh1dgmsnx4rxd0zjI12Y5KNCz0SPvJN6G3ci6omHI6KcfhDzFRXPRtwoHa71e1Ap0neKs0t9-sKeQG5uVFrJENT2bihqYgfLqQSDV0f8eHM5zd7vreDK9QSTgH6iSKIphsrJEuqbTc/%40paulinha_m_ventura%20%288%29.jpeg?psid=1')
+file = URI.open('https://dsm01pap006files.storage.live.com/y4mk_M33L6w0JPSbxqm1CeVXMAQsOZZwolVoqcI9ZXzBXFC2Z0kwKGPDm5-QeeYvjumWzwqPD29EVqDcCmWFa6htDRuKZA3hs97htEiUxAKYlVAxYG6xPIGqeKDozOJeE5RFhVO-dkRbIjY1X5bj2llBQIOYGWPICcvpdryDFWacJWCpAyQtR_L6YjCdLMBmOt9?width=768&height=1024&cropmode=none')
 project = Project.create(name: 'Cheetah Center', country: "África do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://ekmtxg.bl.files.1drv.com/y4mUwX4VOft7iVCkkX_eqrV1C3qVlAfmTKPPEHcbJUvSRaZ8uhdyyw0Ql4plkrZxbhlnp_jmDYREetbZEr3UN7BfBat2JXWnGdT_hsMV1NgiT5hfsZpkK7Zupl8QBVLRac5lWZ_16eVJaNWHFkpguK9UWCjWucZ96EiOlTV_88yz6VdHhAkRopAouvMLUX3Lr3UQrgNMFLBNfSutX-8cIO5lhm0Wt2XJooFKF9PMVdwBCA/WhatsApp%20Image%202021-09-09%20at%2009.02.12.jpeg?psid=1')
+file = URI.open('https://dm2pap090files.storage.live.com/y4mQ5onOBNta-PyKmVFuy2Rw7DL9fu4GHjqNsxZurMf-qtRuWp1UgTnSvhGCaEXfcWeyGysC_sRcdgO4_FwHeFzkcKe-BBrnsspT6wVPU516dDAD9ZT_hLUsg9-p048gNh45CSAgbvWXqktPYQNcO58GG4F2vdFBEoUY2fN97EDzuP2_KjuMQo9ofq9xOaY8bbg?width=768&height=1024&cropmode=none')
+project = Project.create(name: 'Yoga & Organic Farming', country: "África do Sul")
+project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
+
+# Brasil
+
+file = URI.open('https://bl6pap003files.storage.live.com/y4mtCnVqCOOUp-ly8grUf4BiwUPfM7C5BrGLCCWaQ9lvVbF13BfRK8XRCzTMSG24kI-2_R2d4NbC_WtFt8J00ae23Ioo5sc1n1P9d9qoqTyO3O3JWRzz0kE2Exlsuwzs5gO0FmHWita5jCMEsjlBP-lcX4XgOuIxa-fJ9zIIYH7cnYr8Fo1Y_cnAGbsZtKHYoqM?width=768&height=1024&cropmode=none')
 project = Project.create(name: 'Onça Pintada', country: "Brasil")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mJul_Y5Ha4zd2nVW2zLTaixkinLWkf8Bt-dEDQENei14CE7erPDlIpx2rjPZdqW6mdnkhTVB8I8omPC8X7dVFzw78ZZ7klKBBuLRolIAGhDMHrZ-6a3dvRSKv2Z41MjyMYTH1WiDbgU2eoqDqtCg6u1wBswmXUh_RdwH9levxbtYX-hcBqRn7CE3BabA2OxJkV_fngaJFqa8nsgj_MIvkJ0Es-WpeHMCMgyo4AC6oH7A/%40gianegnaspini%20%285%29.jpg?psid=1')
+file = URI.open('https://dm2306files.storage.live.com/y4mUguetSvywI6TQVNYloU117wJLf7te-_5ce8gaRUcWaUlLdZK2B3W8T3BUZVupK6do733cP09yrHezMuOTtCCF0SXqlm38WliBm0Tq3p6OtPNmmPLmvM3Jw4XEwz140E7dphyLMRg9zdTq611e1xSWoaN4rZwDvGkjJSxJIqUHI81Qq0WjNejMkNsEzdo7mI8?width=1024&height=576&cropmode=none')
 project = Project.create(name: 'Turismo Consciente - Pipa', country: "Brasil")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mfgItjDyFZJDbhhRcrhUh4xqdACtipyqg14dBRY9Xkp39Q_uAmwEf_OAFPqS9UT8Q8RFraVU2lu9sanfCYmWPNwaWYQtpkIXVmw83XMTFsNlvSP47ZA1-qlWGiUnQmn-yxQURqDiuv3OsyW_w0bmx9qRcyRjX2OmIYA1rt0VqKs8UB10r600Lhz3oGkr5BV4_KfHosP3QVQjtIc7XnQdeVdUmci0gJxllwoPFy7_2fqw/2019_09_27_Arctocephalus%20australis%20-%20nilson%20coelho.jpg?psid=1')
+file = URI.open('https://dsm01pap003files.storage.live.com/y4mJxWAm-GIZJzo_u_OTsZ_s2m_mWhxuvLQ6sb8hm8OsUqkRsYdxytWq09rTUir9N-L1B94HcDWfsKVCCbBF8f_4dOQjjWLbvPDswPpULKODIwbykoWdLxW1iIqx9tf36tuXbnG-M9AxQxf3Ov9INSXlgp_TAsdqO_DY7aG1TpYBAjoFQoCqpRosWfPPiTWpPyF?width=827&height=1024&cropmode=none')
 project = Project.create(name: 'Conservação de Animais Marinhos', country: "Brasil")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.bl.files.1drv.com/y4mCt7ec79XxDwtwhwJmykhTGORHxzv_YXRYcxOfM0qy12QzH1EZ4vaoC79EJEvqJ-kWBWrH5wvvoKwYMkx7LB2CMrsa_R3NtjlJVZvGFIceJRsjFa9QTDhkTN8UF0g3JZ0KbGCjp6qHJkTc-QImjv3ZS7Ufs1uYzYzVGFH0LKzWlWZRK7rpG4tEBs_klY8XFQR5nBQnZO87_gFhDQnC-2KMg92r2gscTwTfvTGF73rw3A/Moinho%20Cultural%20-%20Musica.jpeg?psid=1')
+file = URI.open('https://bl6pap003files.storage.live.com/y4mp34WX9BRYW-ZzOLA2CN3Qbby_-HiwHlm2uj0SKgZvilpPADTtiKj5UvOGL7EqB7vHsgxjUMBLn3XBb9C1lsstQxRpC-KIiJH-Wwm0Fj_jzqUtd1EPn8CcfLOVIZ-js6KEH2BvKMaeELuJ2QIlgiz5Zg0I9tR6G0VjFZUA2RHXhfcMNGy2IaO274zR3Q2PjX1?width=958&height=640&cropmode=none')
 project = Project.create(name: 'Inst. Moinho Cultural', country: "Brasil")
-project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
+project.photo.attach(io: file, filename: 'project.jpeg', content_type: 'image/jpeg')
 
-file = URI.open('https://ehidlq.dm.files.1drv.com/y4mfL0Z35LQ2AjxkRAM5ODajImhrutzi7-zw33N7nayumrfsBahNhYir3ZTLGSpRRewiP4fwFiyLmpjcqkK5406B8w2LywXPS6nUZEbH-uT5Ryru0NCz-F-Vfzs6j1LtPhcT77iUoPEIOj1S7750thtRXB03vNDEvCrEmIRpYGsotPnQB-9KGPD9G9Aaab1T9F2EXBPYEUnIpIQ4fku-c7PjEucEo-QcrNfXtAoefjTeoI/Momento%20C%C3%ADvico.jpeg.jpg?psid=1')
+file = URI.open('https://bl6pap003files.storage.live.com/y4mGjG-wg9bfU2qbzz6pTMEH4fBQ12SBqgfwtnSmVOFBT9EAQWFPVpJzjWjUQaPbzGS1UHPvpLKNVVd09XZpEWSLLpwFSXdu7vgw2HEyy_rmbflJijLa53JD_tjODCZAKxKr2BpE95zNezyjXqzQiuqVUQk53Dk7y1q-0dxUL65NtfMKEgGTrSokdCuJAudWFg5?width=765&height=498&cropmode=none')
 project = Project.create(name: 'Educação Ambiental e Cons. da Natureza', country: "Brasil")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mMXu5eW2LzF78rNl33KvPr6_YrYjGblMKrCRFyaoS7yKQH_nrsmMnP8REcdqAIzWIy3bu34hcZy0p3u4vH4ANHmgt2XB7fMUPHCcVGETNyfGRaEUSc7tFb5jFYv9NwbGwWJeU9qcb3BnRiElG6qibYYvgfZXGrDuptRWXOnEfrdgzL1qQXV5xaTmADIQCD14Oc7JtGXNi3Le5YaDnWeS90Nqvsa7m1d1PpMu28gS0WCI/trinta-reis-real%20em%20reabilita%C3%A7%C3%A3o%20no%20CePRAM%20-%20Nilson%20Coelho.jpg?psid=1')
+file = URI.open('https://dsm04pap001files.storage.live.com/y4mNIHHpLLOSmhZdu1gkDpo3WwzDQkiHfeGVvk7U3U8B9VbJ5X5PCr796N2mPBiTKKOYDAMsVr-doifVnEZp_V_IfXa-q_gxD1ENqeVAVoOR8eqdS710YHXDlUlanUeiZqya9LU_toKcG1pmMR5IhSLhZabuBzHeTZ9ftbw5B6tXwV35QMuvNAuTzhpQ9n4mXTA?width=1024&height=683&cropmode=none')
 project = Project.create(name: 'Vivências Jatobazinho', country: "Brasil")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mW1Wv7wJjgYyr60huWp8EYYwduUxJ3lOwyopUK4jEgJHouzP4_fAwyeS4Gsq3bVRQn19jHhkiyi18bu2f5ojS8SDdncScHTu6rIqoF9M1Ogu6tVpVsAIO-wuQO4wRtU5Bst2mxZ3mQsrgh2cNBesNtGVAwWQ6KWKdoS4z49HDOiaLNBhwLFp-VHHKQyzVsmoPuqzRD8yHn0D5DDu1ZTPK2eRWgK8Vj-seQbmbYRpeQ1Y/IMG_9792.JPG?psid=1')
+file = URI.open('https://dm2304files.storage.live.com/y4moc6FYOhiGhcn78buEjh18Cbgj87rnbphMx97r6Yu27kDNbKR8arijTaLufCc8fqFp7uK1CJr6Qz8833PilSF083GaywciqTZcq2KxZc1J2WAB_xSNl8PYleYsZe2iw3otBZCn7RW3zTvlvdrSfeq9LCQ7GNy5dFQhA1kacAwBHeLOq7uAFTtxpJzl8sTdtRE?width=768&height=1024&cropmode=none')
 project = Project.create(name: 'Projeto Lontra', country: "Brasil")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mwce2HEmaWknKOvOTdsg_ZLeQGnkUySjE1voqDRvJ1xQyz2mIl0A9xaQy5Vz52P0qzbk9xUgyFHLkPFAZ-zrgwuw6gdeM8CnA_DOuj1Iubv_TKRT6smuaiWjw8buZc97PCBjENacyEds7Pj8mSjKWGrytM55CYVz6dkTclq2b6kvkmzfWvY75ovUtnJwsny0VD-T4LKlGuMKV1MXFSPc3JqQ4l8vQ5LX3XEXtRkEAo8Y/bird5.jpg?psid=1')
+# Cabo Verde
+
+file = URI.open('https://dm2305files.storage.live.com/y4m28vHyBKo8aXLYRFylxP2MvtrALRDo8a8EliXu45lohIL0iplFsR8GfzKqe1A8qjifFCCOXPvs2ztB9cObHuP4L-OETpitISdOXgm6Kz2AjlYA_Hf7-BCPakWlcMH-Pv_0q2j3L-QG26ygbqLYKuXEC0iOb3MHOYBE7XLADDwt4zjAvmmRtTRe4iIMT66yJfV?width=4608&height=3456&cropmode=none')
 project = Project.create(name: 'Aves Marinhas', country: "Cabo Verde" )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mPqkoukeqyqnF76Tf05iXDQEHwJZfiCcXMCHcLoXSAxA159WJOdbjDVKVQibZUw4V1FGE3QvBcPm2NPcrCo-p3KpG7yrJAZKR6LNqBJLzIILGbCAqUJncLM2i7Pei81tnbxILL9UVKDJz7ByNQ04zhrUsC2j9ZOukRMi2WmCiAI6I_STXx0-Dazxb05ho2Goc-KAJUQY3DyQV84alET_UiTMSGSsu6rAov6RuAsxTHJg/nesting1.jpg?psid=1')
+file = URI.open('https://dm2pap090files.storage.live.com/y4mlSpRrhNT6DUhlY9V_flKXRE9xR3BZSjseiOSoMNP2r-DfcUFBzJqJ7S75knYGtYnxAxwAs4Wsuc0m-pX4VlGFeosElk3kLRstsNw-eaW-olqQL7nSarFsbpQQWnhoLFVh9il5czyjntG3C9zWm602rmDiJG2z8T41rvf8O41LlvK5XqQ2RYx8DWexm5ok9Q9?width=5152&height=3135&cropmode=none')
 project = Project.create(name: 'Tartarugas Marinhas' , country: "Cabo Verde" )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.bl.files.1drv.com/y4mAb7jornUjxPVRSBjFbMi6ahY1W0usGz1dndcoaNQ4Z6WQZ_MTda2G_IAGoWNUINinDew_53Y6xBcmJThzTqZmxgFkK7gCrUP3J7O6eiLTp3x7Fb03gPSEYpYKzM8OYs28ImZKOCr-FWRVDHhfHt1-7YYgd94D0kReH26DX9hTPyTfvc2EcGIpNGuomGL2rDyXPFY0sA1XrSQJ8IAYDLSZJAixJDjRBVAyNpOj6Btv5c/IMG_1353.JPG?psid=1')
+# Colômbia
+
+file = URI.open('https://bl6pap003files.storage.live.com/y4myeSSFhG_fCEW4yzY2swt7CIOH42ZcSUfuFnXdAG_1BZSiSksIDrrntxALWDxs_w1whgB0TGsOkC0MPsD-J2zh2E-bCph_jt-vVT7zHp51BUEmzbtZi4Ndx5k05NuUNHJM0jZ6en2C3WmJlIR7JbJ0XW0mMmE5rB533LYQoNZ9QFiSyC9IVkxammi8P5CasEJ?width=1024&height=768&cropmode=none')
 project = Project.create(name: 'Hogar Casa de La Chinca' , country: "Colômbia")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.bl.files.1drv.com/y4m3Q8bkT1I6KV7Y0GyKEpOPTcFoJSZOTVY-sBwj-JTdcIVUgXmAfjHRr8qVGZFEzmFVJptvsIOuvfwavNY1FDrbPh5LlLSTSoUJOZQ0curgKp_mhTlYsY5099EkVAS5R3mqsqAxvNu9mTQ3jX5eCEWE-GCQKkMmo7E7CYbXp2nqnfrocmmojG2Di-navpZOUgj3qXVfWP53ojpJ88yoSal7Cjo6WQOFw503TanBJ__JGA/WhatsApp%20Image%202019-10-12%20at%2014.38.08%20%282%29.jpeg?psid=1')
+file = URI.open('https://bl6pap003files.storage.live.com/y4m0Qmle_1v0fVivIc26RgGzJd_AokS8aPuQpJmJp18DslUPA-9D_TUwpEO1h0yNNBQiEHNHznIHMJ1lGgpSH9fDn1z41d43gfQ_R9fIJuhFjDXX4-E9tm9D5nHz0qcHHaraDXfFWo0i63IR7qUlVBzpiRuzgmj2vPQ9jcorITxsAathFHLAiqjuu5mKqfHt6CF?width=650&height=487&cropmode=none')
 project = Project.create(name: 'Brinquedoteca La Visitación', country: 'Colômbia' )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.bl.files.1drv.com/y4mDruwB-SRLPz-Ykn9bBgKXqwEDKxZKi0ZGhliavQpM_RpvFgcCCRmYY__nxD4QHK0cut32Nbl-to1C3O4QG78RlC_8WjSj353jyKt9SQcS6LNvvcMw1I5PGKsrrdsEM1C93OfufCZoawXvEQ9eagOvwRe6tRvgBEw1PLpQ_6xJEv0dP46EgjHanVaNiRV9hquRqFlOW8c4i9xOdXEhjViNveox2PSh5Sqh-ijJaeCQ1g/IMG_3551.JPG?psid=1')
+file = URI.open('https://bl6pap003files.storage.live.com/y4mCCsBEzLa0P9U_106H_asxcVZ1PTRH3r2OeFZ-c7scrOwK5pBviwlgEOXxyRhN3eNuYn3aXPVG_iDQnegrHwe1xQCpaEIjAg5CTd0uzUo-3EMrYPYvGwGgni2wiUWDZWeq6oTbrZHemFXxP8LUU14KPbOh_RWmS8xjae_spslQQ8meQ2jnwygYViK9MzFugCx?width=650&height=487&cropmode=none')
 project = Project.create(name: 'Fundación Lupines', country: 'Colômbia' )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mvb5XAG-ePEbPYoart3H522kur4Xnu-XWydocWqtqM2wAYZfTRuUqh18MP0JIdeadrmrP6GOigeO9Q6Cmmj_BbBt9U5WgKcIr-VRimSoYM3MnRcAZWvDmY0j0-VBUpqJAcusLXBvsVz3Zn9o4gwbDBMhi8UrtysKNB4f8Q7zSn1-I14n0Hbza8poac8qyyKAbRDcckNWKZZtNzrV74uz-QMiFJqDY_lNIBwlyvL-EX2M/PHOTO-2019-08-26-14-51-35.jpg?psid=1')
+file = URI.open('https://dsm01pap002files.storage.live.com/y4mvWYEYK6_W849Wy-lrCJd6dAJ3nTNR1_ZZxMkwNbOShXD5qvf-kYLVk9delwtnd4XshDBwmLhDGW--awZqQL52HtteXtjZ57iFV5ixGwCt35WjI3mV2bwEFqOn9WF4iFN9oIDukDwRwT3IhppJR4worawmh66oHu8k4wV5aa9jyqZCb12smWG7AvXkMBuUEQz?width=855&height=1024&cropmode=none')
 project = Project.create( name: 'Corporación Superarse', country: 'Colômbia' )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mgFU7BNIDo_cjiiQJyl-M1307mBrKUBEGg58HB8tUUdFVHuiTva13qvAZ8oykeAiw5iGaUrkzU7IAAYoMRqhFuAXsyumkt6qWAPqTRDlijltpOUb5kpOwiATHmQHfuyhLZiezAYdLCrUbumVDL63P1s28-tyBi1Fo-0XE1Zn4lE8tddHMKV31CAFn0RStz0oTEiyL5lTDoarNJdJqulWoNy13dG47IpDuS9YN3tpc3ac/TUR_1318.JPG?psid=1')
+# Costa Rica
+
+file = URI.open('https://dm2pap090files.storage.live.com/y4m2STEe8mUK4gVlyvDpPQjDNKn6W5mdx-2DW_th1Cnhiz1dPjNuMrVemv76NUXgfBzCf-vd5vsy5gm-k4oNZRivtB9VDBPnAuK1lrxzAqmqQ1FawwaGnEVslyCROr8j8Gvl2geMBpivLsGkSMdJt90fNR89M5bTz_wC7c74OxvMWR0fbOd37m4czashrBk8y9i?width=1024&height=768&cropmode=none')
 project = Project.create(name: 'Turtle Conservation', country: 'Costa Rica' )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mVpPc9GTr7pbJPgy8i4AZOnBfuFtY5Kf0bATOSO-kt7l3979A0VNeXVX_hbHVsU-KchWi8jh2zVfrvFcYGN_DKXXTWG0fW4WsfKncJ3-bE1a3-Hj02fvXjnOjO4_nHOwzzgEGDUaGfwFDvtnRhiiLewVEP2mtgJ5hReymlVm6pjUb34WEt3IEaC_K9XI2tDMCgZ9HhGEDun2_KaLa2XCh3arvYaQrwGQ7fSVLUa2hje0/TUR_1343.JPG?psid=1')
+file = URI.open('https://dm1files.storage.live.com/y4mwaLyfBJm7Xn0NJORpg8l2H2g4nbSruiy15HW0c5EMjfMTItNoJEiNOn0OBs7EBWKc9J8obXOvi_u1BOClvd1_smhv90YkZCDS1dAGu7tRS5dht9ulIyDgNRrnzQdPFH0EufDzyArGeyHLgyBfAhY14aRd4Okpku2Qup-AtwlBXDgfa1tWxGZeHMj2DesOhGW?width=1024&height=683&cropmode=none')
 project = Project.create(name: 'Turtle Love', country: 'Costa Rica' )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mI0hcTPHGNalTWnOWrVew699BL95JrhgY-_nr0himDfh_rfbOOwQmvf9a0dOCD1jferdHQQTLs_RoIkGDIJqFOZDIisbuqguonlE4CFOcx6lZgPVPvRCLBDMtKRmU5_i6yH1rsBn0qz6yzarnyQ7-Bl18oLySGhGUilfdBexpJT55S8GHAyw3mbgpUYNStG35-R1m6d3py5I1knHNgOm9YAGspbkrH8C-tyX5gu18rm0/WhatsApp%20Image%202019-07-25%20at%2018.24.02%281%29.jpeg?psid=1')
+file = URI.open('https://dsm04pap001files.storage.live.com/y4mXde-2kMJv6MWAH-92rsRUtp_KOBFmxmZRbNXpFt69aXWGKUsiNnPU6NHbkHP7UdInujZOH5cs1uNfMyKSKUTqxPpJqWa5vbXnvSNEhu_he5zFdYic_h3xFFiVTEhS6dfHv65WxeNbSMbOkwYCNco_PKhd2IgSS8YHPOvvAU0eq0RxUSbGn7x3XvtyF_ROYTT?width=1024&height=683&cropmode=none')
 project = Project.create(name: 'Energia Solar', country: 'Costa Rica')
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://pywxlw.dm.files.1drv.com/y4meFzy81ijM1zL5fhLF5VZdio8rME5r04X-22a3rOgqDZ9xfETlBccf42fbeQANRkFIpMKnQigJ0QGHIMj3u6Kq4uqUK8IjM8-To7zrQUv_wd8qkERRmfH7cw-ZyVo6KHyeJNdObrgJjp4dTDKK_UG33bCo5wN10KMaREwpnPHuves9Ao8gPPhJ-7thFua3OKTUJ9zV8i7Lsd1LVBcYk2GkOyFPmB1KoWAARtuIUOdsFg/PHOTO-2018-10-04-18-50-51%201.jpg?psid=1')
+# Gana
+
+file = URI.open('https://dm1files.storage.live.com/y4mjXhDA5M9cAx3XYMlvPGQPQJAjHP0TCB0w-XABksNwM0C9jIucSZkco1WCr2-9hWDujXXH-06d4mw9t5sH6qGt48vMHvi7wQqOxnUhUKHJvAzS-2LN4WYNEZoiAh4BJOScwc99JzVkRb1-UYDB9FrBmtz8iVPXHsAlJdVSU2vnkgkaawnsBJ-OZ5XF-dz1_Gw?width=599&height=518&cropmode=none')
 project = Project.create(name: 'Child Care Project', country: 'Gana' )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://pywxlw.dm.files.1drv.com/y4msCvMWVRQpm1LInn4XFwyR59_mswv_ZQFYrxUJ1LrZ9WRzrxyiH74gAjluGyo4hNXL-Jnnxrn1SQ6qOKan5QsNW8rqvGdy2mcJRXYCdosvC1XoFX8cFviX_hGQU_sZo_FJQ4wVWbLG67uAU10OYKlh07F7vCHbZXTwUE1ZwX8fG7MiRazLZ9Cu4auVekSPXmtQ2lgDB6csMpLshrwW9fCYj8vG2ZTLOZ1CAIPWbeWEGQ/%40marianmass%201%20aula%20de%20defesa%20pessoal.PNG?psid=1')
+file = URI.open('https://dm2301files.storage.live.com/y4mchjGKix7AdIRKgtCg_Cz_tm241UEsW7uJtQX8gvh2XbRMrIpL-ODRHfZykmOx9K1cl8mAmaBaEJCUh3b4VndqfsjFDJJoer3BwAe8UZl4LqYDnUb3MyVdNDvB2VFQppsgCnHssyTUAmeM1enQZk8hyKJnVK8xbtUyW3oIIJdDNJOH38wTsiUZBZlWuW5tuiy?width=1024&height=768&cropmode=none')
 project = Project.create(name: 'Teacher Project', country: 'Gana' )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mGSkITTJDnWnLpBQ_OSOqY4X2OiNP0GofDo8xD7kWTna5DukRzpPozIHB_D0xYRmJ6sxLz4fWchKt8SY3qkq0FJY3cWexQPZ4L7JfduaOnQdw-I_r8uiwNNrCoZLaOiSQbVgJvAL7iTkn8pdpC5Tu8wTteszcmwJEIDYGZhxyPARbHeCE8kPYo10Kkm4t-7wPuX4bt4JETsLd6IF_PgdSJRzdqPpMrsRdjk3eHjeFKWQ/PHOTO-2019-02-10-15-54-41%201.jpg?psid=1')
-project = Project.create(name: 'Educação para crianças', country: 'Índia')
+file = URI.open('https://dm2304files.storage.live.com/y4mRuQDB9pfEaA9Jh-zmnifWyYrFF4Q7AQ1Cdqj68bJ1QMjCfwPmTRLRDFZWM6Wk1O24LTZy4VnLND7kaY8VCYzlxajNFIzbxJxy8RUzxSTz8SdCbqpaVE3DxkEXf8kfGuY0W4KWpPzIxzGu5o4EH_Op0I1weFYt45sTVdvhnElETuCsoOtAfiSYVB2ER2suaex?width=1024&height=1024&cropmode=none')
+project = Project.create(name: 'Hospital Project', country: 'Gana' )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://4y5d6a.dm.files.1drv.com/y4m6X-A7ToZOr_72H4JzbOFkYNVeS3ljaFyMZ9-fGXo0x7irlOSAEgYqLc0E22KQHcBpQT30E8RWQFyeBCdykYANsGHqQLgt2rJANtZIruZsU_LFesA9wg4Vep2_Qpl1xv_hBuf0xQxBFBcPAzFqhr15HjG5hnbF67OjmM1UaGYLuw2OzDbSF4yEDXhLw2vTPyqcF9MBWh2m464U4lJiIYIOUx8ZvAPXakazQkRd2Xb3tU/IMG_6581.JPG?psid=1')
+# Índia
+
+file = URI.open('https://dsm01pap001files.storage.live.com/y4mLANELgGRdM4Gu7rBSyLn9L0_8ehGA47v_T3s98W0BH-CW3wvHedqPe1wGkT2tsGlU52Ty_ZMuFc1SbuHBenE63OLPXIfriDg9_olzGnJ0pqtAmEvR0RmhGZtHufjNF_9buItYTox-BjkZZVLuoR-3psloZBRPWuGTZtJvtNUGXqN855ce7uGz34kKINeF5a8?width=1024&height=768&cropmode=none')
+project = Project.create(name: 'Educação Para Crianças', country: 'Índia')
+project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
+
+file = URI.open('https://dsm04pap001files.storage.live.com/y4mtcj9WcbYwSEL04NIG5j0BxDiRckgxWpG9iMQSgtZJ35_-vbLy11xNYp-UjK34xMGVylVaKb5hYJx6p-d1Q98BCTBnbNdQnjQxBePNWz1Luvxmh1w6TbbJn_32mqiqqOdfzWmw-JPm-F9UvxFHhWBEFO8iVJXHHrQBGUhvotdQT2qxXJWK9B0ERKeJ-zxAgDn?width=768&height=1024&cropmode=none')
 project = Project.create( name: 'Proteção à Infância', country: 'Índia')
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4m6R86IzOUyPP7agkYq6s_ppJQ9b41DOwKNm9kWNkNDNJ40Xwew0ippJRBKUnOlth82zrGip_fGLwlLN0KGkf6ozqjYQQYc6ZNf5hgDlU3tzrwpnYpzaDpQyqnisRgxle6VX1deAbFdRsgi2ZFCYcsgASw5MNvqRc52eGkPoGI1GcpBBjM8M_TGQ0bXFpUXUU3sevLnMGIs2_AVqb4qg3PKSotxvdUybFMewO8_V3DqGI/%40_serpinha%20%2811%29.jpg?psid=1')
+file = URI.open('https://dm2305files.storage.live.com/y4m2DkEwWjuzKGZL4_rVUgkAhU_5LcZIb82SeTpNA4-tx121jHxIt95vSi05exntAngTXUgW9raj-gGSWHpvud3lMJrdNe7Pbm36NR0RxtEbQgJ7GyfEiA9DBvJfjV31Vq1CUFUl5hukWFtNQFmNyqLoqH5rGc98fWImqji_I_2bj-AaJ6Nadp4Avck5avv2bZC?width=1024&height=769&cropmode=none')
 project = Project.create(name: 'Women Empowerment', country: 'Índia'  )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://ocw7jq.dm.files.1drv.com/y4mavhIEopcrnsxD0jhkMFaNkJXVh_k4qep1eChBuZisQpzpbqomARazf4RQmJF12oTR4jU-mgBUhlFPm_yZ_jTXMWoTvUE0H73QNCujBLW0JqVFxrTLUiwu-TfXV3pQB4sB6nU_B_yPGml3g9jKVPX33FcFQutQu4pJxiUsKOwMj2fwxugNNOh1UwTchyoeXFsn6ZFBu3BdjoqvZ8D2eIYwW_Nr6_sAsA7UlXluoGKJ6o/IMG-20200427-WA0011.jpg?psid=1')
+# Moçambique
+
+file = URI.open('https://dsm01pap001files.storage.live.com/y4mwGQjbYV6fErwAyUXjHZNPkAXJco3SlUUy6QReAh4ICyNRGEprCD_-18-SJlb6y8DD_u0cnEcUvIay8todc_S_zQdyTTI8uhhnCx9plLT6sUT6X9JMORuv0Z7yt0Hg3aAP5Fkz6II7OS5fw5syUr1dvv4Mam00ZvwzoFpsKKpxZOvf1abKHz_MN6bFCsR62DN?width=1024&height=576&cropmode=none')
 project = Project.create(name: 'Projeto com Crianças - Lwandi', country: 'Moçambique'  )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mpJAwnthmylMhgTrZFHaGQeRLmdrxPCcRl8qXVJ-VxVX3wAY4kExLy0elYn23zbLo0cbd5HNbHifeqb6mAQSZwGxrqqDBdxdx7M4-PTrKVfm4T_-u352yPiDxMd38w0dZgl3hY0p85AA0P0WQCzoA9emhEI1edCkt61NBTQSLic-eit7wUFpd2po7_A7D5jq96E1d5lKJPm8MbwlNZ69fWwqrpbrNCv1DoU8PPvLlClA/IMG_4381.JPG?psid=1')
+# Nepal
+
+file = URI.open('https://dm2pap090files.storage.live.com/y4mBJn-K47322qXLKeK5Pzo4lyfc7RmEbWCDyYwXlItzFcaz0o11e4JDtVMf6QLyoxYbJBjKRF7IUR7fM7hZ58PcViZBlo165QngGFaAlaChzhgkt308U4chaRDRri3oWc_a4QekGmjvvVlOG_9eJGqqz_VyAHNQpBqatoyzHEVNYRjQ9ncATA2DRaAnEMwic-3?width=1024&height=768&cropmode=none')
 project = Project.create(name: 'Gandaki Hospital', country: 'Nepal'  )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4m9zt232MYH0UOmP5J2KrcDbrxEpjH528bsa02wNMY3eSTk1x4RG19EcWrA3_b3OiN7mmuNkQWjnwYCKuGPheKphRglU11Yqs5N2tKF8x-DzL6t4UmOV-1wzIYiFoL6mtC4Z6uDuLOXw5IWdvrQ37GxPp6GzMSapWzzUfOykxNzgulA6qzOYa7wjDmO1YkPlts04sqGkKdOP0RrzHBitROuf6zJMkwI0MUusCLve1pvMk/IMG_4362.JPG?psid=1')
+file = URI.open('https://dm2304files.storage.live.com/y4mdrCYtFoqm_a1JnkNA37Zw9ixx5XqMTYDKr5dXCg4pFk-QWANfZMUtO89wFzMaJubcZj9OkJw3Eh_0EPdpKK4o1W7Z28hp7pOIqThOBnZeiGZZLqJCeNgq00_nEozX_rNLMOis3AUry4iTnWY4KkkX3lDWve6fq69UKsc5qNtvkSosKElQLdhPl8OiA6ky1DM?width=1024&height=1024&cropmode=none')
 project = Project.create(name: "Kanti Children's Hospital", country: 'Nepal'  )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mJuq_2IY1oYFJnLvk7q-zAiGgVHxR_iJhEwfNBgiCc4xLza71D8AoKRQ8e54cV4t-8uRRRFKfDFVgZViDbmgJ1ikedlEe8XPBEJEl-a8SgzQJTi9eYo18QFJkPmRiB6NgH-Pjkzn_1WzQIgs4fHWrzYFKMgyBBOu2hf3iuCdCyDOwFCZ-g7LW37HUSQvoXvck_SghdXvpSfC9YZADa7prT81q_X1Btk2lsJYzTO6Cr3c/trabalho%20voluntario%20no%20nepal%20crian%C3%A7as%2021.jpg?psid=1')
+file = URI.open('https://dsm04pap001files.storage.live.com/y4mAgfrC9gsINNn7iyMK-rvE5kxzENGHWqm9DmX6mWRKlyoQHn02hewn_TeRVA5kgZMdcMMLLpvTt7_1XeCBMZYE_bmx-iYu4yQ-xj2W4x7w39aVmk3m-ij0YI1QU0XCf6mqzGjLwVqat0ubBx9t1j27MaQ70xqy4BBun1CpnAzGBFAQxhx7mGo-kiiQvU7HUGZ?width=960&height=960&cropmode=none')
 project = Project.create(name: "Disabled Children's Home", country: 'Nepal'  )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4m3lDiR6JtQS46unaii9SIbr24GdbppTHjrYP-uk9yQbMpke537HLwsW4mqU2SUD0pFRNmk02ufvMcI-zlAd2fTUJAXfLQsWIoQ3gQq4WZq1y56fkISZPGDqC-wh8ACaML3OyVDXqK0Y9omFXRggGCte35J8knE7rNvt6l6lJWF3auMeryaFq3xW9fhxP5XAWghXD1G4xpeCfv90hZiBev5eok5GQIsqvRw6UTV68yADw/camila%20professora%20no%20nepal%20escola.jpg?psid=1')
+file = URI.open('https://dsm01pap007files.storage.live.com/y4mWGuLxW4W2jXnT845Yj7B7smSjlS7i4z5bmUMsViUxgyvXwjgNrCMeqaxmMtviR9t5w20xTP9N_jh2m4k628MrBwcdxGT1qP8kWNc2Vlt9mnn983zFznNwN_Ol2Ddm3ZDpo6PPv5q_zimetP9PGiRRik-ZywdOP4snxsHxodsR53XMRl3zB7UurvKXJxRdtLK?width=1024&height=776&cropmode=none')
 project = Project.create(name: 'Rupa Tal School Teaching', country: 'Nepal'  )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4m9lPXitH6av3sbBvXdDkQTIwKh4TA99wT6xb7Jeb9HrqLNXbqcXYSQyKaaOWHSpP_IUXzyr8QOs_MBylCgLmD7eqNQoS61LYOwa1NI_2m0zFBORFkzdCxQEphAlqn_A6kMhL05_i_PcbRrOu2G1fpqF9coHNbqgSLlrju9vjepmooU5PjMZFSw8PESC2ql0HXwZKNY9aIwuqiJXlLfPYRbBJpFTpXBVQ8rwOuIC8GpKQ/WhatsApp%20Image%202017-10-31%20at%2004.07.32.jpeg?psid=1')
+file = URI.open('https://dm2pap090files.storage.live.com/y4mT0PpOvRyx2F2uUdLelHJZ5ipz9M4v0Izod4yR1rQ0l3QUCyUziF-Qe8urbH62HytnrcWvy2Tmi5UTpkOwUgmpp-31rhuGIcuGqYPVPiiYFHtHmBEK1AKS8QpD9wuyopSedSSMlq7go-JD-AeBaFlbJr6rg8V4hSE1tO398YnmCouffvNk5_xlcT3vF3Adcz_?width=1024&height=576&cropmode=none')
 project = Project.create(name: 'Nepal Rural Farming', country: 'Nepal' )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mdMkCCNxh2Zi1-FAaOB7ml0T63pOwk6kqxho1l7wYLo9Ath7ccI8u9SZ7c1UzVsKBrn2n8bp3C6Ilz-lRmhpAnNrBAZO4b0bV9NtUtcTOVrOQYYwsSX8eH1TN3XZ9YSwU3yfPlYMgRZjektMSdb1_jLy3fAYrHdfWOtkN8SvfyQXcJuTpH8tggDmmOkoI3gyVHAQSlT2v4p0ezKjCsBsAHmnyU2oN2SfWOZhhEmUa6_Q/IMG-20180721-WA0002.jpg?psid=1')
+file = URI.open('https://dsm04pap001files.storage.live.com/y4m1ym9sIAblTRjxY9_mk5ot5rWCAyKLBIGHSh_5TMKwlksXemRLQujBhIEgUPOIF58-wt85DGcDjOCv_TVnDoK-3ZdbzcQ2zwnhl2oZ-jma7elMKMqUFxipqBmOTAD1GI4OyH7Uob-H2wXC5X583PDnbMlAV3ar_hk7HkfL96sl5ovYD-8IOMUR2mUfjIu99C6?width=1024&height=682&cropmode=none')
 project = Project.create( name: 'Clínica Móvel', country: 'Nepal')
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mhuhTyW5F1eeqjBs6rixvFTEaLlxxjeEXq0wfa-H5dxkcl-OWwNCsEtXql_jdlsc8Gouk4nTlfRxgYEOCEP4SGNoq949ClELdoEQkwISYNCfqm_NRgYDWg2K4xVSwLAcbYFoFWZbk6xHpgKJnf8SREF-m6bhDYTjYJwVffepxRcP2wqWkG64kQC9EqvCJ48gwCV5BFKTRG6oPNPtoV8Hu-77YJasqxfDbMI3WupwV1AY/PHOTO-2019-03-21-21-51-12.jpg?psid=1')
+file = URI.open('https://dm2305files.storage.live.com/y4mFsLJH7zBPwqTRl_2LxfaSD7JncJjFt7ckWDKfo56G_DalruYzYq3MAYBisbiw5Ou2sVcXlsIXTShUboL4uVh0Rz_B-qWtDKKdcoZ2cMWBnpxeHqFBgnyxOj82pOduBO0B2GdvLkFbboMmYE_s-f4ui5deZrmCNooUOs17paW5pUgdirPmHl2P0IUDg85z8Ym?width=1024&height=683&cropmode=none')
 project = Project.create(name: 'Women Empowerment', country: 'Nepal' )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://dnheaa.bl.files.1drv.com/y4m8Yz-9ai6edg9tIUqUqjTwpH1ceNtcZ9QuOXtUlSuXi_vrOwRtttrucaYZq5vCex9DGv-1D1DyLCAyVvtPjCZYWTe37m542LwXGy_47tvi-0yqyGKYWb8GbXmx6yjnkK9NetIgziP8Lsj1stQKtIoMlV9p51Mxgb-2hb0eErhLTKktp04HbuovskkIDLkrJY_0_WwW5YWnkDk2G-o2UGCuIay0rsOcYsFahojKEaA-8M/Imagem2.jpg?psid=1')
+# Peru
+
+file = URI.open('https://bl6pap003files.storage.live.com/y4m5GY2-bMEdq4DMrg11ddiAoXmP0BaTubW9eihCxJqgnuMo2mx2HmMhw3pHEBNEkE8QMsz0Rysrd_zhaFcSBBZWgsGc_F0bl0377WMoQMSD3BEqLIMsHQquo3EO5ABP5paXsX0Y6WZrA-lxuR4q3ILXZRqita3UiM-4fvcbOdmYxFRGm5oUqEsdFOf23_ts-h_?width=589&height=442&cropmode=none')
 project = Project.create(name: 'New Hope', country: 'Peru' )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://syw4qw.dm.files.1drv.com/y4mZEcpHbu4ZCus6LIwhhWnXiLdPx0uOHAtDkBF6GdZ0Ik03JgjbSugXaU_BOm9CZFGwCBiaOm0vfgDuj9KquvM9ZmjT83flb_IGurvBa6xQM3lNYpeBJuu9cC0IK7-tjtEyhHlpiQZZlB5nmUaGDggXkkFt79WR9wEzdMcnmalrKnqw4fg6NZprgHV-8SwbOzOZVKdausNHMP9f_docZOQAUyRH94DoUWBwR0f2fKuaD0/2017-10-04-PHOTO-00000073.jpg?psid=1')
+file = URI.open('https://dsm01pap006files.storage.live.com/y4mu5iMM2EWKhppJwBBCSxLUfQdyVaqFeYhQHRCthN2IXnLwccw2wpd4h2LcG8_D4xrnEqSD1Nu-Dne_YfuiNQozxC42XBReRVZoiPEOF7eCtDAbjLVvAKGjOX_kYsuCZbv_HJeFh8UQ8Uqm0CZgeyozc_MQ9C9hVQQxshw05Nh3shBTV5KkazO2zsekN8uZBou?width=1024&height=768&cropmode=none')
 project = Project.create(name: 'Casa Hogar', country: 'Peru' )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://e6mgiw.dm.files.1drv.com/y4mhsSFf0EkEKP_Lk7cpprFZTkyQlxNMm-7dDVKK76zSdwuQyKZUAiWndcKykvfkbfatznTcz5oR2lp7Ok9FLCdrP9UZwoDy1z_nDln_hktO3hRTb6j85pM-EE79qharoIb92NWp5r6xY9k68CamaA9SJRzSS5ar2LX7Rpie6XM7dinfZ0D2n0b9w2gW_C44Pw9lSmrKofd3nFVa-I4gDLw5B02YNg7_rvSkw8Mo16F8XA/20181231_161008.jpg?psid=1')
+# Quênia
+
+file = URI.open('https://bl6pap003files.storage.live.com/y4ma4yprRMenDhSpL7tCLbEJ49sBvFJJOCf-6sGPx-AqG_YzJdk6xOUYwH8fxJtRj4zSNqrnuAwigQwHqSRpX6QNGPqHXCQkfrHqacm-67X8rOFY5oO_3QMRuWJUImC7eH7BTiYL2E_OURmPd-ULWkIBq6gymU0RPif2elArq-ftvvtkIt2sDaBEMCu3ckiDt_1?width=1024&height=683&cropmode=none')
 project = Project.create(name: 'Safisha Africa Welfare', country: 'Quênia' )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mgMl5TRJYDptaeiIKVNKLtl3B6Im8PGV2mlMv5WAmT1O6kclsNpQrwUztIpicVVoWqy6WQX59s7VrWFkABwY1Wfv9SJZu6qT5HOani9OJqu5Cb8Vd99qGX_hq5PicSb_lZ54DRn5HlFG2T8fi4Pq6Y3IzBAkrd1bBfTlwny9XARa2Bwe-6fVxx7FY3aHKUEZVyPI3kUG1KTIOt2twBnWYqJQo317ivYsmzjSUJdAXEi0/2017-10-17-PHOTO-00000277.jpg?psid=1')
+file = URI.open('https://dsm01pap001files.storage.live.com/y4mQ5STx_nesPPpLMgRfc4a67RdbFWKHc8cf4a4SvGVD6LBQwfyoBVXGiAKAIGBNixVV0fjCjMD-vBU451CU82PS0pCfTSJEjA24lej9Q6t0PEwSJx3nI6bZZruGB8mDW0jakf6Swmi-LLhoTVFKUIk8DSF1-J7OOEJPeUUHkl3AooUueNgjJCw1DCYnvoZuz2K?width=819&height=1024&cropmode=none')
 project = Project.create( name: 'Port Reitz Hospital', country: 'Quênia')
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://syw4qw.bl.files.1drv.com/y4mM9iC8m-a4Bbi93FJBVmP4a1mOTBk2y_5ZMLiEYVXgSYtG_5mGggmVmehFi3FeLUyocqWGNQ2N7LqR5vbkTFbgM_mAm49A3ZZoTdHjR9ehcAaAV_95JdLrLcjanPz5JJJfiGMhBwkfybSzbaXII2ttA3J7CsaLXIxNnK1ventN17kOuzjV2DkZUmVVrqcu1bXjc_646PctfJfp712JQ4XEgwKyVHIwCfqJr5cFMhILVs/Paz%20Peru%209.jpg?psid=1')
+file = URI.open('https://dm2pap001files.storage.live.com/y4mn3X3y6RRkxGzvjPyrLF8mxNL1guPQp3icw94NzIUHRiEX1-QAHVA-FXFX9O83wKLfsrmRJAMKghHX1qqm60DZoA2nYJfJgSz9kRgCKnsfR02MBPfNwz58u2jUgZFsNEoKfNkRdxcs1NygJJkmmynj_RRur0GNikrbpDuad-61B2OedFPEXaAC2rk0Nygt2S6?width=1024&height=498&cropmode=none')
 project = Project.create(name: 'Rescue & Rehabilitation', country: 'Quênia'  )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4m5tQhNrFoGQ4aVSlOawUvd2ZxHgPOl8iur041bRt54s0MXOOMQe9tPnTHCaFw2e8feAV2kkKTvHitTOZcKD_vmYjb86PkK9Olb-uy6g4BKl-t6jxODTH1oRWp3K6QkOn3UPCEG3UkMwIHjgwaxmnQVg4yWDSu2qCvslnwy_lmFKCeSwJeAHQt1v99vw6gmJ7Is86bkSY7Xt22aSS-MG7tFwVT-cB0KelI1RqFXAiyh2k/IMG_1961.JPG?psid=1')
+# Sri Lanka
+
+file = URI.open('https://dm1files.storage.live.com/y4mA_neP9xunSTF0r4M4Vp0A1jEqI7DEeeFqDWbUVCMhuQH4ch9yRy_B5GQ0SJ1dCI0nuUZmx2cAdtBqIJZHp6hBo2shOdwTo4NquS5W4G38XCTRmSTFkmZjgCZvgrLDSdU5kdzbqDk64diAu7YlTaJvtaXZTIGdwHblMVbSBlgb92L8itlLVdHFeVb-F9DmaTS?width=960&height=960&cropmode=none')
 project = Project.create( name: 'Monk Teaching', country: 'Sri Lanka')
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mQjt6QsgzY5f5xWPFo_WSipPwwmEpXpdmH5zkPY9IRX8yZXFTYIwexF0C57Kc86_pgwQjXiZ4PUMAhVjqpZzfNRipqILlPsJvx8QrHdLwxz8r7PaUmJy60j8f7-rNMxW4haPeUEQKFeDQFci_-AuTL5lLXZHt6WlH-mBTHkzXGlMtHIGO-TAOsrnwPh3l8y2cPCs0Sx_5KiHw9pZnMZu0Bjh0i1y2SGLe2u4aG78ks1U/IMG_1960.JPG?psid=1')
+file = URI.open('https://bl6pap003files.storage.live.com/y4m5sTsgH40cXeG2Hhv1C4B5L5H3mrZ-0LLeK8rqNUD7F39g44KnVnsLKAdw0VAFACFh5dnONIi7rsffvp398i0DrNsDn0EwSrTwSVEW67w3U9-klb10AH_p-s4_YksKlTd_Xc4jmXUylSm0U6Tp9u5_SAQmPtaibL9Pd1-wSpDHpeRhKIwXtR5P0YnTEEjc2wy?width=766&height=509&cropmode=none')
 project = Project.create( name: 'Women Empowerment', country: 'Sri Lanka'  )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mZN8S3pPbgEXx6vq3lYDlcE1K_2AAQeBEKE8EeTFv3JY1qdaxGUEOjZrKbcDyemvrbdEsTePAX93FSWx9thTUndCH2Uqn7zatd2-1mtRGQ3_GboFS5zlmStn776FD08VQZS-TqEDnDJQnqy9O0iWesgyUXyfpGTzEXFfuyFt8jTXw-hyMQGkUtm9lbFvRTw_k0LpVnNiAVEo9kPMA5CyACqrAljjX6187r_hjm8y5sBQ/%40marianmass%20ela%20est%C3%A1%20viajando%20conosco%20desde%20janeiro%2C%20esse%20%C3%A9%20o%20quinto%20e%20%C3%BAltimo%20pa%C3%ADs%20dela%20como%20nossa%20volunt%C3%A1ria%201%202.JPG?psid=1')
+file = URI.open('https://dsm01pap002files.storage.live.com/y4mGrukHQ-SjemtAV5_BkeiV--rwhX3PKyRq_-9s9C5zUFuxIxqOD_-egstHCCSDfSvZHaqM919Xaj7EBkyINAt_iV7Yr5-IASuMFkGc2mXJXXCfif_3FZ6zIYA8Iqd9gsiI3zXzGDJwA4EGEuJ0XAJh7HnjxV3lC_lKHfWBSPp5LpU-ham_4zEjMv3jf5hD6li?width=1024&height=576&cropmode=none')
 project = Project.create( name: 'Teaching', country: 'Sri Lanka')
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://siw4qw.dm.files.1drv.com/y4meML6uHKs2f87WiLOT-9L6fGjykXzwRvAF0X66Fc6tMbrBTyBFX7trS18k0O_-uVJYM8qPDujMr7PF4kHluy9LM7Y0y9LwX8ICYqk0Xetrjj8nAWrKFo0sb-iryPvVnxcoKxjqlFxzoHLv2ddM_Wmp1NzJf9dolShpQjY5HaiorZdFWEfhaX9-UbRJu56TqQepiE5jB6IprJ8xp70wORboyXv1G6_-i98BXqXTpMGYAg/IMG_2153.JPG?psid=1')
+# Tailândia
+
+file = URI.open('https://dm2305files.storage.live.com/y4mXsr36UJtkPp6IlYlHOUOIqWu7TnsnAOlp26jACG5nKhmY-7CgtwE7ejQQf07svU-91B88N1j45pxr42rNAVD0feNDLpNLXcYKryXyg3HucT9008aGz6DgfvExybm-5V_tVr40QR9ONiezZli8FeKsUk2GVeebtB-JRlZhko5A2k23FT9PKrmJOxto5PsbEbw?width=1024&height=1024&cropmode=none')
 project = Project.create( name: 'Child Care Center', country: 'Tailândia'  )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://siw4qw.bl.files.1drv.com/y4mHM9ohY1YM-F6N0BfNLRzlXC7f_msm3JHSDIBuKQeey5LPoGKd2DY7cI-ICdQvYkCAS58i9kkfxM6GKzTDC94ofqkbvCrsJlycicQ12orXcG7utuBC2c7e3VUT7QGZrEn7pB44ynKnAKIUQSfX5vDszH131ICJJ0B0zrX_A4LSAmfDMsnbh507f8eMRtqkgyDmazVX_R0-XBWa1V2x0qH_8VgMdwnmnGlLfDCxsaF3ak/WhatsApp%20Image%202022-06-10%20at%2009.37.20.jpeg?psid=1')
+file = URI.open('https://dsm01pap003files.storage.live.com/y4mw6sZ-vgQogaN1acqPsUXZ_2-lFLKvi9r9-eHiYqKG3dapD6NBnZ6CJkI5Shqfm__yu4FlgIlElB-_oB2JOFdGTaQVLYNX9sWOieiIdA2jtaaACiSqnXrM4LjPK5KbKUfgZHt49TSEJgmtxQGTOUhzdRPgGy3UczvR3OChslNtNr4Eod7Oyofw_rHrqcOt4Mn?width=873&height=1024&cropmode=none')
 project = Project.create( name: 'Elephant Sanctuary', country: 'Tailândia')
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://siw4qw.dm.files.1drv.com/y4mqNl3srnfm-0TFtIvf8qfyJflH8FKqGN2HvsfksbtPEXJVEMUDC3abkSs8vLPuJ7xz-8fExTMuNNIWPm_dHj9rns0MO5ollxgF-JAhgZ_JeAoaOevp2vuuqEaU0uP7N4RBx63yKK1Zb6JRTs_wVYdd6L6Mt2TFdQb4dpQ-rN-qlABEcmPivbNL6Ia5uzeZ3zimH5yQoD8uCGfUYBNy1x94ELA_odb9B0U8d-2EdCf4Rw/%40bruna.casaroti%204.jpeg?psid=1')
+file = URI.open('https://dsm01pap006files.storage.live.com/y4mfb7bYvezp16m_HB2QsyDuDlQ7dS7F5Mb5TFJipAlDt8PStYFz4mTd-trg1vVSciOGvLe89LSILXge0vi3XNkvE69Ortq7jBiSH0ih2d-sXH3PT3z5tWRtpxUb_mbT0BI31XfxHVQxJNUEzb7nDOLGg-jVD1LPjChw_gK0RPHyKEuGySeiaUIW7kpzeP7iBTI?width=1024&height=768&cropmode=none')
 project = Project.create(name: 'Teaching in Thailand', country: 'Tailândia'  )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://siw4qw.dm.files.1drv.com/y4mCz0rK-8p90fTm-PUACo2bYpCoP_WTG8zb4vuT53msbIM5LojqR1koK2WfY1O4NE6c8Dlac5jrvMXfcDXmx-1sRTAIAQubKrwaqxwNH-XvD7QjglZawZW7F68yvOjG6se4nNDd86ZcuNQOs45v2Xi8mCkoJN2W02i88ZMy8HM4eqxkpkBri00FEs9LP78rPVVArQvdK-gV_yWcjGI5quAaOnv9BToXrbav1R5yGHvFcc/49397654_2133857136636898_6277929421408043008_n.jpg?psid=1')
+file = URI.open('https://dsm04pap001files.storage.live.com/y4mlfgpdcKqt4X0996NMHkxVZhi0Ufd9FkNn9Ht1Eb78iYAu37scYn1nqZenhD_NkJlyTg2dknyPxQvuYBiv590XQyLiUp0gCnQlSyxxSzAlFZwN_nEEt7ft-7jhZX9fLHz2_np0gUDY8hspMoatUcsB2C3s093SSltdWc_QMwfMu9mS_wrp61DsDVmxU1hqDxg?width=1024&height=768&cropmode=none')
 project = Project.create( name: 'Teach Buddhist Monks', country: 'Tailândia')
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4mo3VrM79sw3lSxZBEyVpW23xjDbTowRLI-8OqzqVMkSVmbGsUuQ4sx7POxgyjSVv3ZLFyEkUWTI0_0sSzFDWJUySO-0uCyvY9E1XVf0_pUAQdfUJWbBGbzMBKo1-AmKyfEongto_yKMEWfVmO2p0wgX5KLfP-hMcrQ9BzxRQSlBoO_CUP74Eot1L-AvdoN-WUQ1viRIt50cusMvIFzTIHpLdgAARP1uhgXHwkqfpSiIk/PHOTO-2019-08-13-14-00-27%208.jpg?psid=1')
+# Tanzânia
+
+file = URI.open('https://dsm04pap001files.storage.live.com/y4mPqLhW1RfF6EobtJdId0g3TE5HKSD7b38Kg-Qx-Fln49wYkVeCzz-D-XAVrvuQlzDVfO2LP0i8pRVpJey83vKwXT_1GxdW6jZqQIo_eOqnFPH1iM88u2lVn1vS1QbSwmmW_6tbdgH_XVczUCyfPpyr5t1a4eIkB-VLCWdk1_W5SkOH85ozv2Z85-1stiloMYM?width=1000&height=748&cropmode=none')
 project = Project.create( name: 'Help2Kids', country: 'Tanzânia' )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://b6nqfg.dm.files.1drv.com/y4mFbtVeZT5A0r77Sm6AfxPwsZNVBBAqnLP55m0kU7OHJTErlLSbaZxYoD2hP0kA2NrbLoDSOQB-93Riw8efhYXMzF4eaTGbfLUFbOATUGiX7_ufXpEFtzALEF5aFbQjaG5WjZjD7KNqFZoNRwYaZJNK6uLfY4IaODwd6SP5ZQr2Z3kkvs8uhcejy77s6qB7c26l7joZwDeizjl0zN7ZowFB-rAk93HNkMiDwElrt25B7A/IMG_0507.JPG?psid=1')
+# Vietnã
+
+file = URI.open('https://bl6pap003files.storage.live.com/y4mSRGvV88htGTuh8ZAvxizYPPUCGw6mk-EDtmy57kPuqe-fvWfNtEAO6YNX19HveoJ8WbzfPeFd_51fyuLnyy2e_uFR8R1RnME9azqC9Ex2iOR6cTjMLWM0_hH1q3BX33GrRfaDC0hf4sBWJU7go27ssR0O8s31uWNiOvy1FgfChw_cuvDM_KNR30C6xyLqo-x?width=671&height=503&cropmode=none')
 project = Project.create( name: 'Thien Homeless Center', country: 'Vietnã' )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://sywxlw.dm.files.1drv.com/y4m8Iwono40mddGuL-Q-pzOVCmJtiF8SGEgB2Tx7T4_4ALZqpKbKCEevytTP7e1LlEM3RGWLmTNZB3MbqZ7N_344P1sRBniz1boFJI0AlyIdULYbtJGWPQEaV6G3vhJ3RMJAh8lp1lit19sd3XKbeZtFp_rhLYpDVIPgyoV02-tQCyHv_ihSlUDkwy9VuMP4OQ8uGegzoe1jOnWA3DinLMaSSAcrpRaekZs1TC7VQ-GkhM/Cris%20V.jpg?psid=1  ')
+file = URI.open('https://dm2304files.storage.live.com/y4m7stA9E2zDrxGPwhblgJ7eY3ACvB1M17FHOz7r_AcVJMix78SIkrz7JIlSi4NL7zzG5yioLe16JTdISLDQvsYBDwq9kxrIX4IM8WZ7bi_ggmRG7i_Cy5FVBMChf5Qa3ndPmNC0fByTvy3OWRCUryFiNZ23x3wPNQ0x3JYAV2-PzSJK8hG2jceeK7UZHN2ed8H?width=768&height=1024&cropmode=none')
 project = Project.create(name: 'Child Care', country: 'Vietnã' )
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
