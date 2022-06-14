@@ -20,9 +20,7 @@
           <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
         <% end %>
 
-        <%= f.input :date_of_birth, as: :date, start_year: Date.today.year - 70,
-                    end_year: Date.today.year - 12,
-                    order: [:day ,:month, :year] %>x
+        <%= f.input :date_of_birth, as: :string, required: false, input_html: {class: "datepicker", value: resource.date_of_birth.strftime('%d-%m-%Y')} %>
         <%= f.input :about,
                     required: true,
                     input_html: { autocomplete: "about" } %>

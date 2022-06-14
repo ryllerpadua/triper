@@ -14,9 +14,7 @@
         <%= f.input :last_name,
                     required: true,
                     input_html: { autocomplete: "last_name" } %>
-        <%= f.input :date_of_birth, as: :date, start_year: Date.today.year - 70,
-                    end_year: Date.today.year - 12,
-                    order: [:day ,:month, :year] %>
+        <%= f.input :date_of_birth, as: :string, required: false, input_html: {class: "datepicker"} %>
         <%= f.input :email,
                     required: true,
                     autofocus: true,
@@ -33,7 +31,7 @@
       </div>
 
       <div class="d-flex justify-content-between">
-        <%= f.button :submit, "Sign up", class: "btn btn-primary" %>
+        <%= f.submit "Sign up", class: "btn btn-primary" %>
         <%= link_to "Voltar", root_path, class: "btn btn-primary" %>
         <%= render "devise/shared/links" %>
       </div>
