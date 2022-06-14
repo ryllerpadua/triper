@@ -1,12 +1,20 @@
+.card-trip {
+  justify-content: center;
+  padding: 0 25px 25px 25px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+
 .card-profile {
   justify-content: center;
-  padding-right: 20px;
+  padding: 25px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-color: white;
   height: auto;
-  padding-left: 20px;
-  padding-top: 3px;
-  padding-bottom: 10px;
+
 
   ul {
     padding: 0;
@@ -59,7 +67,7 @@
   border-radius: 20px;
   border: 1px solid #08415C;
   color: #08415C;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.912);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 600px;
   padding: 50px;
