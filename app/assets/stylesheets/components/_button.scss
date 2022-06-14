@@ -22,6 +22,7 @@
   border: none;
 
 }
+
 .btn-login {
   text-decoration: none;
   background-color: #08415C;
@@ -74,7 +75,21 @@
 
   &:hover {
     background-color: #83dff4;
+    transition: 0.4s;
+  }
+}
 
+.btn-chat {
+  background-color: #54bed6e4;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: 0.4s;
+  text-align: center;
+  vertical-align: middle;
+  padding: 2px 8px 2px 8px;
+
+
+  &:hover {
+    background-color: #83dff4;
     transition: 0.4s;
   }
 }

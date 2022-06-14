@@ -185,10 +185,6 @@
   grid-gap: 16px;
 }
 
-
-
-
-
 .card-matched[style^="background-image:"] {
   background-size: cover;
   background-position: center;
@@ -198,6 +194,7 @@
 }
 
 .card-matched {
+  font-family: "Nunito", "Helvetica", "sans-serif";
   color: white;
   width: 20vh;
   height: 40vh;
@@ -207,39 +204,57 @@
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   text-shadow: 1px 1px 1px rgb(49, 49, 49);
 
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  }
+
   h2 {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 10px;
     font-weight: bold;
+  }
+
+  .country {
+    font-family: "Work Sans", "Helvetica", "sans-serif";
+    position: absolute;
+    color: #84e7f5;
+    font-weight: bold;
+    bottom: 40px;
+    left: 10px;
+    font-size: 16px;
+  }
+  .project {
+
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+
   }
 
   .date {
+    font-family: "Work Sans", "Helvetica", "sans-serif";
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    font-size: 16px;
+    bottom: 5px;
+    left: 10px;
+    font-size: 14px;
     font-weight: bold;
   }
 
-  .destino {
-    position: absolute;
-    bottom: 60px;
-    left: 20px;
-    font-size: 16px;
-    font-weight: bold;
-  }
-
-  .btn-match {
-    position: absolute;
-    top: 25px;
-    right: 20px;
-  }
 
   .btn-profile {
     position: absolute;
     bottom: 25px;
-    right: 20px;
+    right: 10px;
+  }
+
+  .btn-chat {
+    position: absolute;
+    bottom: 25px;
+    right: 50px;
   }
 
   .fa-xmark {
@@ -249,9 +264,6 @@
     color: white;
   }
 }
-
-
-
 
 /* Use a media query to add a breakpoint at 800px: */
 @media screen and (max-width: 800px) {
