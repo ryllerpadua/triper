@@ -1,0 +1,19 @@
+<div class="flex-wrapper">
+  <div class="container-profile">
+    <div class="card-profile-holder">
+      <div class="card-image" style="background-image: url(<%= cl_image_path @user.photo.key, height: 300, crop: :fill %>)"></div>
+      <div class="p-4">
+        <h2 class="mb-3"><strong><%= @user.name %></strong>, <%= @user.age %> </h2>
+        <p><i class="fas fa-briefcase me-2"></i><strong>Profissão:</strong> <%= @user.occupation %></p>
+        <p><i class="fas fa-map-marker-alt me-2"></i><strong>Cidade: </strong><%= @user.city %></p>
+        <p><i class="fas fa-plane-departure me-2"></i><strong>Destinos: </strong><%  %></p>
+        <hr>
+        <p class="about m-0"><strong>Sobre: </strong></p>
+        <p class="about-info"><%= @user.about %></p>
+      </div>
+    </div>
+    <div class="div d-flex justify-content-center">
+      <%= link_to "Voltar", matches_path, class: "btn btn-primary mt-3" %>
+    </div>
+  </div>
+</div>
