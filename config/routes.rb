@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   resources :trips do
     resources :matches, only: %i[create]
   end
-  resources :matches # Rota Fatah Delete
+
+  resources :matches
 
   resources :matches, only: :show do
     resources :messages, only: :create
