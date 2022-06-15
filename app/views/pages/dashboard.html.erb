@@ -47,17 +47,27 @@
     <h2>Resultados</h2>
       <ul>
       <% @users_search.each do |user_search| %>
-      <li style="list-style: none">
-        <div class="card-search m-5 p-2" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path user_search.user.photo.key %>')">
-          <h2><%= user_search.user.first_name %>, <%= user_search.user.age %></h2>
-          <span class="date">
-            <i class="fa-solid fa-calendar-days"></i><%= user_search.date.strftime("%B") %>, <%= user_search.date.year %>
-          </span>
-          <span class="destino">
-            <i class="fa-solid fa-map-location-dot"></i><%= user_search.project.name %> - <%= user_search.project.country %>
-          </span>
-          <%= link_to raw('<i class="fas fa-thumbs-up"></i>'), trip_matches_path(user_search), method: :post, class: "btn-match btn-primary" %>
-          <%= link_to raw('<i class="fa-solid fa-user"></i>'), user_path(user_search.user), class: "btn-profile btn-primary" %>
+      <li style="list-style: none" data-controller="show-profile">
+        <div class="card-search m-5 p-2 d-flex flex-column" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path user_search.user.photo.key %>')">
+          <div>
+            <h2><%= user_search.user.first_name %>, <%= user_search.user.age %></h2>
+            <span class="date">
+              <i class="fa-solid fa-calendar-days"></i><%= user_search.date.strftime("%B") %>, <%= user_search.date.year %>
+            </span>
+            <span class="destino">
+              <i class="fa-solid fa-map-location-dot"></i><%= user_search.project.name %> - <%= user_search.project.country %>
+            </span>
+            <%= link_to raw('<i class="fas fa-thumbs-up"></i>'), trip_matches_path(user_search), method: :post, class: "btn-match btn-primary" %>
+            <i class="fa-solid fa-user" data-action="click->show-profile#showProfile"></i>
+          </div>
+        </div>
+        <div class="d-none" data-show-profile-target="profile">
+          <p><i class="fas fa-briefcase me-2"></i><strong>Profissão:</strong> <%= user_search.user.occupation %></p>
+          <p><i class="fas fa-map-marker-alt me-2"></i><strong>Cidade: </strong><%= user_search.user.city %></p>
+          <p><i class="fas fa-plane-departure me-2"></i><strong>Destinos: </strong><%= user_search.user.projects.pluck(:country).uniq.join(", ")%></p>
+          <hr>
+          <p class="about m-0"><strong>Sobre: </strong></p>
+          <p class="about-info"><%= user_search.user.about %></p>
         </div>
       </li>
       <% end %>
@@ -67,47 +77,38 @@
   </div>
 
   <%# Matches %>
-  <div class="card-profile">
+  <div class="card-profile" >
     <div class="my-2">
       <h2>Suas Matches</h2>
     </div>
-    <div class="cards">
-      <% @matches.each do |match| %>
-        <% if current_user == match.trip1.user %>
-          <div class="card-matched" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path match.trip2.user.photo.key %>')">
-            <h2><%= match.trip2.user.first_name %></h2>
-            <span class="project">
-              <p><%= match.trip2.project.name %></p>
-            </span>
-            <span class="country">
-              <p><%= match.trip2.project.country %></p>
-            </span>
-            <span class="date">
-              <p><%= match.trip2.date.strftime("%B") %>, <%= match.trip2.date.year %></p>
-            </span>
-            <%= link_to raw('<i class="fa-solid fa-user"></i>'), user_path(match.trip2.user), class: "btn-profile btn-primary" %>
-            <%= link_to raw('<i class="fa-solid fa-comments"></i>'), match_path(match), class: "btn-chat btn-primary mt-2" %>
-            <%= link_to raw('<i class="fa-solid fa-xmark"></i>'), match_path(match), class: "btn mt-2", method: :delete, data: { confirm: "Are you sure?" } %>
-          </div>
-        <% else %>
-          <div class="card-matched" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path match.trip1.user.photo.key %>')">
-            <h2><%= match.trip1.user.first_name %></h2>
-            <span class="project">
-              <p><%= match.trip1.project.name %></p>
-            </span>
-            <span class="country">
-              <p><%= match.trip1.project.country %></p>
-            </span>
-            <span class="date">
-              <p><%= match.trip1.date.strftime("%B") %>, <%= match.trip1.date.year %></p>
-            </span>
-            <%= link_to raw('<i class="fa-solid fa-user"></i>'), user_path(match.trip1.user), class: "btn-profile btn-primary" %>
-            <%= link_to raw('<i class="fa-solid fa-comments"></i>'), match_path(match), class: "btn-chat btn-primary mt-2" %>
-            <%= link_to raw('<i class="fa-solid fa-xmark"></i>'), match_path(match), class: "btn mt-2", method: :delete, data: { confirm: "Are you sure?" } %>
-          </div>
-        <% end %>
-      <% end  %>
-    </div>
+    <% @matches.each do |match| %>
+      <div data-controller="show-profile">
+        <% match_trip = current_user == match.trip1.user ? match.trip2 : match.trip1 %>
+        <div class="card-matched"  style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path match_trip.user.photo.key %>')">
+          <h2><%= match_trip.user.first_name %></h2>
+          <span class="project">
+            <p><%= match_trip.project.name %></p>
+          </span>
+          <span class="country">
+            <p><%= match_trip.project.country %></p>
+          </span>
+          <span class="date">
+            <p><%= match_trip.date.strftime("%B") %>, <%= match_trip.date.year %></p>
+          </span>
+          <i class="fa-solid fa-user" data-action="click->show-profile#showProfile"></i>
+          <%= link_to raw('<i class="fa-solid fa-comments"></i>'), match_path(match), class: "btn-chat btn-primary mt-2" %>
+          <%= link_to raw('<i class="fa-solid fa-xmark"></i>'), match_path(match), class: "btn mt-2", method: :delete, data: { confirm: "Are you sure?" } %>
+        </div>
+        <div class="d-none" data-show-profile-target="profile">
+          <p><i class="fas fa-briefcase me-2"></i><strong>Profissão:</strong> <%= match_trip.user.occupation %></p>
+          <p><i class="fas fa-map-marker-alt me-2"></i><strong>Cidade: </strong><%= match_trip.user.city %></p>
+          <p><i class="fas fa-plane-departure me-2"></i><strong>Destinos: </strong><%= match_trip.user.projects.pluck(:country).uniq.join(", ")  %></p>
+          <hr>
+          <p class="about m-0"><strong>Sobre: </strong></p>
+          <p class="about-info"><%= match_trip.user.about %></p>
+        </div>
+      </div>
+    <% end  %>
   </div>
 
 
