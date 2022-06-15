@@ -1,19 +1,20 @@
 .btn-home {
+  background-color: #f47d35;
   text-decoration: none;
+  padding: 18px 24px;
+  border: 1px solid #f47d35;
+  border-radius: 2px;
   color: white;
-  padding: 15px 30px;
-  display: inline-block;
-  background-color: #fecb29;
-  border-radius: 5px;
-  transition: 0.2s;
-  align-items: center;
+  transition: 0.3s;
+  font-size: 18px;
 
   &:hover {
-    background-color: #fecb29;
+    background-color: #54bed6;
+    border: 1px solid #54bed6;
     color: white;
     transition: 0.2s;
   }
-}
+  }
 
 .btn-primary{
   text-decoration: none;
@@ -108,3 +109,21 @@
     transition: 0.4s;
   }
 }
+
+.btn-form {
+  background-color: #f47d35;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid #f47d35;
+  border-radius: 2px;
+  color: white;
+  transition: 0.3s;
+  font-size: 16px;
+
+  &:hover {
+    background-color: #54bed6;
+    border: 1px solid #54bed6;
+    color: white;
+    transition: 0.2s;
+  }
+  }

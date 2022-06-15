@@ -4,11 +4,11 @@
 
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-inputs">
-        <%= f.input :email,
+        <%= f.input :email, label: "Email:",
                     required: false,
                     autofocus: true,
                     input_html: { autocomplete: "email" } %>
-        <%= f.input :password, label: "Senha",
+        <%= f.input :password, label: "Senha:",
                     required: false,
                     input_html: { autocomplete: "current-password" } %>
         <%= f.input :remember_me, label: "Lembrar dados", as: :boolean if devise_mapping.rememberable? %>
@@ -17,10 +17,10 @@
       </div>
 
         <div class="d-flex justify-content-between ">
-          <%= f.button :submit, "Entrar", class: "btn-login btn-primary" %>
-          <%= render "devise/shared/links" %>
+          <%= f.button :submit, "Entrar", class: "btn-form" %>
+          <%= render "devise/shared/links", class: "btn-form" %>
         </div>
     <% end %>
   </div>
-</div>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+</div>

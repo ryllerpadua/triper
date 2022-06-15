@@ -1,5 +1,4 @@
 .card-trip {
-  justify-content: center;
   padding: 0 25px 25px 25px;
   height: auto;
   display: flex;
@@ -9,12 +8,15 @@
 
 
 .card-profile {
-  justify-content: center;
   padding: 25px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-color: white;
   height: auto;
 
+  .profile-h2 {
+  color: #54bed6;
+
+  }
 
   ul {
     padding: 0;
@@ -65,14 +67,18 @@
 
 .cardbox {
   border-radius: 20px;
-  border: 1px solid #08415C;
-  color: #08415C;
+  // border: 1px solid #08415C;
+  color: black;
   background-color: rgba(255, 255, 255, 0.912);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 600px;
   padding: 50px;
   margin: 140px 15px;
   padding: 30px 50px 20px 50px;
+
+  h2{
+  color: #f47d35;
+  }
 }
 
 .card-search[style^="background-image:"] {
@@ -84,7 +90,7 @@
 
 .card-search {
   color: white;
-  width: 30vw;
+  width: 25vw;
   height: 20vh;
   position: relative;
   border-radius: 8px;

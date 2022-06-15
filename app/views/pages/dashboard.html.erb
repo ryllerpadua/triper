@@ -43,8 +43,8 @@
 
   <%# Lista dos resultados dos matches %>
   <div class="m-2">
-  <div class="card-profile d-flex justify-content-center p-2 mt-3">
-    <h2>Resultados</h2>
+  <div class="card-profile d-flex flex-column align-items-center py-4 mt-3">
+    <h2 class="profile-h2 mb-4">Resultados</h2>
       <ul>
       <% @users_search.each do |user_search| %>
       <li style="list-style: none" data-controller="show-profile">
