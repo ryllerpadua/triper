@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :messages, only: :create
   end
 
+  resources :notifications, only: %i[index show]
   get :dashboard, to: 'pages#dashboard'
   root to: 'pages#home'
 end

@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @countries = current_user.projects.pluck(:country)
+    @countries = current_user.projects.pluck(:country).uniq
     @trips = current_user.trips.order(:project_id)
     projects = current_user.trips.map { |trip| trip.project }
 
