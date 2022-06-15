@@ -1,0 +1,8 @@
+<div>
+  <% @notifications.each do |notification| %>
+    <%= link_to match_path(notification.match) do %>
+      <p> <%= notification.title %>   </p>
+      <p> <%= notification.content %> </p>
+    <% end %>
+  <% end %>
+</div>
