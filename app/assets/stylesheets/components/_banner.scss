@@ -47,7 +47,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 140px;
+  column-gap: 120px;
   background-color: white;
 }
 
@@ -65,6 +65,30 @@
   justify-content: center;
   padding-bottom: 0;
 }
+
+.card-home {
+border-radius: 5px;
+padding: 0px;
+
+
+}
+
+
+
+.card-img-top {
+height: 200px;
+border-radius: 5px;
+
+
+  }
+
+.card-text {
+// text-align: center;
+text-align: justify;
+align-items: center;
+
+}
+
 
 .banner-forms {
   background-size: cover;
