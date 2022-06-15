@@ -1,21 +1,22 @@
 <div class="d-flex flex-column align-items-center justify-content-center w-100 p-3 banner-forms">
-  <div class="cardbox cardbox-login">
-    <h2>Forgot your password?</h2>
+  <div class="cardbox cardbox-login text-align-center">
+    <h2>Esqueceu sua senha?</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
       <%= f.error_notification %>
 
       <div class="form-inputs">
-        <%= f.input :email,
+        <%= f.input :email, label: "Email:",
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "email" } %>
       </div>
 
       <div class="d-flex justify-content-between">
-        <%= f.button :submit, "Reset password", class: "btn btn-primary" %>
+        <%= f.button :submit, "Reset password", class: "btn-form" %>
         <%= render "devise/shared/links" %>
       </div>
     <% end %>
-  </div>
+
+</div>
 </div>

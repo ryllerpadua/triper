@@ -43,12 +43,12 @@
 
   <%# Lista dos resultados dos matches %>
   <div class="m-2">
-  <div class="card-profile d-flex justify-content-center p-2 mt-3">
-    <h2>Resultados</h2>
+  <div class="card-profile d-flex flex-column align-items-center py-4 mt-3">
+    <h2 class="profile-h2 mb-4">Resultados</h2>
       <ul>
       <% @users_search.each do |user_search| %>
       <li style="list-style: none">
-        <div class="card-search m-5 p-2" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path user_search.user.photo.key %>')">
+        <div class="card-search mb-5 p-2" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path user_search.user.photo.key %>')">
           <h2><%= user_search.user.first_name %>, <%= user_search.user.age %></h2>
           <span class="date">
             <i class="fa-solid fa-calendar-days"></i><%= user_search.date.strftime("%B") %>, <%= user_search.date.year %>

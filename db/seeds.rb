@@ -272,5 +272,4 @@ project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg
 # { name: 'Thien Homeless Center', country: 'Vietnã' }, { name: 'Child Care', country: 'Vietnã' }
 # ])
 
-
 p "Created #{Project.count} projects"
