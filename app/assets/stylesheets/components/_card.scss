@@ -131,10 +131,23 @@
     right: 20px;
   }
 
-  .btn-profile {
+  .fa-user {
     position: absolute;
     bottom: 25px;
     right: 20px;
+    background-color: #f47d35;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: 0.4s;
+    text-align: center;
+    vertical-align: middle;
+    padding: 6px 8px 6px 8px;
+    border-radius: 5px;
+  }
+
+  .fa-user:hover {
+    background-color: #fca23b;
+    transition: 0.4s;
+    cursor: pointer;
   }
 }
 
@@ -256,11 +269,23 @@
     font-weight: bold;
   }
 
-
-  .btn-profile {
+  .fa-user {
     position: absolute;
     bottom: 25px;
     right: 10px;
+    background-color: #f47d35;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: 0.4s;
+    text-align: center;
+    vertical-align: middle;
+    padding: 6px 8px 6px 8px;
+    border-radius: 5px;
+  }
+
+  .fa-user:hover {
+    background-color: #fca23b;
+    transition: 0.4s;
+    cursor: pointer;
   }
 
   .btn-chat {
