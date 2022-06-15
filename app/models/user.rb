@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :trips, dependent: :destroy
   has_many :projects, through: :trips
+  has_many :notifications
   has_one_attached :photo
   validates_length_of :trips, maximum: 8
   validates :first_name, :last_name, :date_of_birth, :photo, presence: true
