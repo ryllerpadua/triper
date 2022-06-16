@@ -128,3 +128,21 @@
     transition: 0.2s;
   }
   }
+
+  .btn-form-save {
+    background-color: #a8cf45;
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid #a8cf45;
+    border-radius: 2px;
+    color: white;
+    transition: 0.3s;
+    font-size: 16px;
+
+    &:hover {
+      background-color: #54bed6;
+      border: 1px solid #54bed6;
+      color: white;
+      transition: 0.2s;
+    }
+    }
