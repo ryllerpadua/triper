@@ -1,3 +1,14 @@
+// [--------------- 1 2 3 das colunas ------------------]
+
+.h3-col {
+  box-sizing: border-box;
+  background-color: #54bed6;
+  color: white;
+  padding: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
 // [---------------- COLUNA ESQUERDA -------------------]
 
 .column-profile {
@@ -52,6 +63,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
+
+
 
 
 // Card da trip
@@ -206,7 +219,7 @@
 
 .pr-show {
   justify-content: center;
-  height: auto;
+  margin: auto;
   margin-left: 0;
   margin-right: 0;
 
@@ -354,6 +367,9 @@
 
 // profile(dropdown) das matches feitas
 .pm-show  {
+
+  padding-left: 15px;
+  padding-right: 30px;
 
   p {
     font-size: 12px;
