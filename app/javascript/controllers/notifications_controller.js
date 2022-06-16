@@ -13,7 +13,7 @@ export default class extends Controller {
       this.fetchNotifications()
     }, 10000);
     this.fetchNotifications()
-    console.log('Olá')
+    // console.log('Olá')
   }
   fetchNotifications() {
     fetch(`/notifications?user_id=${this.userValue}`,{ headers: { "Accept": "text/plain" } })

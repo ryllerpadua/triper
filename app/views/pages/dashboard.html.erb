@@ -1,8 +1,8 @@
-<div class="dashboard-main">
+  <div class="dashboard-main">
 
   <%# perfil do dashboard %>
-  <div class="card-profile-holder">
-    <div class="card-image" style="background-image: url(<%= cl_image_path current_user.photo.key, height: 300, crop: :fill %>)"></div>
+  <div class="column-profile col-12 col-lg-2">
+    <div class="card-profile-image" style="background-image: url(<%= cl_image_path current_user.photo.key, height: 300, crop: :fill %>)"></div>
     <div class="p-4">
       <h2 class="mb-3"><strong><%= current_user.name %></strong>, <%= current_user.age %> </h2>
       <p><i class="fa-solid fa-pen-to-square me-2"></i><%= link_to "Editar", edit_user_registration_path, class: "btn-dash-small"  %></p>
@@ -17,16 +17,17 @@
 
 
   <%# criar viagem %>
-  <div class="card-trip">
+  <div class="column-trips col-12 col-lg-6">
     <div class="my-2">
       <button type="button" class="btn-dash" data-bs-toggle="modal" data-bs-target="#tripModal"> <!-- Button trigger modal -->
-        + Criar Viagem
+        + Criar Trip
       </button>
+      <h3 class="h3-col mt-2"> 1. Crie até 6 trips escolhendo o projeto e data para sua viagem </h3>
     </div>
-    <div class="cards">
+    <div class="all-projects">
       <%  @trips.each do |trip| %>
         <% if trip.project.photo.attached? %>
-          <div class="card-project p-2" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= cl_image_path trip.project.photo.key, height: 300, crop: :fill %>')">
+          <div class="card-project p-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path trip.project.photo.key, height: 300, crop: :fill %>')">
         <% else %>
           <div class="card-project p-2">
         <% end %>
@@ -42,15 +43,18 @@
 
 
   <%# Lista dos resultados dos matches %>
-  <div class="m-2">
-  <div class="card-profile d-flex flex-column align-items-center py-4 mt-3">
-    <h2 class="profile-h2 mb-4">Resultados</h2>
+
+  <div class="results py-4 mt-3">
+    <h2 class="mb-4"><strong>Resultados:</strong></h2>
+    <h3 class="h3-col mt-2" style="text-align:center"> 2. Veja quem quer viajar para os mesmos projetos nessas datas </h3>
+    <hr style="width:70%; margin:auto; margin-bottom:20px; margin-top:20px;">
+    <div class="scroller d-flex justify-content-center">
       <ul>
       <% @users_search.each do |user_search| %>
       <li style="list-style: none" data-controller="show-profile">
-        <div class="card-search m-5 p-2 d-flex flex-column" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path user_search.user.photo.key %>')">
+        <div class="card-search d-flex flex-column" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path user_search.user.photo.key %>')">
           <div>
-            <h2><%= user_search.user.first_name %>, <%= user_search.user.age %></h2>
+            <h2><%= user_search.user.first_name %> <%= user_search.user.last_name %>, <%= user_search.user.age %></h2>
             <span class="date">
               <i class="fa-solid fa-calendar-days"></i><%= user_search.date.strftime("%B") %>, <%= user_search.date.year %>
             </span>
@@ -61,7 +65,7 @@
             <i class="fa-solid fa-user" data-action="click->show-profile#showProfile"></i>
           </div>
         </div>
-        <div class="d-none" data-show-profile-target="profile">
+        <div class="pr-show d-none" data-show-profile-target="profile">
           <p><i class="fas fa-briefcase me-2"></i><strong>Profissão:</strong> <%= user_search.user.occupation %></p>
           <p><i class="fas fa-map-marker-alt me-2"></i><strong>Cidade: </strong><%= user_search.user.city %></p>
           <p><i class="fas fa-plane-departure me-2"></i><strong>Destinos: </strong><%= user_search.user.projects.pluck(:country).uniq.join(", ")%></p>
@@ -72,73 +76,79 @@
       </li>
       <% end %>
     </ul>
+    </div>
   </div>
   </div>
-  </div>
+
 
   <%# Matches %>
-  <div class="card-profile" >
-    <div class="my-2">
-      <h2>Suas Matches</h2>
+  <div class="column-matches col-12 col-lg-2" >
+    <h2><strong>Suas Matches</strong></h2>
+    <h3 class="h3-col mt-2" style="text-align:center"> 3. Converse e organize sua viagem! </h3>
+      <div class="d-flex justify-content-center">
+        <ul>
+        <div>
+        <% @matches.each do |match| %>
+        <li style="list-style: none"  data-controller="show-profile" >
+          <% match_trip = current_user == match.trip1.user ? match.trip2 : match.trip1 %>
+          <div class="card-matched"  style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path match_trip.user.photo.key %>')">
+            <h3><%= match_trip.user.first_name %> <%= match_trip.user.last_name %></h3>
+            <span class="project">
+              <p><%= match_trip.project.name %></p>
+            </span>
+            <span class="country">
+              <p><%= match_trip.project.country %></p>
+            </span>
+            <span class="date">
+              <p><%= match_trip.date.strftime("%B") %>, <%= match_trip.date.year %></p>
+            </span>
+            <i class="fa-solid fa-user" data-action="click->show-profile#showProfile"></i>
+            <%= link_to raw('<i class="fa-solid fa-comments"></i>'), match_path(match), class: "btn-chat btn-primary mt-2" %>
+            <%= link_to raw('<i class="fa-solid fa-xmark"></i>'), match_path(match), class: "btn mt-2", method: :delete, data: { confirm: "Are you sure?" } %>
+          </div>
+          <div class="pm-show d-none" data-show-profile-target="profile">
+            <p><i class="fas fa-briefcase me-2"></i><strong>Profissão:</strong> <%= match_trip.user.occupation %></p>
+            <p><i class="fas fa-map-marker-alt me-2"></i><strong>Cidade: </strong><%= match_trip.user.city %></p>
+            <p><i class="fas fa-plane-departure me-2"></i><strong>Destinos: </strong><%= match_trip.user.projects.pluck(:country).uniq.join(", ")  %></p>
+            <hr>
+            <p class="about m-0"><strong>Sobre: </strong></p>
+            <p class="about-info"><%= match_trip.user.about %></p>
+          </div>
+        </li>
+        <% end  %>
+        </div>
+      </ul>
     </div>
-    <% @matches.each do |match| %>
-      <div data-controller="show-profile">
-        <% match_trip = current_user == match.trip1.user ? match.trip2 : match.trip1 %>
-        <div class="card-matched"  style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path match_trip.user.photo.key %>')">
-          <h2><%= match_trip.user.first_name %></h2>
-          <span class="project">
-            <p><%= match_trip.project.name %></p>
-          </span>
-          <span class="country">
-            <p><%= match_trip.project.country %></p>
-          </span>
-          <span class="date">
-            <p><%= match_trip.date.strftime("%B") %>, <%= match_trip.date.year %></p>
-          </span>
-          <i class="fa-solid fa-user" data-action="click->show-profile#showProfile"></i>
-          <%= link_to raw('<i class="fa-solid fa-comments"></i>'), match_path(match), class: "btn-chat btn-primary mt-2" %>
-          <%= link_to raw('<i class="fa-solid fa-xmark"></i>'), match_path(match), class: "btn mt-2", method: :delete, data: { confirm: "Are you sure?" } %>
-        </div>
-        <div class="d-none" data-show-profile-target="profile">
-          <p><i class="fas fa-briefcase me-2"></i><strong>Profissão:</strong> <%= match_trip.user.occupation %></p>
-          <p><i class="fas fa-map-marker-alt me-2"></i><strong>Cidade: </strong><%= match_trip.user.city %></p>
-          <p><i class="fas fa-plane-departure me-2"></i><strong>Destinos: </strong><%= match_trip.user.projects.pluck(:country).uniq.join(", ")  %></p>
-          <hr>
-          <p class="about m-0"><strong>Sobre: </strong></p>
-          <p class="about-info"><%= match_trip.user.about %></p>
-        </div>
-      </div>
-    <% end  %>
   </div>
 
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="tripModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Crie uma Trip</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <%= simple_form_for [ Trip.new  ] do |f| %>
-              <%= f.input :project_id, collection: Project.order(:country).order(:name).group_by(&:country), include_blank: false, input_html: { data: { controller: 'select2' } }, as: :grouped_select, group_method: :last %>
-              <%= f.input :date, start_year: Date.today.year, end_year: Date.today.year + 5, discard_day: true, order: [:month, :year] %>
-              <div class="d-flex justify-content-between">
-                <% if current_user.trips.length < 6 %>
-                  <%= f.submit id: "sa-create-trip", class: 'btn btn-success' %>
-                  <%= link_to "Voltar", "#", data: {dismiss: "modal", target: "#tripModal"}, class: "btn btn-primary" %>
-                <% else %>
-                  <%= f.submit id: "sa-create-trip", class: 'btn btn-danger mb-1', disabled: true %>
-                  <%= link_to "Voltar", dashboard_path, data: {dismiss: "modal", target: "#tripModal"}, class: "btn btn-primary" %>
-              </div>
-                  <p class="text-danger text-center mt-2"> Você chegou ao limite de 6 trips cadastradas. Apague outras para gerar mais.</p>
+  <!-- Modal -->
+  <div class="modal fade" id="tripModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Crie uma Trip</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for [ Trip.new  ] do |f| %>
+            <%= f.input :project_id, collection: Project.order(:country).order(:name).group_by(&:country), include_blank: false, input_html: { data: { controller: 'select2' } }, as: :grouped_select, group_method: :last %>
+            <%= f.input :date, start_year: Date.today.year, end_year: Date.today.year + 5, discard_day: true, order: [:month, :year] %>
+            <div class="d-flex justify-content-between">
+              <% if current_user.trips.length < 6 %>
+                <%= f.submit id: "sa-create-trip", class: 'btn btn-success' %>
+                <%= link_to "Voltar", "#", data: {dismiss: "modal", target: "#tripModal"}, class: "btn btn-primary" %>
+              <% else %>
+                <%= f.submit id: "sa-create-trip", class: 'btn btn-danger mb-1', disabled: true %>
+                <%= link_to "Voltar", dashboard_path, data: {dismiss: "modal", target: "#tripModal"}, class: "btn btn-primary" %>
+            </div>
+                <p class="text-danger text-center mt-2"> Você chegou ao limite de 6 trips cadastradas. Apague outras para gerar mais.</p>
               <% end %>
-            <% end %>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
-  </div>
+</div>
+</div>
