@@ -4,32 +4,22 @@
   align-content: center;
 }
 
-.container-profile {
-  background-color: white;
-  justify-content: center;
-  align-content: center;
-  margin:auto;
-}
-
 .flex-wrapper {
   display: flex;
   min-height: 100vh;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   background-color: white;
 }
 
-.meio {
-  padding: 0;
-}
-
-.esquerda {
-  padding: 1;
-}
-
 .dashboard-main {
-  padding: 50px;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+  // padding: 50px;
+  // display: grid;
+  // grid-template-columns: 1fr 2fr 1fr;
+  // gap: 25px;
+
 }

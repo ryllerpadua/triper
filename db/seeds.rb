@@ -4,47 +4,47 @@ Project.destroy_all  # Remover após versão final
 # África do Sul
 
 file = URI.open('https://dm1files.storage.live.com/y4meBOYqID2FGukqiJTIeJ47m734RsR52m4i2riGJK2ovU_mneK7py75RyN84U6ZbVHlwfjnxTotaAidh_NnzvkDm2unUkK-zFhmv19wKGk_VAWjh-zfXszBQCd5FZ7BpNXgi9UhnxTRGkDAjclT7vt1HYIMMqz8pwUQ3kfKh1ohKxzH5Oqu_gOrMvhTdoGvEuA?width=1280&height=856&cropmode=none')
-project = Project.create(name: 'Loving Cape Town Kids', country: "África do Sul")
+project = Project.create(name: 'Loving Cape Town Kids', country: "Africa do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://dsm01pap007files.storage.live.com/y4m0Pb0GcGnjpem2IawEmNlShwqPM1nmhAgcmLv6KnMBpZDwQEHVOv4kOZgXIRhz6iVQSX0sM70hNgtTqovltgyOFTdlx9qMK6xkT8KCK5MBaYhSxcNNB0fkkEnRUEDOaX4Q4Amdwd2LrNNEmP5dadJBrHeEmhNwdSRvd6mcoi1PYDkwKIaqUq6O9CeVP5jhQME?width=1280&height=960&cropmode=none')
-project = Project.create(name: 'Centro M. Nyanga', country: "África do Sul")
+project = Project.create(name: 'Centro M. Nyanga', country: "Africa do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://dsm01pap004files.storage.live.com/y4mVEISoCY_5VaXEkk5iSDL9rIE9DCOKFWH9dRB-JgM1zOH2nq8zjIXce2A8xh6aWDHjUHUDgodgyfa_PQ1xa9zVliR6UXYGzmBL8KBd2k9QjVLJ3fVaHEZUZQmSgH8zjTY3Z07u_WdAHuIZjqOpbNSpM6Qp8V8VnoAx7r-SoQgFv35zIl7GZSwWsct7PKD89w1?width=1280&height=853&cropmode=none')
-project = Project.create(name: 'Child and Animal Care', country: "África do Sul")
+project = Project.create(name: 'Child and Animal Care', country: "Africa do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://dm2pap090files.storage.live.com/y4mDGvgfLIWXCYIkgvJhDf2OMDCxCvsr8wGV3-XGp15oqgm7w5UUNdus2BEO7dndW5dDYSKcDRug4a5gqfyFtAYi4nt8QAanNwJmMm6LQNpkkRUjzTvEOrWXT8_L3RuF-o3SH-3LP_Ykx_F4I8eCLMLSH6Jpg1mLEtE-pOzIhEUWTA1CtxYEZNOtqLGZ5Lh6Lv5?width=1024&height=682&cropmode=none')
-project = Project.create(name: 'Fazenda Urbana', country: "África do Sul")
+project = Project.create(name: 'Fazenda Urbana', country: "Africa do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://dm2301files.storage.live.com/y4m9L0KCAWb8hkAXO0XUN2PSGZ0HVudCx9PvVYLpxgGEaeedKW2_Gx6EnTBJwM2PpfGh0Ph-a_8-WZiJKM1J7D3jOUmbobY0wu4ulEa_rR2PaAm7qgslDcrji10N8e1R6YEpF8GhhDaW4RoCk7koMWG3HDijGRbrcBEQy06oVov-zFI6oftcnP-MhjKeo7yiroN?width=1024&height=768&cropmode=none')
-project = Project.create(name: 'Curso de Inglês', country: "África do Sul")
+project = Project.create(name: 'Curso de Inglês', country: "Africa do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://dsm04pap001files.storage.live.com/y4m9kZG8AEzN5VmnADhYjaIZtDMGsD9AhUOM1NaI57OZj8FCQ176kuKlZDiwD6f90co1Nsft7SSCKWYK2XS1aelmiImm2FxWDNoUZZOigRkujT9O2ZNy6frIvzPhKbVhxW7ubirhjd_PBFsQx0UYkywQ6Whf1QamHFs-6eS_utrnGlzxlqcdhQ839OlEotLUhx0?width=1024&height=770&cropmode=none')
-project = Project.create(name: 'Love2Teach', country: "África do Sul")
+project = Project.create(name: 'Love2Teach', country: "Africa do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://dsm01pap003files.storage.live.com/y4mFqRe59cw3egaNycyQtx-MsrL0rkwXxh9JnVsla17toLgaGvb0x_GpwvaJqssEVVroy-MBxy3QYhgLhFTo0N8om7uK7_ao2r3RVUKeqWLEpwLEvWLDs3hUiKVjsm4eNZ7JZEhCna7VD8Ef0sMOyR806JjuRgrc6Mp9_68KbiG5rnd6NBsnjgyaGU_ZCInn3zA?width=960&height=960&cropmode=none')
-project = Project.create(name: 'Penguin Rescue', country: "África do Sul")
+project = Project.create(name: 'Penguin Rescue', country: "Africa do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://dm2306files.storage.live.com/y4mYfhUtZKPtw6Z_1lYzcO6IraVv0QYtcKxh9n7uws0l4LJBERIPxJjrQUbU4szklqYoTTemr_0gOqWRHhxcZPjdrLEazORA2RH4q8_zjt1ONu6_LHyQGEwIOKaEpnVnlowOTVP9RoENm1KAXCnyS4ITVyyfJhi7KHlijUone_OUx1TjCj-JBE6kHFVaL0wOp7q?width=1024&height=768&cropmode=none')
-project = Project.create(name: 'Streetwise Soccer', country: "África do Sul")
+project = Project.create(name: 'Streetwise Soccer', country: "Africa do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://dsm01pap007files.storage.live.com/y4m6dr7XdbU5v3eaEqhWJLgqvHZughYdlYlWmF6E28LdOC9zENZdR6SWb-QLTNSbili-RKxaprrwrEc8i9-kpjRkHreU-Ub9ZKQONLj7fbhoPYyaDZkNTmsgqQO7ypoGO5hky9HWP2GsjyY9TFetAjZjbRIEewj2eqCjLy251wHuGcwZFj4iEgEDOczjMEmsRsy?width=1024&height=770&cropmode=none')
-project = Project.create(name: 'Hands on Big 5', country: "África do Sul")
+project = Project.create(name: 'Hands on Big 5', country: "Africa do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://dsm01pap006files.storage.live.com/y4mk_M33L6w0JPSbxqm1CeVXMAQsOZZwolVoqcI9ZXzBXFC2Z0kwKGPDm5-QeeYvjumWzwqPD29EVqDcCmWFa6htDRuKZA3hs97htEiUxAKYlVAxYG6xPIGqeKDozOJeE5RFhVO-dkRbIjY1X5bj2llBQIOYGWPICcvpdryDFWacJWCpAyQtR_L6YjCdLMBmOt9?width=768&height=1024&cropmode=none')
-project = Project.create(name: 'Cheetah Center', country: "África do Sul")
+project = Project.create(name: 'Cheetah Center', country: "Africa do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://dm2pap090files.storage.live.com/y4mQ5onOBNta-PyKmVFuy2Rw7DL9fu4GHjqNsxZurMf-qtRuWp1UgTnSvhGCaEXfcWeyGysC_sRcdgO4_FwHeFzkcKe-BBrnsspT6wVPU516dDAD9ZT_hLUsg9-p048gNh45CSAgbvWXqktPYQNcO58GG4F2vdFBEoUY2fN97EDzuP2_KjuMQo9ofq9xOaY8bbg?width=768&height=1024&cropmode=none')
-project = Project.create(name: 'Yoga & Organic Farming', country: "África do Sul")
+project = Project.create(name: 'Yoga & Organic Farming', country: "Africa do Sul")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
 # Brasil
@@ -136,15 +136,15 @@ project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg
 # Índia
 
 file = URI.open('https://dsm01pap001files.storage.live.com/y4mLANELgGRdM4Gu7rBSyLn9L0_8ehGA47v_T3s98W0BH-CW3wvHedqPe1wGkT2tsGlU52Ty_ZMuFc1SbuHBenE63OLPXIfriDg9_olzGnJ0pqtAmEvR0RmhGZtHufjNF_9buItYTox-BjkZZVLuoR-3psloZBRPWuGTZtJvtNUGXqN855ce7uGz34kKINeF5a8?width=1024&height=768&cropmode=none')
-project = Project.create(name: 'Educação Para Crianças', country: 'Índia')
+project = Project.create(name: 'Educação Para Crianças', country: 'India')
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://dsm04pap001files.storage.live.com/y4mtcj9WcbYwSEL04NIG5j0BxDiRckgxWpG9iMQSgtZJ35_-vbLy11xNYp-UjK34xMGVylVaKb5hYJx6p-d1Q98BCTBnbNdQnjQxBePNWz1Luvxmh1w6TbbJn_32mqiqqOdfzWmw-JPm-F9UvxFHhWBEFO8iVJXHHrQBGUhvotdQT2qxXJWK9B0ERKeJ-zxAgDn?width=768&height=1024&cropmode=none')
-project = Project.create( name: 'Proteção à Infância', country: 'Índia')
+project = Project.create( name: 'Proteção à Infância', country: 'India')
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://dm2305files.storage.live.com/y4m2DkEwWjuzKGZL4_rVUgkAhU_5LcZIb82SeTpNA4-tx121jHxIt95vSi05exntAngTXUgW9raj-gGSWHpvud3lMJrdNe7Pbm36NR0RxtEbQgJ7GyfEiA9DBvJfjV31Vq1CUFUl5hukWFtNQFmNyqLoqH5rGc98fWImqji_I_2bj-AaJ6Nadp4Avck5avv2bZC?width=1024&height=769&cropmode=none')
-project = Project.create(name: 'Women Empowerment', country: 'Índia'  )
+project = Project.create(name: 'Women Empowerment', country: 'India')
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
 # Moçambique
