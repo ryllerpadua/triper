@@ -5,7 +5,7 @@
   background-color: #54bed6;
   color: white;
   padding: 10px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -54,7 +54,7 @@
 // [---------------- COLUNA MEIO -------------------]
 
 .column-trips {
-  margin: 50px 75px 0 75px;
+  margin: 20px 75px 0 75px;
 }
 
 // Div dos projects
@@ -131,8 +131,8 @@
 }
 
 .scroller {
-  overflow: auto;
-  max-height: 1000px;
+  // overflow: auto;
+  max-height: 100%;
 }
 
 
@@ -146,8 +146,8 @@
 
 .card-search {
   position: relative;
-  height: 350px;
-  width: 550px;
+  height: 300px;
+  width: 500px;
   margin-bottom: 30px;
   color: white;
   text-shadow: 1px 1px 1px rgb(49, 49, 49);
@@ -248,16 +248,21 @@
 
 // [---------------- COLUNA DIREITA -------------------]
 
+.margin {
+  margin-bottom: 20px
+
+}
+
 .column-matches {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-color: white;
   overflow: auto;
-  min-height: 100vh;
+  max-height: 100%;
 
 
   h2 {
-  padding-top: 30px;
-  margin-top: 30px;
+  padding-bottom: 10px;
+  margin-top: 20px;
   font-size: 30px;
   color: #393939;
   text-align: center;
@@ -269,6 +274,9 @@
 
   li {
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -277,7 +285,7 @@
 .card-matched[style^="background-image:"] {
   background-size: cover;
   background-position: center;
-  width: 300px;
+  width: 18vw;
   height: 200px;
   overflow: hidden;
 }

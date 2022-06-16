@@ -1,7 +1,7 @@
   <div class="dashboard-main">
 
   <%# perfil do dashboard %>
-  <div class="column-profile col-12 col-lg-2">
+  <div class="column-profile">
     <div class="card-profile-image" style="background-image: url(<%= cl_image_path current_user.photo.key, height: 300, crop: :fill %>)"></div>
     <div class="p-4">
       <h2 class="mb-3"><strong><%= current_user.name %></strong>, <%= current_user.age %> </h2>
@@ -22,7 +22,7 @@
       <button type="button" class="btn-dash" data-bs-toggle="modal" data-bs-target="#tripModal"> <!-- Button trigger modal -->
         + Criar Trip
       </button>
-      <h3 class="h3-col mt-2"> 1. Crie até 6 trips escolhendo o projeto e data para sua viagem </h3>
+      <h3 class="h3-col mt-2" style="text-align:center"> 1. Crie até 6 trips escolhendo os projetos e as datas de sua preferência </h3>
     </div>
     <div class="all-projects">
       <%  @trips.each do |trip| %>
@@ -45,9 +45,10 @@
   <%# Lista dos resultados dos matches %>
 
   <div class="results py-4 mt-3">
-    <h2 class="mb-4"><strong>Resultados:</strong></h2>
-    <h3 class="h3-col mt-2" style="text-align:center"> 2. Veja quem quer viajar para os mesmos projetos nessas datas </h3>
-    <hr style="width:70%; margin:auto; margin-bottom:20px; margin-top:20px;">
+    <h2 class="margin"><strong>Resultados</strong></h2>
+    <h3 class="h3-col mt-2" style="text-align:center"> 2. Veja quem quer os mesmos projetos
+    <br>e datas que você </h3>
+    <hr style="width:70%; margin:auto; margin-bottom:20px;">
     <div class="scroller d-flex justify-content-center">
       <ul>
       <% @users_search.each do |user_search| %>
@@ -82,7 +83,7 @@
 
 
   <%# Matches %>
-  <div class="column-matches col-12 col-lg-2" >
+  <div class="column-matches", style="min-width: 281.25px">
     <h2><strong>Suas Matches</strong></h2>
     <h3 class="h3-col mt-2" style="text-align:center"> 3. Converse e organize sua viagem! </h3>
       <div class="d-flex justify-content-center">
