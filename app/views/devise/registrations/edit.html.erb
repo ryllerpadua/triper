@@ -1,7 +1,7 @@
 <div class="d-flex flex-column align-items-center justify-content-center w-100 p-3 banner-forms">
   <div class="cardbox">
 
-    <h2 class="text-center">Edit <%= resource_name.to_s.humanize %></h2>
+    <h2 class="text-center">Editar Perfil</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= f.error_notification %>
@@ -46,8 +46,8 @@
 
         <div class="d-flex justify-content-between mt-4">
         <%= link_to "Voltar", dashboard_path, class: "btn-form" %>
-         <%= f.button :submit, "Update", class: "btn-form" %>
-        <%= link_to "Cancelar conta", registration_path(resource_name), data: { confirm: "Tem certeza?" }, method: :delete, class: "btn btn-danger text-white" %>
+         <%= f.button :submit, "Salvar", class: "btn-form-save" %>
+        <%= link_to "Cancelar conta", registration_path(resource_name), data: { confirm: "Tem certeza?" }, method: :delete %>
       </div>
     <% end %>
     </div>
