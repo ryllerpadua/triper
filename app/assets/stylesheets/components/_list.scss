@@ -1,4 +1,41 @@
 .list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.notification{
+  display: flex;
+}
+
+.notification:hover{
+  background-color: rgb(236, 236, 236);
+
+}
+.img{
+  display: flex;
+}
+
+.notification p{
+  font-size: 13px;
+  margin-left: 5px;
+  color:black
+
+}
+
+.navbar-expand-sm .navbar-nav .dropdown-menu{
+  position: absolute;
+  padding: 10px;
+  width: 282px;
+}
+h6{
   text-align: center;
 
+}
+
+.avatar-2 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  align-items: center;
 }

@@ -1,9 +1,11 @@
-<div class="list">
 <h6><strong> Notificações</strong></h6>
   <% @notifications.each do |notification| %>
+<div class="list">
     <%= link_to match_path(notification.match) do %>
+    <div class="notification">
+      <%= image_tag url_for(notification.match.other_user(current_user).photo), class: "avatar-2" %>
       <p> <%= notification.content %> </p>
-      <%= image_tag url_for(notification.match.other_user(current_user).photo) %>
+    </div>
     <% end %>
   <% end %>
 </div>
