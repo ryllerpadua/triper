@@ -9,6 +9,13 @@
   justify-content: space-between;
   border: solid #b2ebe0;
   border-width: 0 0 3px 0;
+  position: relative;
+
+  .partner {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
 }
 
 .inner-container {
@@ -36,7 +43,8 @@
   text-align: center;
   align-items: center;
   font-size: 20px;
-  margin-right: 0px;
+  width: 100%;
+  margin-left: 0 !important;
 }
 
 .inner-banner p {
