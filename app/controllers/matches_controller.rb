@@ -20,23 +20,15 @@ class MatchesController < ApplicationController
     match = Match.new(trip1: trip1, trip2: trip2)
 
     if match.save
-      Notification.create(title: "Você recebeu um novo Match",
-        content: "Você tem um novo match com #{ trip2.user.name}",
+      Notification.create(content: "Novo match com #{ trip2.user.name}",
         seen: false,
         user: trip1.user,
         match: match)
 
-       Notification.create(title: "Você recebeu um novo Match",
-        content: "Você tem um novo match com #{ trip1.user.name}",
+       Notification.create(content: "Novo match com #{ trip1.user.name}",
         seen: false,
         user: trip2.user,
         match: match)
-
-
-
-
-
-
       redirect_to dashboard_path
     else
       redirect_to trips_path, notice: "Erro"
