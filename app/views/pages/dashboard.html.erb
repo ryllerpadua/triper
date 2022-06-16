@@ -92,7 +92,7 @@
         <li style="list-style: none"  data-controller="show-profile" >
           <% match_trip = current_user == match.trip1.user ? match.trip2 : match.trip1 %>
           <div class="card-matched"  style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path match_trip.user.photo.key %>')">
-            <h2><%= match_trip.user.first_name %> <%= match_trip.user.last_name %></h2>
+            <h3><%= match_trip.user.first_name %> <%= match_trip.user.last_name %></h3>
             <span class="project">
               <p><%= match_trip.project.name %></p>
             </span>
