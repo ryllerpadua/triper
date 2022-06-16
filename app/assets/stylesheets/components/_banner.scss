@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 88px 0;
   height: 80vh;
   align-items: center;
   justify-content: space-between;
@@ -16,6 +16,12 @@
     left: 20px;
     bottom: 20px;
   }
+}
+.match-certo {
+background-color: #54bed692;
+
+
+
 }
 
 .inner-container {
@@ -38,7 +44,7 @@
   display: flex;
   background-color: white;
   color: #fff;
-  padding: 50px;
+  padding: 0px 50px 50px 50px;
   justify-content: space-evenly;
   text-align: center;
   align-items: center;
