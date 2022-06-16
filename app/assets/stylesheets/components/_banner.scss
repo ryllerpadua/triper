@@ -9,6 +9,13 @@
   justify-content: space-between;
   border: solid #b2ebe0;
   border-width: 0 0 3px 0;
+  position: relative;
+
+  .partner {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
 }
 
 .inner-container {
@@ -18,7 +25,7 @@
 }
 
 .inner-container h1 {
-  text-shadow: 2px 2px 3px rgb(0, 0, 0);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
   font-size: 45px;
 }
 
@@ -36,7 +43,8 @@
   text-align: center;
   align-items: center;
   font-size: 20px;
-  margin-right: 0px;
+  width: 100%;
+  margin-left: 0 !important;
 }
 
 .inner-banner p {
@@ -45,10 +53,24 @@
 
 .banner-cards-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 120px;
+  justify-content: space-evenly;
   background-color: white;
+
+  .image-block {
+
+    width: 375px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+    h1 {
+      font-size: 36px;
+      text-align: left;
+      text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
 }
 
 .banner-card {

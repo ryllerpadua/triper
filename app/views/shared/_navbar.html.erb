@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-lewagon">
   <div class="container-fluid">
     <%= link_to dashboard_path, class: "navbar-brand" do %>
-      <%= image_tag "/assets/logo_exb.png" %>
+      <%= image_tag "/assets/logo_v.png" %>
     <% end %>
 
     <button class="navbar-toggler fa-solid fa-bars" style="color:#fff; font-size:20px; border-color: white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,14 +14,17 @@
             <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
+            <%= image_tag "bell", class: "bell", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> <p class="px-3 mb-0"></p>
+              <div data-controller="notifications", data-notifications-user-value="<%= current_user.id %> ">
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
             <%= cl_image_tag current_user.photo.key, height: 40, width: 40, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> <p class="px-3 mb-0"><strong>Olá, <%="#{current_user.first_name}!" %></strong></p>
-              <div>
-                <p> Notificações</p>
-                  <div data-controller="notifications", data-notifications-user-value="<%= current_user.id %> ">
 
-                  </div>
-              </div>
               <%= link_to "Editar Perfil", edit_user_registration_path, class: "dropdown-item" %>
               <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
