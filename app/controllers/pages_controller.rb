@@ -13,7 +13,6 @@ class PagesController < ApplicationController
       interval = trip.date.beginning_of_month..trip.date.end_of_month
       current_user.trips.where(project: trip.project, date: interval).count.positive?
     end
-
     @users_search = @users_search.reject { |trip| Match.where(trip1: trip).count.positive? || Match.where(trip2: trip).count.positive? }
 
     @matches = Match.where(trip1_id: current_user.trips.ids).or(Match.where(trip2_id: current_user.trips.ids))

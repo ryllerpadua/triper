@@ -20,8 +20,9 @@
   <div class="column-trips col-12 col-lg-6">
     <div class="my-2">
       <button type="button" class="btn-dash" data-bs-toggle="modal" data-bs-target="#tripModal"> <!-- Button trigger modal -->
-        + Criar Viagem
+        + Criar Trip
       </button>
+      <h3 class="h3-col mt-2"> 1. Crie até 6 trips escolhendo o projeto e data para sua viagem </h3>
     </div>
     <div class="all-projects">
       <%  @trips.each do |trip| %>
@@ -45,6 +46,8 @@
 
   <div class="results py-4 mt-3">
     <h2 class="mb-4"><strong>Resultados:</strong></h2>
+    <h3 class="h3-col mt-2" style="text-align:center"> 2. Veja quem quer viajar para os mesmos projetos nessas datas </h3>
+    <hr style="width:70%; margin:auto; margin-bottom:20px; margin-top:20px;">
     <div class="scroller d-flex justify-content-center">
       <ul>
       <% @users_search.each do |user_search| %>
@@ -81,8 +84,10 @@
   <%# Matches %>
   <div class="column-matches col-12 col-lg-2" >
     <h2><strong>Suas Matches</strong></h2>
+    <h3 class="h3-col mt-2" style="text-align:center"> 3. Converse e organize sua viagem! </h3>
       <div class="d-flex justify-content-center">
         <ul>
+        <div>
         <% @matches.each do |match| %>
         <li style="list-style: none"  data-controller="show-profile" >
           <% match_trip = current_user == match.trip1.user ? match.trip2 : match.trip1 %>
@@ -111,6 +116,7 @@
           </div>
         </li>
         <% end  %>
+        </div>
       </ul>
     </div>
   </div>
