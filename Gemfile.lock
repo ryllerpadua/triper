@@ -280,7 +280,6 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass (~> 6.1.1)
-  i18n (~> 1.9)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
