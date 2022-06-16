@@ -22,7 +22,8 @@
       <button type="button" class="btn-dash" data-bs-toggle="modal" data-bs-target="#tripModal"> <!-- Button trigger modal -->
         + Criar Trip
       </button>
-      <h3 class="h3-col mt-2" style="text-align:center"> 1. Crie até 6 trips escolhendo os projetos e as datas de sua preferência </h3>
+      <h3 class="h3-col mt-2" style="text-align:center"> 1. Crie até 6 trips com os projetos e as datas
+      <br>de sua preferência </h3>
     </div>
     <div class="all-projects">
       <%  @trips.each do |trip| %>
@@ -34,7 +35,7 @@
             <small class="card-tag"><strong><%= trip.project.country %></strong></small>
             <div>
               <h2><%= trip.project.name  %></h2>
-              <p><%= trip.date.strftime("%B") %>, <%= trip.date.year %></p>
+              <p><%= (l trip.date, format: "%B, %Y").capitalize %></p>
               <%= link_to raw('<i class="fa-solid fa-xmark"></i>'), trip_path(trip) , class: "btn-edit mt-2 mb-3", method: :delete, data: { confirm: "Are you sure?" } %>
             </div>
           </div>
@@ -46,8 +47,8 @@
 
   <div class="results py-4 mt-3">
     <h2 class="margin"><strong>Resultados</strong></h2>
-    <h3 class="h3-col mt-2" style="text-align:center"> 2. Veja quem quer os mesmos projetos
-    <br>e datas que você </h3>
+    <h3 class="h3-col mt-2" style="text-align:center"> 2. Veja quem procura os mesmos projetos e
+    <br>datas que você </h3>
     <hr style="width:70%; margin:auto; margin-bottom:20px;">
     <div class="scroller d-flex justify-content-center">
       <ul>
@@ -57,7 +58,8 @@
           <div>
             <h2><%= user_search.user.first_name %> <%= user_search.user.last_name %>, <%= user_search.user.age %></h2>
             <span class="date">
-              <i class="fa-solid fa-calendar-days"></i><%= user_search.date.strftime("%B") %>, <%= user_search.date.year %>
+              <i class="fa-solid fa-calendar-days"></i><%= (l user_search.date, format: "%B, %Y").capitalize %>
+
             </span>
             <span class="destino">
               <i class="fa-solid fa-map-location-dot"></i><%= user_search.project.name %> - <%= user_search.project.country %>
@@ -84,7 +86,7 @@
 
   <%# Matches %>
   <div class="column-matches", style="min-width: 281.25px">
-    <h2><strong>Suas Matches</strong></h2>
+    <h2><strong>Matches</strong></h2>
     <h3 class="h3-col mt-2" style="text-align:center"> 3. Converse e organize sua viagem! </h3>
       <div class="d-flex justify-content-center">
         <ul>
@@ -101,7 +103,7 @@
               <p><%= match_trip.project.country %></p>
             </span>
             <span class="date">
-              <p><%= match_trip.date.strftime("%B") %>, <%= match_trip.date.year %></p>
+              <p><%= (l match_trip.date, format: "%B, %Y").capitalize%></p>
             </span>
             <i class="fa-solid fa-user" data-action="click->show-profile#showProfile"></i>
             <%= link_to raw('<i class="fa-solid fa-comments"></i>'), match_path(match), class: "btn-chat btn-primary mt-2" %>

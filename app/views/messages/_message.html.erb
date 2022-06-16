@@ -5,7 +5,7 @@
     <div>
       <small>
         <strong><%= message.user.first_name %></strong>
-        <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
+        <i><%= l message.created_at, format: "%a  %e %b às %k:%M" %></i>
       </small>
       <p><%= message.content %></p>
     </div>
