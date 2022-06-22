@@ -1,17 +1,34 @@
-<div class="container match my-4">
-  <div class="d-flex justify-content-between p-3 align-items-center">
-    <h3><%= "#{@match.trip1.user.first_name} e #{@match.trip2.user.first_name}" %></h3>
-    <%= link_to "Voltar", dashboard_path %>
-  </div>
-    <div class="messages" data-controller="match-subscription" data-match-subscription-match-id-value="<%= @match.id %>">
-      <% @match.messages.each do |message| %>
-
-        <%= render 'messages/message', message: message %>
-      <% end %>
+<div class="container-chat">
+  <div class="container match my-4">
+    <div class="d-flex justify-content-between p-3 align-items-center">
+      <h3><%= "#{@match.trip1.user.first_name} e #{@match.trip2.user.first_name}" %></h3>
+      <%= link_to "Voltar", dashboard_path %>
     </div>
-      <%= simple_form_for [@match, @message], remote: true, html: {class: "d-flex mb-3"} do |f| %>
-        <%= f.input :content, label: false, placeholder: "Digite sua mensagem", wrapper_html: {class: "flex-grow-1 h-100"}, input_html: {class: "h-100"}%>
-        <%= f.button :submit, "Enviar", class: "btn-dash ms-2" %>
-      <% end %>
+      <div class="messages" data-controller="match-subscription" data-match-subscription-match-id-value="<%= @match.id %>">
+        <% @match.messages.each do |message| %>
 
+          <%= render 'messages/message', message: message %>
+        <% end %>
+      </div>
+        <%= simple_form_for [@match, @message], remote: true, html: {class: "d-flex mb-3"} do |f| %>
+          <%= f.input :content, label: false, placeholder: "Digite sua mensagem", wrapper_html: {class: "flex-grow-1 h-100"}, input_html: {class: "h-100"}%>
+          <%= f.button :submit, "Enviar", class: "btn-dash ms-2" %>
+        <% end %>
+  </div>
+
+  <div class="container-profile">
+    <div class="card-profile-holder">
+      <div class="card-image" id="chat-card-image" style="background-image: url(<%= cl_image_path @match.trip1.user.photo.key %>)"></div>
+      <div class="p-4">
+        <% match_trip = current_user == @match.trip1.user ? @match.trip2 : @match.trip1 %>
+        <h2 class="mb-3"><strong><%= match_trip.user.first_name %></strong>, <%= match_trip.user.age %> </h2>
+        <p><i class="fas fa-briefcase me-2"></i><strong>Profissão:</strong> <%= match_trip.user.occupation %></p>
+        <p><i class="fas fa-map-marker-alt me-2"></i><strong>Cidade: </strong><%= match_trip.user.city %></p>
+        <p><i class="fas fa-plane-departure me-2"></i><strong>Destinos: </strong><%= match_trip.user.projects.pluck(:country).uniq.join(", ")  %></p>
+        <hr>
+        <p class="about m-0"><strong>Sobre: </strong></p>
+        <p class="about-info"><%= match_trip.user.about %></p>
+      </div>
+    </div>
+  </div>
 </div>

@@ -4,7 +4,6 @@ import 'select2';
 
 export default class extends Controller {
 
-
   connect() {
 
     $(this.element).select2({
@@ -12,7 +11,6 @@ export default class extends Controller {
       theme: 'bootstrap-5',
       dropdownParent: $('#tripModal'),
       minimumResultsForSearch: Infinity,
-
     });
   }
 }
