@@ -5,8 +5,6 @@ export default class extends Controller {
   user: String
   }
 
-
-
   connect() {
     console.log
     setInterval(() => {
