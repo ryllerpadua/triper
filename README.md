@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/ryllerpadua/triper/master/app/assets/images/voluntrpr.png">
 
-> This project was created as a final exam for the Le Wagon bootcamp. Prototyped and coded in 9 days, VolunTripr can be used to match people who are interested in traveling to the volunteer programs offered by Exchange do Bem (https://www.exchangedobem.com).
+> This project is a web app created for the final exam at the Le Wagon bootcamp. Prototyped and coded in 9 days, VolunTripr can be used to match people who are interested in traveling to the volunteer programs offered by Exchange do Bem (https://www.exchangedobem.com).
 
 > By using VolunTripr, you will always have company for more than 50 destinations in 15 countries offered by the agency!
 
@@ -11,12 +11,12 @@
 
 The project is still in development and the next updates and features will be to improve or create the following:
 
-- [x] Chat e visualização de perfil
-- [ ] Captcha criação de contas
+- [x] Chat and profile view
+- [ ] Captcha account creation
 - [ ] AJAX requests
 - [ ] Admin view
-- [ ] Responsividade para mobile
-- [ ] Views com informações dos projetos (atualmente pelo site da agência)
+- [ ] Responsive design for mobile
+- [ ] Views with infos for each destination
 
 ## ☕ Accessing VolunTripr
 
