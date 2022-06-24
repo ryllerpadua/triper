@@ -8,9 +8,6 @@
   background-color: white;
 }
 
-.column-profile{
-
-}
 
 .column-trips {
 
@@ -28,7 +25,6 @@
 
   .match {
     width: 70%;
-    height: 101vh;
   }
 
   .container-profile {
@@ -161,10 +157,30 @@
 
   .column-trips {
     width: 100%;
-
   }
 
   .column-matches {
     width: 45%;
   }
+
+  .match {
+    width: 70vw;
+  }
+}
+
+// Ultra large devices (large desktops, 1920px and up)
+@media (min-width: 1920px) {
+  .container-profile {
+    max-width: 20%;
+  }
+
+  .column-profile{
+    max-width: 15%;
+  }
+
+  .column-trips{
+    margin-right: 10rem;
+    margin-left: 10rem;
+  }
+
 }
