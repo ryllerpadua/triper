@@ -101,25 +101,18 @@ background-color: #54bed692;
 .card-home {
 border-radius: 5px;
 padding: 0px;
-
-
 }
-
-
 
 .card-img-top {
 height: 200px;
 border-radius: 5px;
-
-
-  }
+}
 
 .card-text {
 // text-align: center;
 text-align: justify;
 align-items: center;
 color: black;
-
 }
 
 
@@ -131,7 +124,7 @@ color: black;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-@media (max-width: 576px) {
+@media (max-width: 530px) {
   .banner {
     height: 80vh;
     padding: 0;
@@ -141,24 +134,55 @@ color: black;
     justify-content: center;
     margin: auto;
     padding-top: 10px;
+
+    .image-block {
+      height: 40vh;
+      width: 90vw;
+      text-align: center;
+
+      img {
+        width: 90vw;
+        height: auto;
+      }
+
+      h1 {
+        text-align: center;
+        left: auto;
+      }
+
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 600px) {
+
+  .banner {
+    height: 102vh;
+    padding: 0;
   }
 
 
   .image-block {
-
     height: 40vh;
+    width: 90vw;
+    text-align: center;
 
     img {
-    width: 100vw;
-    height: auto;
+      width: 90vw;
+      height: 100vh;
+    }
+
+    .smaller {
+      width: 90vw;
+      height: 120vh;
     }
   }
-
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-
 }
 
 // Large devices (desktops, 992px and up)

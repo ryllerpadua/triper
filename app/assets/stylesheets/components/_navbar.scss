@@ -32,6 +32,10 @@
   border-radius: 50%;
   box-shadow: 1px 1px rgb(157, 157, 157);
   border: 1px solid white;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .bell{
@@ -39,4 +43,7 @@
   margin-right: 7px;
   padding-top: 6px;
 
+  &:hover {
+    cursor: pointer;
+  }
 }

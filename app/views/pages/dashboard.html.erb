@@ -55,10 +55,10 @@
                 <h2><%= user_search.user.first_name %> <%= user_search.user.last_name %>, <%= user_search.user.age %></h2>
                 <span class="date">
                 <i class="fa-solid fa-calendar-days"></i><%= (l user_search.date, format: "%B, %Y").capitalize %>
-
                 </span>
                 <span class="destino">
-                  <i class="fa-solid fa-map-location-dot"></i><%= user_search.project.name %> - <%= user_search.project.country %>
+                  <p class="matches-country m-0"><%= user_search.project.country %></p>
+                  <p><i class="fa-solid fa-map-location-dot"></i><%= user_search.project.name %></p>
                 </span>
                 <%= link_to raw('<i class="fas fa-thumbs-up"></i>'), trip_matches_path(user_search), method: :post, class: "btn-match btn-primary" %>
                 <i class="fa-solid fa-user" data-action="click->show-profile#showProfile"></i>

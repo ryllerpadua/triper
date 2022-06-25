@@ -26,3 +26,9 @@
 .fa-heart {
   color: red;
 }
+
+@media (max-width: 530px) {
+  .footer-links p {
+    font-size: 10px;
+  }
+}
