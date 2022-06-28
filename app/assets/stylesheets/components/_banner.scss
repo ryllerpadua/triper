@@ -117,6 +117,7 @@ color: black;
 
 
 .banner-forms {
+  min-height: calc(100vh - 65px);
   background-size: cover;
   background-position: center;
   background-image: url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3000&q=2000"), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
@@ -126,7 +127,7 @@ color: black;
 
 @media (max-width: 530px) {
   .banner {
-    height: 80vh;
+    height: 75vh;
     padding: 0;
   }
 
@@ -150,7 +151,6 @@ color: black;
         left: auto;
       }
 
-
       p {
         font-size: 14px;
       }
@@ -158,15 +158,29 @@ color: black;
   }
 }
 
-
-// Medium devices (tablets, 768px and up)
 @media (max-width: 600px) {
 
-  .banner {
-    height: 102vh;
-    padding: 0;
+  .banner-forms {
+
+    .cardbox {
+      width: 80vw;
+      font-size: small;
+
+      .form-control {
+        font-size: small;
+      }
+
+      .btn-form {
+        font-size: small;
+
+      }
+    }
   }
 
+  .banner {
+    height: 75vh;
+    padding: 0;
+  }
 
   .image-block {
     height: 40vh;

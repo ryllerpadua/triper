@@ -5,6 +5,9 @@ class User < ApplicationRecord
   has_one_attached :photo
   validates_length_of :trips, maximum: 8
   validates :first_name, :last_name, :date_of_birth, :photo, presence: true
+  validates :first_name, length: { in: 2..20 }
+  validates :last_name, length: { in: 2..20 }
+  validates :about, length: { maximum: 500 }
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
