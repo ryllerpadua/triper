@@ -8,7 +8,6 @@
   background-color: white;
 }
 
-
 .column-trips {
 
 }
@@ -43,7 +42,6 @@
     border-bottom: 4px solid #b3d4ce;
   }
 }
-
 
 // Small devices
 @media (max-width: 530px) {
@@ -145,11 +143,14 @@
       bottom: 5px;
       text-align: center;
 
-
       img {
         width: 100%;
       }
     }
+  }
+
+  .container-chat .container-profile {
+    border-top: 3px solid #54bed6;
   }
 }
 
@@ -203,5 +204,4 @@
     margin-right: 10rem;
     margin-left: 10rem;
   }
-
 }

@@ -10,9 +10,9 @@
           <%= render 'messages/message', message: message %>
         <% end %>
       </div>
-        <%= simple_form_for [@match, @message], remote: true, html: {class: "d-flex mb-3"} do |f| %>
+        <%= simple_form_for [@match, @message], remote: true, html: {class: "d-flex"} do |f| %>
           <%= f.input :content, label: false, placeholder: "Digite sua mensagem", wrapper_html: {class: "flex-grow-1 h-100"}, input_html: {class: "h-100"}%>
-          <%= f.button :submit, "Enviar", class: "btn-dash ms-2" %>
+          <%= f.button :submit, "Enviar", class: "btn-dash h-100" %>
         <% end %>
   </div>
 
