@@ -19,7 +19,7 @@
 
   <%# criar viagem %>
   <div class="column-trips">
-    <div class="mb-2">
+    <div class="dash-trips mb-2">
       <h3 class="h3-col" style="text-align: center"><%= image_tag "one.png" %> Crie até 6 Trips</h3>
       <button type="button" class="btn-dash mx-2" data-bs-toggle="modal" data-bs-target="#tripModal"> <!-- Button trigger modal -->
         + Criar Trip
@@ -45,7 +45,6 @@
     <%# Lista dos resultados dos matches %>
     <div class="results">
       <h3 class="h3-col mt-2" style="text-align:center"><%= image_tag "two.png" %> Veja quem está buscando os mesmos projetos e datas </h3>
-      <hr style="width:70%; margin:auto; margin-bottom:20px;">
       <div class="scroller">
         <ul>
           <% @users_search.each do |user_search| %>
