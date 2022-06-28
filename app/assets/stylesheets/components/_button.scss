@@ -14,7 +14,7 @@
     color: white;
     transition: 0.2s;
   }
-  }
+}
 
 .btn-primary{
   text-decoration: none;
@@ -38,6 +38,7 @@
   border-radius: 2px;
   color: white;
   transition: 0.3s;
+  margin-left: 0.5rem;
 
   &:hover {
     background-color: #54bed6;
@@ -72,7 +73,6 @@
   vertical-align: middle;
   padding: 3px 16px 3px 16px;
 
-
   &:hover {
     background-color: #83dff4;
     transition: 0.4s;
@@ -102,7 +102,6 @@
   vertical-align: middle;
   padding: 2px 8px 2px 8px;
   font-size: 14px;
-
 
   &:hover {
     background-color: #83dff4;

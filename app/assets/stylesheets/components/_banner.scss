@@ -21,8 +21,9 @@
     }
   }
 }
+
 .match-certo {
-background-color: #54bed692;
+  background-color: #54bed692;
 }
 
 .inner-container {
@@ -67,7 +68,6 @@ background-color: #54bed692;
   margin-bottom: 50px;
 
   .image-block {
-
     width: 375px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
@@ -99,22 +99,21 @@ background-color: #54bed692;
 }
 
 .card-home {
-border-radius: 5px;
-padding: 0px;
+  border-radius: 5px;
+  padding: 0px;
 }
 
 .card-img-top {
-height: 200px;
-border-radius: 5px;
+  height: 200px;
+  border-radius: 5px;
 }
 
 .card-text {
-// text-align: center;
-text-align: justify;
-align-items: center;
-color: black;
+  // text-align: center;
+  text-align: justify;
+  align-items: center;
+  color: black;
 }
-
 
 .banner-forms {
   min-height: calc(100vh - 65px);
