@@ -10,6 +10,9 @@
 
 > By using VolunTripr, you will always have company for more than 50 destinations in 15 countries offered by the agency!
 
+## ☕ Accessing VolunTripr
+
+You can acess https://voluntripr.com and check the latest stable version that is deployed on Heroku
 
 ### Adjustments and improvements
 
@@ -23,9 +26,7 @@ The project is still in development and the next updates and features will be to
 - [ ] Responsive design for mobile
 - [ ] Views with infos for each destination
 
-## ☕ Accessing VolunTripr
 
-You can acess https://voluntripr.com and check the latest stable version that is deployed on Heroku
 
 ## 🤝 This project was created by
 
