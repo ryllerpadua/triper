@@ -47,3 +47,24 @@
     cursor: pointer;
   }
 }
+
+
+@media (max-width: 600px) {
+
+  .dropdown {
+    margin: auto;
+    padding-top: 10px;
+    position: relative;
+
+    .dropdown-menu {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .bell {
+      margin:0;
+      padding: 0;
+    }
+  }
+}

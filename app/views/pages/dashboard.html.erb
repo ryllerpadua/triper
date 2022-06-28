@@ -3,7 +3,7 @@
 
   <%# perfil do dashboard %>
   <div class="column-profile">
-    <div class="card-profile-image" style="background-image: url(<%= cl_image_path current_user.photo.key, height: 300, crop: :fill %>)"></div>
+    <div class="card-profile-image" style="background-image: url(<%= cl_image_path current_user.photo.key, crop: :fill %>)"></div>
     <div class="p-4">
       <h2 class="mb-3"><strong><%= current_user.name %></strong>, <%= current_user.age %> </h2>
       <p><i class="fa-solid fa-pen-to-square me-2"></i><%= link_to "Editar", edit_user_registration_path, class: "btn-dash-small"  %></p>
