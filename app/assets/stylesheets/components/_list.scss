@@ -4,35 +4,33 @@
   flex-direction: column;
 }
 
-.notification{
+.notification {
   display: flex;
 }
 
-.notification:hover{
+.notification:hover {
   background-color: rgb(236, 236, 236);
-
 }
-.img{
+
+.img {
   display: flex;
 }
 
-.notification p{
+.notification p {
   font-size: 13px;
   margin-left: 5px;
   color:black
-
 }
 
-.navbar-expand-sm .navbar-nav .dropdown-menu{
+.navbar-expand-sm .navbar-nav .dropdown-menu {
   position: absolute;
   padding: 10px;
   width: 282px;
   border: 1px solid #54bed6;
 }
 
-h6{
+h6 {
   text-align: center;
-
 }
 
 .avatar-2 {
