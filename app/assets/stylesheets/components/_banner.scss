@@ -83,38 +83,6 @@
   }
 }
 
-.banner-card {
-  padding: 30px;
-  background-color: rgba(147, 140, 140, 0.408);
-  border-radius: 5px;
-  margin: 20px 0;
-  width: 200px;
-  height: 200px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 0;
-}
-
-.card-home {
-  border-radius: 5px;
-  padding: 0px;
-}
-
-.card-img-top {
-  height: 200px;
-  border-radius: 5px;
-}
-
-.card-text {
-  // text-align: center;
-  text-align: justify;
-  align-items: center;
-  color: black;
-}
-
 .banner-forms {
   min-height: calc(100vh - 65px);
   background-size: cover;
@@ -171,7 +139,6 @@
 
       .btn-form {
         font-size: small;
-
       }
     }
   }
