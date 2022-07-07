@@ -1,6 +1,5 @@
 <div class="dashboard-main">
 
-
   <%# perfil do dashboard %>
   <div class="column-profile">
     <div class="card-profile-image" style="background-image: url(<%= cl_image_path current_user.photo.key, crop: :fill %>)"></div>
@@ -16,17 +15,21 @@
     </div>
   </div>
 
-
   <%# criar viagem %>
   <div class="column-trips">
     <div class="dash-trips mb-2">
       <h3 class="h3-col" style="text-align: center"><%= image_tag "one.png" %> Crie até 6 Trips</h3>
+        <div class="alltrips">
+          <% @trips.each do |trip| %>
+            <%= trip.project.country %> - <%= trip.project.name %> (<%= (l trip.date, format: "%B, %Y").capitalize %>)
+          <% end %>
+        </div>
       <button type="button" class="btn-dash mx-2" data-bs-toggle="modal" data-bs-target="#tripModal"> <!-- Button trigger modal -->
         + Criar Trip
       </button>
     </div>
     <div class="all-projects mb-3">
-      <%  @trips.each do |trip| %>
+      <%  @usertrips.each do |trip| %>
         <% if trip.project.photo.attached? %>
           <div class="card-project" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path trip.project.photo.key, height: 300, crop: :fill %>')">
         <% else %>
@@ -128,7 +131,7 @@
         <div class="modal-body">
           <%= simple_form_for [ Trip.new  ] do |f| %>
             <%= f.input :project_id, collection: Project.order(:country).order(:name).group_by(&:country), include_blank: false, input_html: { data: { controller: 'select2' } }, as: :grouped_select, group_method: :last %>
-            <%= f.input :date, start_year: Date.today.year, end_year: Date.today.year + 5, discard_day: true, order: [:month, :year] %>
+            <%= f.input :date, start_year: Date.today.year, end_year: Date.today.year + 3, discard_day: true, order: [:month, :year] %>
             <div class="d-flex justify-content-between">
               <% if current_user.trips.length < 6 %>
                 <%= f.submit id: "sa-create-trip", class: 'btn btn-success' %>

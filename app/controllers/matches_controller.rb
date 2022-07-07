@@ -16,7 +16,8 @@ class MatchesController < ApplicationController
 
   def create
     trip1 = Trip.find(params[:trip_id])
-    trip2 = current_user.trips.find_by(project: trip1.project, date: trip1.date)
+    trip2 = current_user.trips.find_by(project: trip1.project)
+    # trip2 = current_user.trips.find_by(project: trip1.project, date: trip1.date)
     match = Match.new(trip1: trip1, trip2: trip2)
 
     if match.save
