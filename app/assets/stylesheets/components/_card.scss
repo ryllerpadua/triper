@@ -36,6 +36,10 @@
     font-size: 30px;
   }
 
+  .about-info {
+    word-break: break-word;
+  }
+
   .card-profile-image {
     background-size: cover;
     background-position: center;
@@ -254,6 +258,7 @@
   .about-info {
     text-align: justify;
     font-size: 12px;
+
   }
 }
 
