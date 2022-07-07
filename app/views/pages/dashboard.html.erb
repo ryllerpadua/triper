@@ -19,11 +19,6 @@
   <div class="column-trips">
     <div class="dash-trips mb-2">
       <h3 class="h3-col" style="text-align: center"><%= image_tag "one.png" %> Crie até 6 Trips</h3>
-        <div class="alltrips">
-          <% @trips.each do |trip| %>
-            <%= trip.project.country %> - <%= trip.project.name %> (<%= (l trip.date, format: "%B, %Y").capitalize %>)
-          <% end %>
-        </div>
       <button type="button" class="btn-dash mx-2" data-bs-toggle="modal" data-bs-target="#tripModal"> <!-- Button trigger modal -->
         + Criar Trip
       </button>
