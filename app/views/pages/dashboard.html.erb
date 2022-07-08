@@ -42,10 +42,10 @@
 
     <%# Lista dos resultados dos matches %>
     <div class="results">
-      <h3 class="h3-col mt-2" style="text-align:center"><%= image_tag "two.png" %> Veja quem está buscando os mesmos projetos e datas </h3>
+      <h3 class="h3-col mt-2" style="text-align:center"><%= image_tag "two.png" %> Veja quem quer ir no mesmo projeto e ano que você </h3>
       <div class="scroller">
         <ul>
-          <% @users_search.each do |user_search| %>
+          <% @users_search.select do |user_search| %>
           <li class="li-card-search" style="list-style: none" data-controller="show-profile">
             <div class="card-search" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path user_search.user.photo.key %>')">
               <div>
