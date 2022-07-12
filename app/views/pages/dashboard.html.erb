@@ -18,23 +18,32 @@
   <%# criar viagem %>
   <div class="column-trips">
     <div class="dash-trips mb-2">
+      <div class="alltrips">
+      <ul>
+        <% @trips.uniq.each do |trip| %>
+        <li>
+          <%= trip.project.name %>
+        </li>
+        <% end %>
+      </ul>
+      </div>
       <h3 class="h3-col" style="text-align: center"><%= image_tag "one.png" %> Crie até 6 Trips</h3>
       <button type="button" class="btn-dash mx-2" data-bs-toggle="modal" data-bs-target="#tripModal"> <!-- Button trigger modal -->
         + Criar Trip
       </button>
     </div>
     <div class="all-projects mb-3">
-      <%  @usertrips.each do |trip| %>
-        <% if trip.project.photo.attached? %>
-          <div class="card-project" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path trip.project.photo.key, height: 300, crop: :fill %>')">
+      <%  @user_trips.each do |user_trip| %>
+        <% if user_trip.project.photo.attached? %>
+          <div class="card-project" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path user_trip.project.photo.key, height: 300, crop: :fill %>')">
         <% else %>
           <div class="card-project">
         <% end %>
-            <small class="card-tag"><strong><%= trip.project.country %></strong></small>
+            <small class="card-tag"><strong><%= user_trip.project.country %></strong></small>
             <div>
-              <h2><%= trip.project.name  %></h2>
-              <p><%= (l trip.date, format: "%B, %Y").capitalize %></p>
-              <%= link_to raw('<i class="fa-solid fa-xmark"></i>'), trip_path(trip) , class: "btn-edit mt-2 mb-3", method: :delete, data: { confirm: "Caso tenha matches nessa trip eles serão cancelados e o histórico do chat apagado. Continuar?" } %>
+              <h2><%= user_trip.project.name  %></h2>
+              <p><%= (l user_trip.date, format: "%B, %Y").capitalize %></p>
+              <%= link_to raw('<i class="fa-solid fa-xmark"></i>'), trip_path(user_trip) , class: "btn-edit mt-2 mb-3", method: :delete, data: { confirm: "Caso tenha matches nessa trip eles serão cancelados e o histórico do chat apagado. Continuar?" } %>
             </div>
           </div>
       <% end %>
@@ -42,7 +51,7 @@
 
     <%# Lista dos resultados dos matches %>
     <div class="results">
-      <h3 class="h3-col mt-2" style="text-align:center"><%= image_tag "two.png" %> Veja quem quer ir no mesmo projeto e ano que você </h3>
+      <h3 class="h3-col mt-2" style="text-align:center"><%= image_tag "two.png" %> Veja quem quer viajar para o mesmo projeto que você </h3>
       <div class="scroller">
         <ul>
           <% @users_search.select do |user_search| %>
@@ -112,8 +121,6 @@
       </div>
     </ul>
   </div>
-
-
 
   <!-- Modal -->
   <div class="modal fade" id="tripModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
