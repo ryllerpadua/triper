@@ -66,7 +66,7 @@ project = Project.create(name: 'Inst. Moinho Cultural', country: "Brasil")
 project.photo.attach(io: file, filename: 'project.jpeg', content_type: 'image/jpeg')
 
 file = URI.open('https://bl6pap003files.storage.live.com/y4mGjG-wg9bfU2qbzz6pTMEH4fBQ12SBqgfwtnSmVOFBT9EAQWFPVpJzjWjUQaPbzGS1UHPvpLKNVVd09XZpEWSLLpwFSXdu7vgw2HEyy_rmbflJijLa53JD_tjODCZAKxKr2BpE95zNezyjXqzQiuqVUQk53Dk7y1q-0dxUL65NtfMKEgGTrSokdCuJAudWFg5?width=765&height=498&cropmode=none')
-project = Project.create(name: 'Educação Ambiental e Cons. da Natureza', country: "Brasil")
+project = Project.create(name: 'Educação Ambiental', country: "Brasil")
 project.photo.attach(io: file, filename: 'project.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://dsm04pap001files.storage.live.com/y4mNIHHpLLOSmhZdu1gkDpo3WwzDQkiHfeGVvk7U3U8B9VbJ5X5PCr796N2mPBiTKKOYDAMsVr-doifVnEZp_V_IfXa-q_gxD1ENqeVAVoOR8eqdS710YHXDlUlanUeiZqya9LU_toKcG1pmMR5IhSLhZabuBzHeTZ9ftbw5B6tXwV35QMuvNAuTzhpQ9n4mXTA?width=1024&height=683&cropmode=none')
