@@ -18,15 +18,15 @@
   <%# criar viagem %>
   <div class="column-trips">
     <div class="dash-trips mb-2">
-      <div class="alltrips">
-      <h3 class="h3a-col" style="text-align: center"><%= image_tag "warn.png" %> Veja os projetos que estão sendo procurados</h3>
-      <ul class="alltrips-ul">
-        <% @trips.each do |trip| %>
-        <li style="list-style: none">
-         <%= trip.country %> - <%= trip.name %>
-        </li>
-        <% end %>
-      </ul>
+      <div class="alltrips" >
+        <h3 class="h3a-col" style="text-align: center"><%= image_tag "warn.png" %> Veja os projetos que estão sendo procurados</h3>
+        <ul class="alltrips-ul">
+          <% @trips.each do |trip| %>
+          <li style="list-style: none">
+          <%= trip.country %> - <%= trip.name %>
+          </li>
+          <% end %>
+        </ul>
       </div>
       <h3 class="h3-col" style="text-align: center"><%= image_tag "one.png" %> Crie até 6 Trips</h3>
       <button type="button" class="btn-dash mx-2" data-bs-toggle="modal" data-bs-target="#tripModal"> <!-- Button trigger modal -->
