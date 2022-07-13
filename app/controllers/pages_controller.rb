@@ -3,7 +3,13 @@ class PagesController < ApplicationController
 
   def dashboard
     @countries = current_user.projects.pluck(:country).uniq
-    @trips = Trip.all.where.not(user: current_user)
+
+    @trips = Trip.where.not(user: current_user).find_by_sql("
+    SELECT DISTINCT p.name, p.country
+    FROM trips t
+    JOIN projects p ON t.project_id = p.id
+    ORDER BY p.country
+    ")
 
     @user_trips = current_user.trips.order(:project_id)
 
@@ -28,3 +34,11 @@ end
 #     end
 #     @trips = @trips.reject { |trip| Match.where(trip1: trip).count.positive? || Match.where(trip2: trip).count.positive? }
 #   end
+
+
+
+# @trips = Trip.where.not(user: current_user).find_by_sql("
+# SELECT DISTINCT p.name
+# FROM trips t
+# JOIN projects p ON t.project_id = p.id;
+# ")
