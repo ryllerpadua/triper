@@ -1,5 +1,15 @@
 // [--------------- 1 2 3 das colunas ------------------]
 
+
+.h3a-col {
+  box-sizing: border-box;
+  background-color: #54bed6;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .h3-col {
   box-sizing: border-box;
   background-color: #54bed6;
@@ -107,6 +117,25 @@
     top: 12px;
     right: 10px;
     color: white;
+  }
+}
+
+.alltrips-ul{
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 4px;
+  padding: 6px;
+
+  li {
+    background-color: #f47d35;
+    margin: 0 8px 2px 8px;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   }
 }
 
