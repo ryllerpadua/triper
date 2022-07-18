@@ -18,6 +18,7 @@ You can acess https://voluntripr.com and check the latest stable version that is
 
 The project is still in development and the next updates and features will be to improve or create the following:
 
+- [x] Have most views changed to single-page style
 - [x] Chat and profile view
 - [x] Trip counter showing where people want to go the most
 - [ ] Captcha account creation
